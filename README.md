@@ -71,24 +71,28 @@ This project was a group project for Turing School of Software & Design during m
 - Fully responsive user experience
 ![recording (11)]()
 
-## 🏆 Wins
+## Reflections
 
-- A big win was to be able to create the React components and have them communicate as we wanted them to.
-- Learning the behavior of JSX and how to apply CSS to those elements. 
-- Including a search bar for search PoKemon By name for better user experience.
-- Being able to successfully apply the Cypress testing.
-- Having a Lighthouse score over 90, even as we were still getting used to using JSX.
+### Wins
 
-## Challenges
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg" alt="Pikachu" width="100" align="right"/>
+
+- Creating the React components and have them communicate as desired
+- Learning the behavior of JSX and how to apply CSS to elements
+- Including a search bar for search Pokemon by name for better user experience
+- Applying Cypress testing
+- Receiving a Lighthouse score over 90, even while still learning JSX
+
+### Challenges
+
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg" alt="Pikachu" width="100" align="right"/>
 
 - Balancing fun/life with project/work/study time 👩🏻‍💻 💅🏻 💆🏻‍ 🐈 🎸 
-- First project using GSAP and PWA .
-- Managing the media queries for responsive design.
-- Navigating the challenge of learning two new tecnologies.
+- Managing the media queries for responsive design
+- Learning and using two new tecnologies at the same time (GSAP and PWA)
 
 ## Future Designs/Extensions
 
-- Add a user login/logout with username and password .
-- Have an area of favorited cards.
-- Be able to play the game in the app.
-- The User's favotiting will be saved within the user's account.
+- The user will be able to login/logout with username and password.
+- The user will be able to save their favorite cards within their account.
+- The user will be able to play the game in the app.
