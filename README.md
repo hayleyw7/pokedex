@@ -25,7 +25,7 @@ This project was a group project for Turing School of Software & Design during m
 
 *Info about [Matt](https://github.com/Matt-Roden) 🎸   *
 
-## Learning Goals
+## Learning Goals and Objectives
 
 - Successfully create a progressive web application (PWA)
 - Installable (A2HS ready), use of Service Workers, a Web App Manifest, Use of an API, offline useage
@@ -35,12 +35,9 @@ This project was a group project for Turing School of Software & Design during m
 - Create a multi-page UX using Router
 - Successful TDD/Cypress
 
-
-- *Project Spec: [link](https://frontend.turing.edu/projects/module-3/stretch.html "Spec")*
-- *Miro Wireframing: [link](https://miro.com/app/board/o9J_lyZfIKA=/)*
-- *API: [PoKemon](https://pokeapi.co/)*
-
 ## Technologies Used
+
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Pikachu" width="100" align="right"/>
 
 - React/ JavaScript 
 - React Router
@@ -54,6 +51,8 @@ This project was a group project for Turing School of Software & Design during m
 - NPM
 - Fetch API 
 - ESLint
+- Miro Wireframe [(link)](https://miro.com/app/board/o9J_lyZfIKA=/)
+- [PokeApi](https://pokeapi.co/)
 
 ## Setup
 
