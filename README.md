@@ -4,7 +4,7 @@
 
 ## Abstract
 
-*The Pokedex App gives you the chance of search for your own Pockemon card,  shows a list of displayed Pokemon and allows a user to see the additional information about the selected Pokemon:* 
+*The Pokedex App is a Progressive Web Application that gives you the ability to search through the original 151 Pokemon and quickly find information on them. This will be a very useful app for a person who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
 
 - Pokedex : when I visit the app, I should be able to select the Pokemon Card by name. 
 - Pokedex desktop: when I visit the app, all Pokemon should be displayed.
@@ -35,11 +35,14 @@
 
 ## Technologies Used
 
+- React/ JavaScript 
+- React Router
+- Service Workers
+- Cache
+- Green Sock Animation Library (GSAP)
 - HTML
 - CSS
 - Lighthouse (Accessibility dev-tool)
-- React/ JavaScript 
-- React Router
 - Cypress
 - NPM
 - Fetch API 
