@@ -15,15 +15,15 @@
 This project was a group project for Turing School of Software & Design during module 3. [The project rubric is linked here.](https://frontend.turing.edu/projects/module-3/stretch.html)
 
 
-## A Little bit about the Developer
+## A Little Bit About the Developers
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg" alt="Pikachu" width="100" align="right"/>
 
 *Hi! My name is [Joana](https://github.com/joanafbrito) and I am a current Front End Engineering student at Turing School of Software Design. I am a career changer! I've  spent the last decade working to manage two small business, and grabbing the opportunity to move to another country.* 
 *Now, I'm spending my days learning code. As a woman I can contribuit to build a more balanced society, where people can be seen as equals in the software marketing and where I can build apps more inclusive and make a difference using this huge platform of the internet!*
 
+*Info about [Hayley](https://github.com/hayleyw7)🐈 * 
 
-*Info about Hayley 🐈 * 
-
-*Info about Matt 🎸   *
+*Info about [Matt](https://github.com/Matt-Roden) 🎸   *
 
 ## Learning Goals
 
