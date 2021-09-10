@@ -4,13 +4,16 @@
 
 ## Abstract
 
-*The PoKedeX App is a Progressive Web Application that gives you the ability to search through the original 151 Pokemon and quickly find information on them. This will be a very useful app for a person who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
+* The PoKedeX App is a Progressive Web Application that gives a user the ability to search through Generation 1 Pokemon and quickly find information on them. This will be a very useful app for someone who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
 
-- PoKedeX : when I visit the app, I should be able to select the PoKemon Card by name. 
-- PoKedeX desktop: when I visit the app, all PoKemon should be displayed.
-- Home-Page: as a user, I should be able to access a page about how to use the app.
-- Selected PoKemon: As a user, I can click a card, and see that Pokemon’s details. When a PoKemon’s details are displayed, none of the other PoKemon cards will be visible.
-- When a PoKemon’s details are displayed, the user should have a way to return to the main view of all movies.
+- PoKedeX: As a user, when I visit the app, I should be able to search for Pokemon by name.
+- PoKedeX: As a user, when I visit the app on a computer or tablet, I should be able to see a display of all Pokemon.
+- Help: As a user, when I visit the app, I have a "help" button, and if I click it, I can access a page that explains how to use the app.
+- PokemonDetails: As a user, I should be able to access a page that contains a Pokemon's details by either a) clicking their image or b) searching for their name, and no other Pokemon details or images should be visible.
+- PokemonDetails & Help: As a user, I should be able to return to the PoKedeX from any other page.
+
+This project was a group project for Turing School of Software & Design during module 3. [The project rubric is linked here.](https://frontend.turing.edu/projects/module-3/stretch.html)
+
 
 ## A Little bit about the Developer
 
