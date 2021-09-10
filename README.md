@@ -54,33 +54,21 @@ This project was a group project for Turing School of Software & Design during m
 - Miro Wireframe [(link)](https://miro.com/app/board/o9J_lyZfIKA=/)
 - [PokeApi](https://pokeapi.co/)
 
-## Setup
+## Accessing and Using the App
 
-Fork this repo (look up in the top right corner) and copy the SSH link.
-Open your terminal, run git clone (replace the [ ] with the copied remote address)
-Change into the directory and run
+[deployment link](deployment link)
 
-```bash
-npm i
-```
-To view, run:
+[describe steps of how to use & navigate the app]
 
-```bash
-npm start
-```
+## GIFs
 
-or click the link:[Add deployed link here]
-
-## Illustrations
-
-- User can select a PoKemon Card, find more details about it .
+- User selects a Pokemon to find more details about it
 ![recording (8)]()
 
-
-- User can search for a particular PoKemon in the PoKedeX search bar.
+- User searches for a particular Pokemon in the PoKedeX search bar
 ![recording (9)]()
 
-- Fully responsive user experience.
+- Fully responsive user experience
 ![recording (11)]()
 
 ## 🏆 Wins
