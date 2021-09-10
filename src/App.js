@@ -7,7 +7,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      pokeDex: []
+      pokeDex: [],
+      // what will we need for favoriting?
     }
   }
 
