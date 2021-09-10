@@ -1,6 +1,6 @@
-# <img src="https://i.imgur.com/iPvcyJv.png" alt="drawing" width="250"/>PoKedeX - Mod3 Group Project <img src="https://user-images.githubusercontent.com/82066350/132804191-9d9429be-a758-4072-869d-2253a20378da.png" alt="drawing" width="100"/>
+# PoKedeX
 
-<!-- ![image](https://i.imgur.com/iPvcyJv.png) -->
+<img src="https://i.imgur.com/iPvcyJv.png" alt="drawing" width="500" align="right"/>
 
 ## Abstract
 
