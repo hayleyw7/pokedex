@@ -1,6 +1,6 @@
-# <img src="https://cdn.icon-icons.com/icons2/851/PNG/512/pikachu_icon-icons.com_67535.png" alt="drawing" width="100"/>Pokedex - Mod3 Group Project
+# <img src="https://i.imgur.com/iPvcyJv.png" alt="drawing" width="300"/>Pokedex - Mod3 Group Project <img src="https://user-images.githubusercontent.com/82066350/132804191-9d9429be-a758-4072-869d-2253a20378da.png" alt="drawing" width="100"/>
 
-![image](https://i.imgur.com/iPvcyJv.png)
+<!-- ![image](https://i.imgur.com/iPvcyJv.png) -->
 
 ## Abstract
 
