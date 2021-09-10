@@ -1,16 +1,16 @@
-# <img src="https://i.imgur.com/iPvcyJv.png" alt="drawing" width="250"/>Pokedex - Mod3 Group Project <img src="https://user-images.githubusercontent.com/82066350/132804191-9d9429be-a758-4072-869d-2253a20378da.png" alt="drawing" width="100"/>
+# <img src="https://i.imgur.com/iPvcyJv.png" alt="drawing" width="250"/>PoKedeX - Mod3 Group Project <img src="https://user-images.githubusercontent.com/82066350/132804191-9d9429be-a758-4072-869d-2253a20378da.png" alt="drawing" width="100"/>
 
 <!-- ![image](https://i.imgur.com/iPvcyJv.png) -->
 
 ## Abstract
 
-*The Pokedex App is a Progressive Web Application that gives you the ability to search through the original 151 Pokemon and quickly find information on them. This will be a very useful app for a person who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
+*The PoKedeX App is a Progressive Web Application that gives you the ability to search through the original 151 Pokemon and quickly find information on them. This will be a very useful app for a person who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
 
-- Pokedex : when I visit the app, I should be able to select the Pokemon Card by name. 
-- Pokedex desktop: when I visit the app, all Pokemon should be displayed.
+- PoKedeX : when I visit the app, I should be able to select the PoKemon Card by name. 
+- PoKedeX desktop: when I visit the app, all PoKemon should be displayed.
 - Home-Page: as a user, I should be able to access a page about how to use the app.
-- Selected Pokemon: As a user, I can click a card, and see that Pokemon’s details. When a Pokemon’s details are displayed, none of the other Pokemon cards will be visible.
-- When a Pokemon’s details are displayed, the user should have a way to return to the main view of all movies.
+- Selected PoKemon: As a user, I can click a card, and see that Pokemon’s details. When a PoKemon’s details are displayed, none of the other PoKemon cards will be visible.
+- When a PoKemon’s details are displayed, the user should have a way to return to the main view of all movies.
 
 ## A Little bit about the Developer
 
@@ -24,10 +24,14 @@
 
 ## Learning Goals
 
-- Gain competency with React fundamentals
-- Learn how to test React components & asynchronous JS using Cypress
+- Successfully create a progressive web application (PWA)
+- Installable (A2HS ready), use of Service Workers, a Web App Manifest, Use of an API, offline useage
+- Implement web animations (Green Sock)
+- Learn more about React components & asynchronous JS - use of Hooks
 - Practice refactoring
 - Create a multi-page UX using Router
+- Successful TDD/Cypress
+
 
 - *Project Spec: [link](https://frontend.turing.edu/projects/module-3/stretch.html "Spec")*
 - *Miro Wireframing: [link](https://miro.com/app/board/o9J_lyZfIKA=/)*
@@ -67,11 +71,11 @@ or click the link:[Add deployed link here]
 
 ## Illustrations
 
-- User can select a movie, find more details and provide their "star-rating" for the movie.
+- User can select a PoKemon Card, find more details about it .
 ![recording (8)]()
 
 
-- User can search for a particular movie in the search bar.
+- User can search for a particular PoKemon in the PoKedeX search bar.
 ![recording (9)]()
 
 - Fully responsive user experience.
@@ -81,9 +85,7 @@ or click the link:[Add deployed link here]
 
 - A big win was to be able to create the React components and have them communicate as we wanted them to.
 - Learning the behavior of JSX and how to apply CSS to those elements. 
-- Adding the stars for a user to rate a movie and be able to give those stars beautiful styling and functionality. 
-- Including a search bar for movie titles for better user experience. 
-- Being able to render the movie trailer successfully for the selected.
+- Including a search bar for search PoKemon By name for better user experience.
 - Being able to successfully apply the Cypress testing.
 - Having a Lighthouse score over 90, even as we were still getting used to using JSX.
 
@@ -99,4 +101,4 @@ or click the link:[Add deployed link here]
 - Add a user login/logout with username and password .
 - Have an area of favorited cards.
 - Be able to play the game in the app.
-- The User's star rating will be saved within the user's account.
+- The User's favotiting will be saved within the user's account.
