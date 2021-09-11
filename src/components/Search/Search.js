@@ -20,6 +20,7 @@ class Search  extends Component  {
             id:Date.now(),
             ...this.state
         }
+        console.log(foundPokemon)
         // foundPokemon will be = data.name 
     }
 
