@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from '../Search/Search';
 import { getPokedexData } from '../../apiCalls'
 
 import './App.css';
@@ -21,9 +22,13 @@ class App extends Component {
     })
   }
 
+
+
   render() {
     return(
-      <div>Hello World</div>
+      <div>Hello World
+        <Search />
+      </div>
     )
   }
 }
