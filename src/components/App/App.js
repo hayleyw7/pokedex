@@ -23,30 +23,30 @@ class App extends Component {
     })
   }
 
+  addPokemon = (queriedPokemon) => {
+    this.validatePokemonData(queriedPokemon)
+    //set state with the validated pokemon
+  }
+
   validatePokemonData = (queriedPokemon) => {
     const lowerCaseInput = queriedPokemon.queriedPokemon.toLowerCase()
 
-    let nameCheck = this.state.pokeDex.find(pokemon => {
+    const verifiedName = this.state.pokeDex.find(pokemon => {
       let lowerCaseName = pokemon.name.toLowerCase()
       if (lowerCaseName.includes(lowerCaseInput) && lowerCaseInput !== '')  {
         return pokemon
       }
     })
 
-    if (nameCheck === undefined) {
-      console.log('No Good!')
+    if (verifiedName === undefined) {
+      console.log('No Good NAMe!')
     } else {
-      console.log(nameCheck) 
+      console.log(verifiedName, 'IT WORKSSSSSSS!!!!')
+      return verifiedName
     }
   }
 
-  addPokemon = (queriedPokemon) => {
-    this.validatePokemonData(queriedPokemon)
-    //set state with the validated pokemon
-  }
-
-
-
+  // pass the validated query through addPokemon
 
   render() {
     return(
