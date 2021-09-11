@@ -1,28 +1,31 @@
-# <img src="https://i.imgur.com/iPvcyJv.png" alt="drawing" width="250"/>PoKedeX - Mod3 Group Project <img src="https://user-images.githubusercontent.com/82066350/132804191-9d9429be-a758-4072-869d-2253a20378da.png" alt="drawing" width="100"/>
+# PoKedeX
 
-<!-- ![image](https://i.imgur.com/iPvcyJv.png) -->
+<img src="https://i.imgur.com/iPvcyJv.png" alt="drawing" width="500" align="right"/>
 
 ## Abstract
 
-*The PoKedeX App is a Progressive Web Application that gives you the ability to search through the original 151 Pokemon and quickly find information on them. This will be a very useful app for a person who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
+* The PoKedeX App is a Progressive Web Application that gives a user the ability to search through Generation 1 Pokemon and quickly find information on them. This will be a very useful app for someone who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
 
-- PoKedeX : when I visit the app, I should be able to select the PoKemon Card by name. 
-- PoKedeX desktop: when I visit the app, all PoKemon should be displayed.
-- Home-Page: as a user, I should be able to access a page about how to use the app.
-- Selected PoKemon: As a user, I can click a card, and see that Pokemon’s details. When a PoKemon’s details are displayed, none of the other PoKemon cards will be visible.
-- When a PoKemon’s details are displayed, the user should have a way to return to the main view of all movies.
+- PoKedeX: As a user, when I visit the app, I should be able to search for Pokemon by name.
+- PoKedeX: As a user, when I visit the app on a computer or tablet, I should be able to see a display of all Pokemon.
+- Help: As a user, when I visit the app, I have a "help" button, and if I click it, I can access a page that explains how to use the app.
+- PokemonDetails: As a user, I should be able to access a page that contains a Pokemon's details by either a) clicking their image or b) searching for their name, and no other Pokemon details or images should be visible.
+- PokemonDetails & Help: As a user, I should be able to return to the PoKedeX from any other page.
 
-## A Little bit about the Developer
+This project was a group project for Turing School of Software & Design during module 3. [The project rubric is linked here.](https://frontend.turing.edu/projects/module-3/stretch.html)
+
+
+## A Little Bit About the Developers
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg" alt="Pikachu" width="100" align="right"/>
 
 *Hi! My name is [Joana](https://github.com/joanafbrito) and I am a current Front End Engineering student at Turing School of Software Design. I am a career changer! I've  spent the last decade working to manage two small business, and grabbing the opportunity to move to another country.* 
 *Now, I'm spending my days learning code. As a woman I can contribuit to build a more balanced society, where people can be seen as equals in the software marketing and where I can build apps more inclusive and make a difference using this huge platform of the internet!*
 
+*Info about [Hayley](https://github.com/hayleyw7)🐈 * 
 
-*Info about Hayley 🐈 * 
+*Info about [Matt](https://github.com/Matt-Roden) 🎸   *
 
-*Info about Matt 🎸   *
-
-## Learning Goals
+## Learning Goals and Objectives
 
 - Successfully create a progressive web application (PWA)
 - Installable (A2HS ready), use of Service Workers, a Web App Manifest, Use of an API, offline useage
@@ -32,12 +35,9 @@
 - Create a multi-page UX using Router
 - Successful TDD/Cypress
 
-
-- *Project Spec: [link](https://frontend.turing.edu/projects/module-3/stretch.html "Spec")*
-- *Miro Wireframing: [link](https://miro.com/app/board/o9J_lyZfIKA=/)*
-- *API: [PoKemon](https://pokeapi.co/)*
-
 ## Technologies Used
+
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Pikachu" width="100" align="right"/>
 
 - React/ JavaScript 
 - React Router
@@ -51,54 +51,48 @@
 - NPM
 - Fetch API 
 - ESLint
+- Miro Wireframe [(link)](https://miro.com/app/board/o9J_lyZfIKA=/)
+- [PokeApi](https://pokeapi.co/)
 
-## Setup
+## Accessing and Using the App
 
-Fork this repo (look up in the top right corner) and copy the SSH link.
-Open your terminal, run git clone (replace the [ ] with the copied remote address)
-Change into the directory and run
+[deployment link](deployment link)
 
-```bash
-npm i
-```
-To view, run:
+[describe steps of how to use & navigate the app]
 
-```bash
-npm start
-```
+## GIFs
 
-or click the link:[Add deployed link here]
-
-## Illustrations
-
-- User can select a PoKemon Card, find more details about it .
+- User selects a Pokemon to find more details about it
 ![recording (8)]()
 
-
-- User can search for a particular PoKemon in the PoKedeX search bar.
+- User searches for a particular Pokemon in the PoKedeX search bar
 ![recording (9)]()
 
-- Fully responsive user experience.
+- Fully responsive user experience
 ![recording (11)]()
 
-## 🏆 Wins
+## Reflections
 
-- A big win was to be able to create the React components and have them communicate as we wanted them to.
-- Learning the behavior of JSX and how to apply CSS to those elements. 
-- Including a search bar for search PoKemon By name for better user experience.
-- Being able to successfully apply the Cypress testing.
-- Having a Lighthouse score over 90, even as we were still getting used to using JSX.
+### Wins
 
-## Challenges
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg" alt="Pikachu" width="100" align="right"/>
+
+- Creating the React components and have them communicate as desired
+- Learning the behavior of JSX and how to apply CSS to elements
+- Including a search bar for search Pokemon by name for better user experience
+- Applying Cypress testing
+- Receiving a Lighthouse score over 90, even while still learning JSX
+
+### Challenges
+
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg" alt="Pikachu" width="100" align="right"/>
 
 - Balancing fun/life with project/work/study time 👩🏻‍💻 💅🏻 💆🏻‍ 🐈 🎸 
-- First project using GSAP and PWA .
-- Managing the media queries for responsive design.
-- Navigating the challenge of learning two new tecnologies.
+- Managing the media queries for responsive design
+- Learning and using two new tecnologies at the same time (GSAP and PWA)
 
 ## Future Designs/Extensions
 
-- Add a user login/logout with username and password .
-- Have an area of favorited cards.
-- Be able to play the game in the app.
-- The User's favotiting will be saved within the user's account.
+- The user will be able to login/logout with username and password.
+- The user will be able to save their favorite cards within their account.
+- The user will be able to play the game in the app.
