@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getPokedexData } from './apiCalls'
+import { getPokedexData } from '../../apiCalls'
 
 import './App.css';
 
