@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './Search.css'
 
-
 class Search  extends Component  {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            queriedPokemon:''
+            queriedPokemon: ''
         }
     }
 
@@ -17,11 +16,14 @@ class Search  extends Component  {
     handleClick = (e) => {
         e.preventDefault();
         const queriedPokemon = {
-            id:Date.now(),
+            key: Date.now(),
             ...this.state
         }
-        console.log(queriedPokemon)
-        // foundPokemon will be = data.name
+        // console.log(queriedPokemon)
+        this.props.addPokemon(queriedPokemon)
+        // if(props.addPokemon(queriedPokemon)
+        // then addPokemon(queriedPokemon)
+        // else show error
     }
 
     render() {
@@ -29,7 +31,7 @@ class Search  extends Component  {
             <form>
                 <input
                     type="search"
-                    name="foundPokemon"
+                    name="queriedPokemon"
                     className="search-bar"
                     placeholder="Choose your Pokemon"
                     onChange={(e) => this.handleChange(e)}/>

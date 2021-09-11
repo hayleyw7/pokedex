@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       pokeDex: [],
+      foundPokemon: {}
       // what will we need for favoriting?
     }
   }
@@ -22,12 +23,28 @@ class App extends Component {
     })
   }
 
-  
+  addPokemon = (queriedPokemon) => {
+    console.log(queriedPokemon)
+    return this.validatePokemonData(queriedPokemon)
+    //set state with the validated pokemon
+  }
+
+
+  validatePokemonData = (queriedPokemon) => {
+    const lowerCaseInput = queriedPokemon.queriedPokemon.toLowerCase()
+    return console.log(lowerCaseInput, '<><>')
+    // make all data.names in pokedex to lower case
+    // const validatedPokemon =
+    // make queiredPokemon lower case before validating
+    // validating our data to make sure the queriedSearch is infact in our getPokedexData
+    // compares name or id (arr.length)
+    // if validated, fires addPokemon with the validatedPokemon as the argument
+  }
 
   render() {
     return(
       <div>Hello World
-        <Search />
+        <Search addPokemon={this.addPokemon}/>
       </div>
     )
   }
