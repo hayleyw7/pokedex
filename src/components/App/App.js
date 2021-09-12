@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Search from '../Search/Search';
-import { getPokedexData } from '../../apiCalls'
+import { getPokedexData, getPokemonData } from '../../apiCalls'
 
 import './App.css';
 
@@ -9,7 +9,9 @@ class App extends Component {
     super();
     this.state = {
       pokeDex: [],
-      foundPokemon: {}
+      foundPokemon: {
+        name: 'test'
+      }
       // what will we need for favoriting?
     }
   }
@@ -22,7 +24,6 @@ class App extends Component {
       })
     })
   }
-
 
  addPokemon = (queriedPokemon) => {
    this.validatePokemonData(queriedPokemon)
@@ -45,27 +46,39 @@ validatePokemonName = (queriedPokemon) => {
     return verifiedName
   }
 }
-validatePokemonID(queriedPokemon) {
-  console.log('reaches id function')
-  const parsedID = parseInt(queriedPokemon);
-  
-  if (parsedID > 1 && parsedID < 152) {
-    console.log(parsedID, 'IT WORKS!!!!!!')
-    return parsedID
-  
-  } else {
-    console.log('No Good ID!')
-    return 'No Good ID!'
+
+  pokemonNameFetch(num) {
+    getPokemonData(num)
+    .then(data => {
+      this.setState({
+        foundPokemon: data.name
+      })
+    })
   }
-}
+
+  validatePokemonID(queriedPokemon) {
+    console.log('reaches id function')
+    const parsedID = parseInt(queriedPokemon);
+    
+    if (parsedID > 0 && parsedID < 152) {
+      this.pokemonNameFetch(parsedID)
+      console.log(parsedID)
+      console.log(this.state.foundPokemon)
+      return this.state.foundPokemon
+    
+    } else {
+      console.log('No Good ID!')
+      return 'No Good ID!'
+    }
+  }
  
-validatePokemonData = (queriedPokemon) => {
-  if (!isNaN(queriedPokemon.queriedPokemon)) {
-    this.validatePokemonID(queriedPokemon.queriedPokemon)
-  } else {
-    this.validatePokemonName(queriedPokemon.queriedPokemon)
+  validatePokemonData = (queriedPokemon) => {
+    if (!isNaN(queriedPokemon.queriedPokemon)) {
+      this.validatePokemonID(queriedPokemon.queriedPokemon)
+    } else {
+      this.validatePokemonName(queriedPokemon.queriedPokemon)
+    }
   }
-}
 
   // pass the validated query through addPokemon
 
