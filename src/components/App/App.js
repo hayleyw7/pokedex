@@ -41,6 +41,10 @@ class App extends Component {
     if (verifiedName === undefined) {
       console.log('No Good NAMe!')
     } else {
+      let pokemon_id = verifiedName.url.replace(/\D/g, "").slice(1);
+      let pokemon_image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon_id}.png`
+      console.log(verifiedName.url)
+      console.log(pokemon_image)
       console.log(verifiedName, 'IT WORKSSSSSSS!!!!')
       return verifiedName
     }
