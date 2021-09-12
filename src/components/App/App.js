@@ -30,22 +30,22 @@ class App extends Component {
    //set state with the validated pokemon
  }
  
-validatePokemonName = (queriedPokemon) => {
-  console.log('reaches name function') 
-  const lowerCaseInput = queriedPokemon.toLowerCase()
-  const verifiedName = this.state.pokeDex.find(pokemon => {
-    let lowerCaseName = pokemon.name.toLowerCase()
-    if (lowerCaseName.includes(lowerCaseInput) && lowerCaseInput !== '')  {
-      return pokemon
+  validatePokemonName = (queriedPokemon) => {
+    console.log('reaches name function') 
+    const lowerCaseInput = queriedPokemon.toLowerCase()
+    const verifiedName = this.state.pokeDex.find(pokemon => {
+      let lowerCaseName = pokemon.name.toLowerCase()
+      if (lowerCaseName.includes(lowerCaseInput) && lowerCaseInput !== '')  {
+        return pokemon
+      }
+    })
+    if (verifiedName === undefined) {
+      console.log('No Good NAMe!')
+    } else {
+      console.log(verifiedName.name)
+      return verifiedName.name
     }
-  })
-  if (verifiedName === undefined) {
-    console.log('No Good NAMe!')
-  } else {
-    console.log(verifiedName, 'IT WORKSSSSSSS!!!!')
-    return verifiedName
   }
-}
 
   pokemonNameFetch(num) {
     getPokemonData(num)
