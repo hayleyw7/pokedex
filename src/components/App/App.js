@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Search from '../Search/Search';
-import { getPokedexData, getPokemonData } from '../../apiCalls'
+import { getPokedexData } from '../../apiCalls'
 
 import './App.css';
 
@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       pokeDex: [],
       foundPokemon: {
-        name: 'test'
+        name: 'STILL NO WORKING & ONE SEARCH BEHIND IF YOU SEE THIS'
       }
       // what will we need for favoriting?
     }
@@ -47,30 +47,31 @@ class App extends Component {
     }
   }
 
-  pokemonNameFetch(num) {
-    getPokemonData(num)
-    .then(data => {
-      this.setState({
-        foundPokemon: data.name
-      })
-    })
-  }
+  // pokemonNameFetch(num) {
+  //   getPokemonData(num)
+  //   .then(data => {
+  //     this.setState({
+  //       foundPokemon: data.name
+  //     })
+  //   })
+  //   console.log(this.state.foundPokemon)
+  // }
 
   validatePokemonID(queriedPokemon) {
     console.log('reaches id function')
     const parsedID = parseInt(queriedPokemon);
-    
+
     if (parsedID > 0 && parsedID < 152) {
-      this.pokemonNameFetch(parsedID)
+      // this.pokemonNameFetch(parsedID)
       console.log(parsedID)
       console.log(this.state.foundPokemon)
       return this.state.foundPokemon
-    
+
     } else {
       console.log('No Good ID!')
       return 'No Good ID!'
     }
-  }
+ }
  
   validatePokemonData = (queriedPokemon) => {
     if (!isNaN(queriedPokemon.queriedPokemon)) {
