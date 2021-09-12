@@ -23,28 +23,49 @@ class App extends Component {
     })
   }
 
-  addPokemon = (queriedPokemon) => {
-    this.validatePokemonData(queriedPokemon)
-    //set state with the validated pokemon
-  }
 
-  validatePokemonData = (queriedPokemon) => {
-    const lowerCaseInput = queriedPokemon.queriedPokemon.toLowerCase()
-
-    const verifiedName = this.state.pokeDex.find(pokemon => {
-      let lowerCaseName = pokemon.name.toLowerCase()
-      if (lowerCaseName.includes(lowerCaseInput) && lowerCaseInput !== '')  {
-        return pokemon
-      }
-    })
-
-    if (verifiedName === undefined) {
-      console.log('No Good NAMe!')
-    } else {
-      console.log(verifiedName, 'IT WORKSSSSSSS!!!!')
-      return verifiedName
+ addPokemon = (queriedPokemon) => {
+   this.validatePokemonData(queriedPokemon)
+   //set state with the validated pokemon
+ }
+ 
+validatePokemonName = (queriedPokemon) => {
+  console.log('reaches name function') 
+  const lowerCaseInput = queriedPokemon.toLowerCase()
+  const verifiedName = this.state.pokeDex.find(pokemon => {
+    let lowerCaseName = pokemon.name.toLowerCase()
+    if (lowerCaseName.includes(lowerCaseInput) && lowerCaseInput !== '')  {
+      return pokemon
     }
+  })
+  if (verifiedName === undefined) {
+    console.log('No Good NAMe!')
+  } else {
+    console.log(verifiedName, 'IT WORKSSSSSSS!!!!')
+    return verifiedName
   }
+}
+validatePokemonID(queriedPokemon) {
+  console.log('reaches id function')
+  const parsedID = parseInt(queriedPokemon);
+  
+  if (parsedID > 1 && parsedID < 152) {
+    console.log(parsedID, 'IT WORKS!!!!!!')
+    return parsedID
+  
+  } else {
+    console.log('No Good ID!')
+    return 'No Good ID!'
+  }
+}
+ 
+validatePokemonData = (queriedPokemon) => {
+  if (!isNaN(queriedPokemon.queriedPokemon)) {
+    this.validatePokemonID(queriedPokemon.queriedPokemon)
+  } else {
+    this.validatePokemonName(queriedPokemon.queriedPokemon)
+  }
+}
 
   // pass the validated query through addPokemon
 
