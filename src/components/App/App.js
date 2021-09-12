@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Search from '../Search/Search';
-import { getPokedexData } from '../../apiCalls'
+import { getPokedexData, getPokemonData } from '../../apiCalls'
 
 import './App.css';
 
@@ -40,22 +40,24 @@ class App extends Component {
       }
     })
     if (verifiedName === undefined) {
-      console.log('No Good NAMe!')
+      console.log('No Good NAME!')
     } else {
       console.log(verifiedName.name)
       return verifiedName.name
     }
   }
 
-  // pokemonNameFetch(num) {
-  //   getPokemonData(num)
-  //   .then(data => {
-  //     this.setState({
-  //       foundPokemon: data.name
-  //     })
-  //   })
-  //   console.log(this.state.foundPokemon)
-  // }
+  pokemonApiFetch(searchTerm) {
+    console.log('reaches api fetch')
+    getPokemonData(searchTerm)
+    .then(data => {
+      this.setState({
+        foundPokemon: data
+      })
+    })
+    console.log(this.state.foundPokemon)
+    return this.state.foundPokemon
+  }
 
   validatePokemonID(queriedPokemon) {
     console.log('reaches id function')
@@ -64,8 +66,8 @@ class App extends Component {
     if (parsedID > 0 && parsedID < 152) {
       // this.pokemonNameFetch(parsedID)
       console.log(parsedID)
-      console.log(this.state.foundPokemon)
-      return this.state.foundPokemon
+      // console.log(this.state.foundPokemon)
+      return parsedID;
 
     } else {
       console.log('No Good ID!')
@@ -75,9 +77,11 @@ class App extends Component {
  
   validatePokemonData = (queriedPokemon) => {
     if (!isNaN(queriedPokemon.queriedPokemon)) {
-      this.validatePokemonID(queriedPokemon.queriedPokemon)
+      const idValidated = this.validatePokemonID(queriedPokemon.queriedPokemon)
+      this.pokemonApiFetch(idValidated)
     } else {
-      this.validatePokemonName(queriedPokemon.queriedPokemon)
+      const nameValidated = this.validatePokemonName(queriedPokemon.queriedPokemon)
+      this.pokemonApiFetch(nameValidated)
     }
   }
 
