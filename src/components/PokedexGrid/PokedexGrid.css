@@ -1,0 +1,9 @@
+.all-pokemon {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: center;
+    
+}
