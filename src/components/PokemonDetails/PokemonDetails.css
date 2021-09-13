@@ -1,0 +1,15 @@
+.moves-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.moves {
+  background: black;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  margin: .5rem .1rem .5rem .1rem;
+  padding: 0.1rem 0.6rem 0.25rem 0.6rem;
+}
