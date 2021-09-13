@@ -6,7 +6,7 @@ const PokemonDetails = ({ foundPokemonH }) => {
   return (
     <div className='pokemon-details-container'>
 
-      <h1>{foundPokemonH.id}: {foundPokemonH.name} </h1>
+      <h1 className='pokemon-details-header capitalize'>{foundPokemonH.id}: {foundPokemonH.name} </h1>
 
       <h2>Moves:</h2>
       <article className='features-container'>
