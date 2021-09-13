@@ -20,7 +20,8 @@ class Search  extends Component  {
             ...this.state
         }
         // console.log(queriedPokemon)
-        this.props.addPokemon(queriedPokemon)
+        this.props.addPokemonH(queriedPokemon)
+        this.props.addPokemonJ(queriedPokemon)
         // if(props.addPokemon(queriedPokemon)
         // then addPokemon(queriedPokemon)
         // else show error

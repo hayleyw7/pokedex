@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Search from '../Search/Search';
-import { getPokedexData } from '../../apiCalls';
+import { getPokedexData, getPokemonData } from '../../apiCalls';
 import PokedexGrid from '../PokedexGrid/PokedexGrid';
 import './App.css';
 
@@ -9,7 +9,9 @@ class App extends Component {
     super();
     this.state = {
       pokeDex: [],
-      foundPokemon: [],
+      foundPokemonJ: [],
+      foundPokemonH: {},
+      foundPokemon: {},
       error: null,
       // what will we need for favoriting?
     }
@@ -24,15 +26,26 @@ class App extends Component {
     })
   }
 
-  addPokemon = (queriedPokemon) => {
-    const foundPokemon = this.validatePokemonData(queriedPokemon)
-    this.setState({
-      foundPokemon: [foundPokemon]
-    })
-    //set state with the validated pokemon
-  }
+  // addPokemon = (queriedPokemon) => {
+  //   const foundPokemonH = this.validatePokemonDataJ(queriedPokemon)
+  //   this.setState({
+  //     foundPokemonH: [foundPokemonH]
+  //   })
+  //   //set state with the validated pokemon
+  // }
 
-  validatePokemonData = (queriedPokemon) => {
+  addPokemonH = (queriedPokemon) => {
+   this.validatePokemonDataH(queriedPokemon)
+  }  
+
+   addPokemonJ = (queriedPokemon) => {
+    const foundPokemonJ = this.validatePokemonDataJ(queriedPokemon)
+    this.setState({
+      foundPokemonJ: [foundPokemonJ]
+    })
+  } 
+
+  validatePokemonDataJ = (queriedPokemon) => {
     const lowerCaseInput = queriedPokemon.queriedPokemon.toLowerCase()
     
     const verifiedName = this.state.pokeDex.find((pokemon, index) => {
@@ -47,16 +60,85 @@ class App extends Component {
       }
     });
 
-    console.log(verifiedName)
+    // console.log(verifiedName)
 
     if (verifiedName === undefined) {
+      // console.log('No Good Name!')
       return this.setState({ error: "Not  a valid name, try again" })
-      console.log('No Good Name!')
     } else { 
-      console.log(verifiedName, 'IT WORKSSSSSSS!!!!')
+      // console.log(verifiedName, 'IT WORKSSSSSSS!!!!')
       return verifiedName
     }
    
+  }
+
+/////// h code
+
+
+  validatePokemonID(queriedPokemon) {
+    console.log('reaches id function')
+    const parsedID = parseInt(queriedPokemon);
+
+    if (parsedID > 0 && parsedID < 152) {
+      // this.pokemonNameFetch(parsedID)
+      // console.log(parsedID)
+      // console.log(this.state.foundPokemon)
+      return parsedID;
+    } else {
+      console.log('No Good ID!')
+      return 'No Good ID!'
+    }
+  }
+
+  validatePokemonName = (queriedPokemon) => {
+    console.log('reaches name function') 
+    const lowerCaseInput = queriedPokemon.toLowerCase()
+    const verifiedName = this.state.pokeDex.find(pokemon => {
+      let lowerCaseName = pokemon.name.toLowerCase()
+      if (lowerCaseName.includes(lowerCaseInput) && lowerCaseInput !== '')  {
+        return pokemon
+      }
+    })
+    if (verifiedName === undefined) {
+      console.log('No Good NAME!')
+    } else {
+      // console.log(verifiedName.name)
+      return verifiedName.name
+    }
+  }
+
+
+
+
+
+
+  validatePokemonDataH = (queriedPokemon) => {
+    if (!isNaN(queriedPokemon.queriedPokemon)) {
+      const idValidated = this.validatePokemonID(queriedPokemon.queriedPokemon)
+      this.pokemonApiFetch(idValidated)
+    } else {
+      const nameValidated = this.validatePokemonName(queriedPokemon.queriedPokemon)
+      this.pokemonApiFetch(nameValidated)
+    }
+  }
+
+
+
+
+
+
+
+
+  pokemonApiFetch(searchTerm) {
+    console.log('reaches api fetch')
+    getPokemonData(searchTerm)
+    .then(data => {
+      this.setState({
+        foundPokemonH: data
+      })
+    })
+    console.log(this.state.foundPokemonH)
+    return this.state.foundPokemonH
   }
 
   // pass the validated query through addPokemon
@@ -75,12 +157,12 @@ class App extends Component {
 
     return(
       <div> Welcome to PoKeDeX, are you ready to catch your Pokemon?
-        <Search addPokemon={this.addPokemon}/>
-        {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
+        <Search addPokemonJ={this.addPokemonJ} addPokemonH={this.addPokemonH}/>
+        {(this.state.foundPokemonJ.length === 0 && !this.state.error) && <h2>{ text }</h2>}
         {(this.state.error && <h2> { this.state.error }</h2>)}
-        {(this.state.foundPokemon.length !== 0 && !this.state.error)&& 
-        <PokedexGrid pokedexData={this.state.foundPokemon} getPokemonImage={this.getPokemonImage}/>}
-        {(this.state.foundPokemon.length === 0) && 
+        {(this.state.foundPokemonJ.length !== 0 && !this.state.error)&& 
+        <PokedexGrid pokedexData={this.state.foundPokemonJ} getPokemonImage={this.getPokemonImage}/>}
+        {(this.state.foundPokemonJ.length === 0) && 
         <PokedexGrid pokedexData={this.state.pokeDex} getPokemonImage={this.getPokemonImage}/>
         }
       </div>
