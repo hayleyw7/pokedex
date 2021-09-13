@@ -157,9 +157,11 @@ class App extends Component {
     const text = 'Loading...';
 
     return(
-      <div> Welcome to PoKeDeX, are you ready to catch your Pokemon?
-        <PokemonDetails foundPokemonH={this.state.foundPokemonH} />
+      <div>
 
+        <PokemonDetails foundPokemonH={this.state.foundPokemonH} getPokemonImage={this.getPokemonImage} />
+
+         <h1>Please search a Pokemon by name or ID.</h1>
 
         <Search addPokemonJ={this.addPokemonJ} addPokemonH={this.addPokemonH}/>
         {(this.state.foundPokemonJ.length === 0 && !this.state.error) && <h2>{ text }</h2>}
