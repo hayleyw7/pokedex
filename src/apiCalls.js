@@ -7,5 +7,8 @@ export const getPokemonData = (suffix) => {
   console.log(suffix)
 
   return fetch(`https://pokeapi.co/api/v2/pokemon/${suffix}`)
-    .then(res => res.ok ? res.json() : this.displayErrorInfo(res))
-}
+    .then(response => {
+      if (response.ok) {
+        return response.json()
+    }
+}) }

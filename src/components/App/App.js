@@ -11,7 +11,7 @@ class App extends Component {
       pokeDex: [],
       foundPokemonJ: [],
       foundPokemonH: {},
-      foundPokemon: {},
+      // foundPokemon: {},
       error: null,
       // what will we need for favoriting?
     }
