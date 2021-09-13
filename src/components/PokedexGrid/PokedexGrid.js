@@ -12,8 +12,8 @@ const PokedexGrid = (props) => {
 
         return (
             <PokemonCard 
-                key={pokemon.id}
-                id={pokemon.id}
+                key={pokemonId}
+                id={pokemonId}
                 image={pokemonImage}
                 name={pokemon.name}
             />           
