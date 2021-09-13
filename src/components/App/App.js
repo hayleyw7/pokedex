@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Search from '../Search/Search';
+import PokemonDetails from '../PokemonDetails/PokemonDetails';
 import { getPokedexData, getPokemonData } from '../../apiCalls';
 import PokedexGrid from '../PokedexGrid/PokedexGrid';
 import './App.css';
@@ -157,6 +158,9 @@ class App extends Component {
 
     return(
       <div> Welcome to PoKeDeX, are you ready to catch your Pokemon?
+        <PokemonDetails foundPokemonH={this.state.foundPokemonH} />
+
+
         <Search addPokemonJ={this.addPokemonJ} addPokemonH={this.addPokemonH}/>
         {(this.state.foundPokemonJ.length === 0 && !this.state.error) && <h2>{ text }</h2>}
         {(this.state.error && <h2> { this.state.error }</h2>)}
@@ -165,6 +169,9 @@ class App extends Component {
         {(this.state.foundPokemonJ.length === 0) && 
         <PokedexGrid pokedexData={this.state.pokeDex} getPokemonImage={this.getPokemonImage}/>
         }
+
+
+
       </div>
     )
   }
