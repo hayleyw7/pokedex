@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state = {
       pokeDex: [],
-      foundPokemon: {}
+      foundPokemon: []
       // what will we need for favoriting?
     }
   }
@@ -26,7 +26,7 @@ class App extends Component {
   addPokemon = (queriedPokemon) => {
     const foundPokemon = this.validatePokemonData(queriedPokemon)
     this.setState({
-      foundPokemon: {...foundPokemon}
+      foundPokemon: [foundPokemon]
     })
     //set state with the validated pokemon
   }
@@ -66,10 +66,18 @@ class App extends Component {
 
 
   render() {
+
+    const text = 'Loading...';
+
     return(
       <div> Welcome to PoKeDeX, are you ready to catch your Pokemon?
         <Search addPokemon={this.addPokemon}/>
+        {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>text</h2>}
+        {this.state.foundPokemon.length !== 0 && 
+        <PokedexGrid pokedexData={this.state.foundPokemon} getPokemonImage={this.getPokemonImage}/>}
+        {(this.state.foundPokemon.length === 0) && 
         <PokedexGrid pokedexData={this.state.pokeDex} getPokemonImage={this.getPokemonImage}/>
+        }
       </div>
     )
   }
