@@ -146,7 +146,7 @@ class App extends Component {
 
   getPokemonImage = (id) => {
     
-    let pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
+    let pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`
    
     return pokemonImage
 
