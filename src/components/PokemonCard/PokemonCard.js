@@ -1,5 +1,5 @@
 import React from 'react';
-// import './PokemonCard.css';
+import './PokemonCard.css';
 
 
 const PokemonCard = (props) => {
