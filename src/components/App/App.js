@@ -34,29 +34,32 @@ class App extends Component {
 
   validatePokemonData = (queriedPokemon) => {
     const lowerCaseInput = queriedPokemon.queriedPokemon.toLowerCase()
-
-    const verifiedName = this.state.pokeDex.find(pokemon => {
+    
+    const verifiedName = this.state.pokeDex.find((pokemon, index) => {
       let lowerCaseName = pokemon.name.toLowerCase()
-      if (lowerCaseName.includes(lowerCaseInput) && lowerCaseInput !== '')  {
+
+      if (lowerCaseName.includes(lowerCaseInput) && lowerCaseInput !== '' && lowerCaseInput !== undefined) {
         return pokemon
+      } else if (parseInt(lowerCaseInput)){
+        if (index+1 == parseInt(lowerCaseInput)){
+          return pokemon
+        }
       }
-    })
+    });
+
+    console.log(verifiedName)
 
     if (verifiedName === undefined) {
-      this.setState({ error: "Not  a Valid name"})
-      console.log('No Good NAMe!')
-    } else {
-      // let pokemon_id = verifiedName.url.replace(/\D/g, "").slice(1);
-      // let pokemon_image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon_id}.png`
-      // console.log(verifiedName.url)
-      // console.log(pokemon_image)
+      return this.setState({ error: "Not  a valid name, try again" })
+      console.log('No Good Name!')
+    } else { 
       console.log(verifiedName, 'IT WORKSSSSSSS!!!!')
       return verifiedName
     }
+   
   }
 
   // pass the validated query through addPokemon
-
 
   getPokemonImage = (id) => {
     
@@ -65,7 +68,6 @@ class App extends Component {
     return pokemonImage
 
   }
-
 
   render() {
 
@@ -86,4 +88,11 @@ class App extends Component {
   }
 }
 
-export default App
+export default App;
+
+// pseudocde about how to add the images to the main page 
+// let pokemon_id = verifiedName.url.replace(/\D/g, "").slice(1);- it was showing as 225 because it has 
+      //  the V2 as a number as well in the url , to fix that i've used slice(1), to take away the 1 number
+      // let pokemon_image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon_id}.png`
+      // console.log(verifiedName.url)
+      // console.log(pokemon_image)

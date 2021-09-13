@@ -4,7 +4,6 @@ import './PokedexGrid.css';
 
 
 const PokedexGrid = (props) => {
-
     const myPokemon = props.pokedexData.map(pokemon => {
 
         let pokemonId = pokemon.url.replace(/\D/g, "").slice(1)
