@@ -24,7 +24,10 @@ class App extends Component {
   }
 
   addPokemon = (queriedPokemon) => {
-    this.validatePokemonData(queriedPokemon)
+    const foundPokemon = this.validatePokemonData(queriedPokemon)
+    this.setState({
+      foundPokemon: {...foundPokemon}
+    })
     //set state with the validated pokemon
   }
 
