@@ -41,7 +41,7 @@ class App extends Component {
       if (lowerCaseName.includes(lowerCaseInput) && lowerCaseInput !== '' && lowerCaseInput !== undefined) {
         return pokemon
       } else if (parseInt(lowerCaseInput)){
-        if (index+1 == parseInt(lowerCaseInput)){
+        if (index+1 === parseInt(lowerCaseInput)){
           return pokemon
         }
       }
