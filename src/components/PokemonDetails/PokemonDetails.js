@@ -6,12 +6,19 @@ const PokemonDetails = ({ foundPokemonH }) => {
   return (
     <div className='pokemon-details-container'>
 
-      <h2>{foundPokemonH.name}</h2>
-      <h2>{foundPokemonH.id}</h2>
+      <h1>{foundPokemonH.id}: {foundPokemonH.name} </h1>
 
+      <h2>Moves:</h2>
       <article className='moves-container'>
         {foundPokemonH.moves.map(move =>
-        <p className='moves' key={move.move.name}>{move.move.name}</p>
+          <p className='moves' key={move.move.name}>{move.move.name}</p>
+        )}
+      </article>
+
+      <h2>Types:</h2>
+      <article className='types-container'>
+        {foundPokemonH.types.map(type =>
+          <p className='types' key={type.type.name}>{type.type.name}</p>
         )}
       </article>
 
