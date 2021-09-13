@@ -64,7 +64,7 @@ class App extends Component {
 
   render() {
     return(
-      <div> Hello World
+      <div> Welcome to PoKeDeX, are you ready to catch your Pokemon?
         <Search addPokemon={this.addPokemon}/>
         <PokedexGrid pokedexData={this.state.pokeDex} getPokemonImage={this.getPokemonImage}/>
       </div>
