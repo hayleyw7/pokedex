@@ -11,14 +11,14 @@ const PokemonDetails = ({ foundPokemonH }) => {
       <h2>Moves:</h2>
       <article className='features-container'>
         {foundPokemonH.moves.map(move =>
-          <p className='features' key={move.move.name}>{move.move.name}</p>
+          <p className='features' key={move.move.name}>{move.move.name.split('-').join(' ')}</p>
         )}
       </article>
 
       <h2>Types:</h2>
       <article className='features-container'>
         {foundPokemonH.types.map(type =>
-          <p className='features' key={type.type.name}>{type.type.name}</p>
+          <p className='features' key={type.type.name}>{type.type.name.split('-').join(' ')}</p>
         )}
       </article>
 
@@ -26,7 +26,7 @@ const PokemonDetails = ({ foundPokemonH }) => {
 
       <article className='features-container'>
         {foundPokemonH.abilities.map(ability =>
-          <p className='features' key={ability.ability.name}>{ability.ability.name}</p>
+          <p className='features' key={ability.ability.name}>{ability.ability.name.split('-').join(' ')}</p>
         )}
       </article>      
 
