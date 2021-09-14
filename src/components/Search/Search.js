@@ -28,18 +28,18 @@ class Search  extends Component  {
 
     render() {
         return (
-            <form>
+            <form className='search-form' >
                 <input
-                    type="search"
-                    name="queriedPokemon"
-                    className="search-bar"
-                    placeholder="Choose your Pokemon"
-                    onChange={(e) => this.handleChange(e)}/>
+                  className="search-bar"
+                  type="search"
+                  name="queriedPokemon"
+                  placeholder="Find A Pokemon..."
+                  onChange={(e) => this.handleChange(e)}/>
                 <button
-                    type="submit"
-                    onClick={(e) => this.handleClick(e)}>
-                Catch
-                </button>
+                  className="catch-button"
+                  type="submit"
+                  onClick={(e) => this.handleClick(e)}>
+                  Catch!!!</button>
             </form>
         )
 
