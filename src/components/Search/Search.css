@@ -24,11 +24,13 @@
   background: linear-gradient(to left, #FF0000, #CC0000);
   color: white;
   padding: 5px;
-  font-size: 50%;;
+  font-size: 45px;
   font-family: 'PocketMonk';
   transition: transform 450ms;
 }
 
 .catch-button:hover {
   transform: scale(1.09);
+  background: linear-gradient(to right, #FF0000, #CC0000);
+
 }
