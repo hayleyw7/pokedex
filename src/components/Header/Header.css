@@ -2,13 +2,13 @@
   background: #D31027;
   background: -webkit-linear-gradient(to right, #FF0000, #CC0000);
   background: linear-gradient(to right, #FF0000, #CC0000);
-  height: 300px;
+  height: 250px;
   width: 100%;
   position: relative;
 }
 
 
-.custom-shape-divider-bottom-1631572219 {
+.custom-shape-divider-bottom-1631589819 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -18,13 +18,13 @@
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1631572219 svg {
+.custom-shape-divider-bottom-1631589819 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 201px;
+    height: 100px;
 }
 
-.custom-shape-divider-bottom-1631572219 .shape-fill {
+.custom-shape-divider-bottom-1631589819 .shape-fill {
     fill: #FFFFFF;
 }
