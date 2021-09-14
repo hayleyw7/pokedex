@@ -2,21 +2,11 @@
   background: #D31027;
   background: -webkit-linear-gradient(to right, #EA384D, #D31027);
   background: linear-gradient(to right, #EA384D, #D31027);
-
   height: 300px;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
-.header-image {
-  height: 15em;
-  width: 9em;
-  margin-top: 10px;
-  margin-left: 50%;
-  /* margin-right: 46%; */
-  position: relative;
-
-}
 
 .custom-shape-divider-bottom-1631572219 {
     position: absolute;
