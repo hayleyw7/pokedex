@@ -1,6 +1,9 @@
 .pokemon-details-header {
-  /* color: #FFDE00; */
+  border-radius: 7rem;
+  padding: 0 0 .3rem 0;
   font-size: 60px;
+  background: white;
+  color: black;
 }
 
 .features-container {
@@ -42,7 +45,7 @@
 }
 
 .single-pokemon-pic {
-  width: 15rem;
+  width: 25rem;
 }
 
 .types-header,
