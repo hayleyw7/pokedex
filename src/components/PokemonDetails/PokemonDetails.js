@@ -9,7 +9,9 @@ const PokemonDetails = ({ foundPokemonH, getPokemonImage }) => {
     <div className='pokemon-details-page'>
       <div className='pokemon-details-container'>  
 
-        <h1 className='pokemon-details-header capitalize'>{foundPokemonH.id}: {foundPokemonH.name} </h1>
+        <h1 className='pokemon-details-id'>{foundPokemonH.id}</h1>
+
+        <h1 className='pokemon-details-header capitalize'>{foundPokemonH.name} </h1>
 
         <img
           src={pokemonImage}      className='single-pokemon-pic'
@@ -17,11 +19,11 @@ const PokemonDetails = ({ foundPokemonH, getPokemonImage }) => {
           id={foundPokemonH.id}
         />        
 
-        <h2 className='types-header'>Types</h2>
+        <h2 className='types-header'>Type</h2>
         <article className='features-container'>
           {foundPokemonH.types.map(type =>
             <p className='features' key={type.type.name}>{type.type.name.split('-').join(' ')}</p>
-          )}
+          ).sort((elementA, elementB) => elementA - elementB)}
         </article>
 
         <h2 className='abilities-header'>Abilities</h2>
