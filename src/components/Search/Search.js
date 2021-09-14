@@ -38,7 +38,8 @@ class Search  extends Component  {
                 <button
                   className="catch-button"
                   type="submit"
-                  onClick={(e) => this.handleClick(e)}>Catch!!!</button>
+                  onClick={(e) => this.handleClick(e)}>
+                  Catch!!!</button>
             </form>
         )
 
