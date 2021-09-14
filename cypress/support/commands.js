@@ -1,7 +1,9 @@
 Cypress.Commands.add('onLoad', () => {
     const baseDataURL = 'https://pokeapi.co/api/v2/pokemon';
 
-    cy.intercept(`${ baseDataURL }?limit=151`, {
+    // got an error because our map changes the url to be able to access the image, see how can we add the image url as well 
+
+    cy.intercept(`${ baseDataURL }?limit=6`, {
         pokeDex:[
             {
                 "name": "bulbasaur",
