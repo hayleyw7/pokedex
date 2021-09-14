@@ -1,25 +1,42 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('onLoad', () => {
+    const baseDataURL = 'https://pokeapi.co/api/v2/pokemon';
+
+    // got an error because our map changes the url to be able to access the image, see how can we add the image url as well 
+
+    cy.intercept(`${ baseDataURL }?limit=6`, {
+        pokeDex:[
+            {
+                "name": "bulbasaur",
+                "url": "https://pokeapi.co/api/v2/pokemon/1/"
+            },
+            {
+                "name": "ivysaur",
+                "url": "https://pokeapi.co/api/v2/pokemon/2/"
+            },
+            {
+                "name": "venusaur",
+                "url": "https://pokeapi.co/api/v2/pokemon/3/"
+            },
+            {
+                "name": "charmander",
+                "url": "https://pokeapi.co/api/v2/pokemon/4/"
+            },
+            {
+                "name": "charmeleon",
+                "url": "https://pokeapi.co/api/v2/pokemon/5/"
+            },
+            {
+                "name": "charizard",
+                "url": "https://pokeapi.co/api/v2/pokemon/6/"
+            }
+        ]
+    });
+    // we probably will use this for test pokemon detailed page/ waiting to see how the page will be
+    // cy.intercept(`${ baseDataURL }/8/`, {
+    //     foundPokemon:[
+
+    //     ]
+    // })
+    cy.visit('http://localhost:3000/');
+
+})
