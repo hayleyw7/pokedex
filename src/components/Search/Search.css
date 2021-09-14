@@ -8,7 +8,10 @@
 .search-bar {
   margin-bottom: 15px;
   width: 70%;
-  height: 25px;
+  height: 45px;
+  font-family: 'PocketMonk';
+  text-align: center;
+  border-radius: 15px;
 }
 
 .catch-button {
@@ -16,5 +19,11 @@
   height: 55px;
   border: none;
   border-radius: 25px;
-  
+  background: #D31027;
+  background: -webkit-linear-gradient(to right, #FF0000, #CC0000);
+  background: linear-gradient(to left, #FF0000, #CC0000);
+  color: white;
+  padding: 5px;
+  font-size: 45px;
+  font-family: 'PocketMonk'
 }

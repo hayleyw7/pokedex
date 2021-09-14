@@ -1,7 +1,7 @@
 .header {
   background: #D31027;
   background: -webkit-linear-gradient(to right, #FF0000, #CC0000);
-  background: linear-gradient(to right, #EA384D, #D31027);
+  background: linear-gradient(to right, #FF0000, #CC0000);
   height: 300px;
   width: 100%;
   position: relative;

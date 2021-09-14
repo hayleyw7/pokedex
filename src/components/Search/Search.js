@@ -33,12 +33,12 @@ class Search  extends Component  {
                   className="search-bar"
                   type="search"
                   name="queriedPokemon"
-                  placeholder="Choose your Pokemon"
+                  placeholder="Find A Pokemon..."
                   onChange={(e) => this.handleChange(e)}/>
                 <button
                   className="catch-button"
                   type="submit"
-                  onClick={(e) => this.handleClick(e)}>Catch</button>
+                  onClick={(e) => this.handleClick(e)}>Catch!!!</button>
             </form>
         )
 
