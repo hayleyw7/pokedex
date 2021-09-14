@@ -60,6 +60,19 @@ describe('Home page user flow', () => {
   });
 
 
+  it('Should be able to search Pokemon by Id Number', () => {
+    cy.get('input[type="search"]')
+      .type('6')
+      .should('have.value',  '6')
+      .get('button')
+      .click()
+      .get('.pokemon-card')
+      .contains('charizard')
+      .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"]')
+      .should('be.visible')
+});
+
+
 
 
     // need to fix the search with a clear search method so i can test for id as well 
