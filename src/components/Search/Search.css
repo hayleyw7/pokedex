@@ -24,6 +24,11 @@
   background: linear-gradient(to left, #FF0000, #CC0000);
   color: white;
   padding: 5px;
-  font-size: 2.5rem;
-  font-family: 'PocketMonk'
+  font-size: 50%;;
+  font-family: 'PocketMonk';
+  transition: transform 450ms;
+}
+
+.catch-button:hover {
+  transform: scale(1.09);
 }
