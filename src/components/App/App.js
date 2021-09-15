@@ -72,7 +72,7 @@ class App extends Component {
   };
 
   render() {
-
+    
     // const text = 'Loading...';
     // {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
     // <h1 className='call-to-action-text'>Welcome to PokeDex! Use the search bar below to find a Pokemon now!</h1>
@@ -81,22 +81,22 @@ class App extends Component {
       <div className="App">
         <Header />
         <main className='main-content'>
-        <Search addPokemon={this.addPokemon} />
-        {this.state.error && <h2> {this.state.error}</h2>}
-        {this.state.foundPokemon.length !== 0 && !this.state.error && (
-          <PokemonDetails
-            foundPokemon={this.state.foundPokemon}
-            getPokemonImage={this.getPokemonImage}
-          />
-        )}
-        {this.state.foundPokemon.length === 0 && (
-          <PokedexGrid
-            pokedexData={this.state.pokeDex}
-            getPokemonImage={this.getPokemonImage}
-          />
-        )}
+          <Search addPokemon={this.addPokemon} />
+          {this.state.error && <h2> {this.state.error}</h2>}
+          {this.state.foundPokemon.length !== 0 && !this.state.error && (
+            <PokemonDetails
+              foundPokemon={this.state.foundPokemon}
+              getPokemonImage={this.getPokemonImage}
+            />
+          )}
+          {this.state.foundPokemon.length === 0 && (
+            <PokedexGrid
+              pokedexData={this.state.pokeDex}
+              getPokemonImage={this.getPokemonImage}
+            />
+          )}
         </main>
-      </div>
+     </div>
     );
   }
 }
