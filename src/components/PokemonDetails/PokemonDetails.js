@@ -1,0 +1,89 @@
+import React, { useState, useEffect } from "react";
+import "./PokemonDetails.css";
+
+const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
+  const [pokemonDetails, setPokemonDetails] = useState([]);
+  const [error, setError] = useState("");
+
+  let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
+  const pokemonImage = getPokemonImage(pokemonId);
+
+//   let pokemonImage =  pokemonDetails.sprites.other.dream_world.front_default
+  const getPokemonDetails = async () => {
+
+    // let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1);
+    let pokemonName = foundPokemon[0].name
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+
+    try {
+      const res = await fetch(url);
+      const pokemonDetails = await res.json();
+      setPokemonDetails(pokemonDetails);
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+// for some reason I don't know yet --it is not reseting the state when we type a diferent name or id 
+// i'm not sure if only clearing the search it is what we need, probably we need a way to look into the details again..
+  useEffect(() => {
+    getPokemonDetails();
+  }, []);
+
+//   getPokemonDetails();
+// it only renders all the info in the page if i use the condition before the return otherwise 
+// will have an error and takes a while to set the state 
+  if (pokemonDetails.types) {
+    return (
+      <div className="pokemon-details-page">
+        <div className="pokemon-details-container">
+          <h1 className="pokemon-details-id">{pokemonDetails.id}</h1>
+
+          <h1 className="pokemon-details-header capitalize">
+            {pokemonDetails.name}{" "}
+          </h1>
+
+          <img
+            src={pokemonImage}
+            className="single-pokemon-pic"
+            alt={`${pokemonDetails.name} image`}
+            id={pokemonDetails.id}
+          />
+
+          <h2 className="types-header">Type</h2>
+          <article className="features-container">
+            {pokemonDetails.types
+              .map((type) => (
+                <p className="features" key={type.type.name}>
+                  {type.type.name.split("-").join(" ")}
+                </p>
+              ))
+              .sort((elementA, elementB) => elementA - elementB)}
+          </article>
+
+          <h2 className="abilities-header">Abilities</h2>
+
+          <article className="features-container">
+            {pokemonDetails.abilities.map((ability) => (
+              <p className="features" key={ability.ability.name}>
+                {ability.ability.name.split("-").join(" ")}
+              </p>
+            ))}
+          </article>
+
+          <h2 className="moves-header">Moves</h2>
+          <article className="features-container">
+            {pokemonDetails.moves.map((move) => (
+              <p className="features" key={move.move.name}>
+                {move.move.name.split("-").join(" ")}
+              </p>
+            ))}
+          </article>
+        </div>
+      </div>
+    );
+  } else {
+    return <h2 className="moves-header">Loading...</h2>;
+  }
+};
+
+export default PokemonDetails;
