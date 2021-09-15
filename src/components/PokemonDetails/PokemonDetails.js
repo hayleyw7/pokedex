@@ -11,9 +11,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
   const getPokemonDetails = async () => {
 
     let pokemonName = foundPokemon[0].name
-    console.log('poopy', pokemonName)
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
-    console.log('poop', url)
 
     try {
       const res = await fetch(url);

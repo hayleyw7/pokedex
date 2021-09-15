@@ -23,7 +23,7 @@ class App extends Component {
       });
     });
   }
-  // i think we will modify this function ? or maybe not just add a function inside that calls the rigth api
+
   addPokemon = (queriedPokemon) => {
     const foundPokemon = this.validatePokemonData(queriedPokemon);
     this.setState({
@@ -49,8 +49,6 @@ class App extends Component {
         }
       }
     });
-
-    console.log('shit', verifiedName);
 
     if (verifiedName === undefined) {
       return this.setState({ error: "Not  a valid name, try again" });
@@ -90,7 +88,7 @@ class App extends Component {
             />
           )}
         </main>
-     </div>
+      </div>
     );
   }
 }
