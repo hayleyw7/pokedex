@@ -72,38 +72,33 @@ class App extends Component {
   };
 
   render() {
-    const text = "Loading...";
+    
+    // const text = 'Loading...';
+    // {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
+    // <h1 className='call-to-action-text'>Welcome to PokeDex! Use the search bar below to find a Pokemon now!</h1>
 
     return (
       <div className="App">
         <Header />
-        <Search addPokemon={this.addPokemon} />
-        {this.state.foundPokemon.length === 0 && !this.state.error && (
-          <h2>{text}</h2>
-        )}
-        {this.state.error && <h2> {this.state.error}</h2>}
-        {this.state.foundPokemon.length !== 0 && !this.state.error && (
-          <PokemonDetails
-            foundPokemon={this.state.foundPokemon}
-            getPokemonImage={this.getPokemonImage}
-          />
-        )}
-        {this.state.foundPokemon.length === 0 && (
-          <PokedexGrid
-            pokedexData={this.state.pokeDex}
-            getPokemonImage={this.getPokemonImage}
-          />
-        )}
-      </div>
+        <main className='main-content'>
+          <Search addPokemon={this.addPokemon} />
+          {this.state.error && <h2> {this.state.error}</h2>}
+          {this.state.foundPokemon.length !== 0 && !this.state.error && (
+            <PokemonDetails
+              foundPokemon={this.state.foundPokemon}
+              getPokemonImage={this.getPokemonImage}
+            />
+          )}
+          {this.state.foundPokemon.length === 0 && (
+            <PokedexGrid
+              pokedexData={this.state.pokeDex}
+              getPokemonImage={this.getPokemonImage}
+            />
+          )}
+        </main>
+     </div>
     );
   }
 }
 
 export default App;
-
-// pseudocde about how to add the images to the main page
-// let pokemon_id = verifiedName.url.replace(/\D/g, "").slice(1);- it was showing as 225 because it has
-//  the V2 as a number as well in the url , to fix that i've used slice(1), to take away the 1 number
-// let pokemon_image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon_id}.png`
-// console.log(verifiedName.url)
-// console.log(pokemon_image)
