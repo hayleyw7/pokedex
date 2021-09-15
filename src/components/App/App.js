@@ -72,7 +72,8 @@ class App extends Component {
 
   render() {
 
-    const text = 'Loading...';
+    // const text = 'Loading...';
+    // {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
 
     return(
       <div className='App'>
@@ -82,8 +83,8 @@ class App extends Component {
         <main className='main-content'>
 
           <Search addPokemon={this.addPokemon}/>
-          
-          {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
+
+
           {(this.state.error && <h2> { this.state.error }</h2>)}
           {(this.state.foundPokemon.length !== 0 && !this.state.error)&&
           <PokedexGrid pokedexData={this.state.foundPokemon} getPokemonImage={this.getPokemonImage}/>}
