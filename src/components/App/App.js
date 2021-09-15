@@ -3,8 +3,10 @@ import Search from "../Search/Search";
 import { getPokedexData } from "../../apiCalls";
 import PokedexGrid from "../PokedexGrid/PokedexGrid";
 import Header from "../Header/Header";
+import Help from "../Help/Help";
 import "./App.css";
 import PokemonDetails from "../PokemonDetails/PokemonDetails";
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -80,24 +82,36 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <main className='main-content'>
-          <Search addPokemon={this.addPokemon} />
-          {this.state.error && <h2> {this.state.error}</h2>}
-          {this.state.foundPokemon.length !== 0 && !this.state.error && (
-            <PokemonDetails
-              foundPokemon={this.state.foundPokemon}
-              getPokemonImage={this.getPokemonImage}
-            />
-          )}
-          {this.state.foundPokemon.length === 0 && (
-            <PokedexGrid
-              pokedexData={this.state.pokeDex}
-              getPokemonImage={this.getPokemonImage}
-            />
-          )}
-        </main>
-     </div>
-    );
+
+        <Route exact path='/' 
+          render={() => {
+
+            <main className='main-content'>
+              <Search addPokemon={this.addPokemon} />
+              {this.state.error && <h2> {this.state.error}</h2>}
+              {this.state.foundPokemon.length !== 0 && !this.state.error && (
+                <PokemonDetails
+                  foundPokemon={this.state.foundPokemon}
+                  getPokemonImage={this.getPokemonImage}
+                />
+              )}
+              {this.state.foundPokemon.length === 0 && (
+                <PokedexGrid
+                  pokedexData={this.state.pokeDex}
+                  getPokemonImage={this.getPokemonImage}
+                />
+              )}
+            </main>
+          }}
+        />
+
+        <Route 
+          exact path='/help' 
+          render={() => <Help />}
+        />  
+        
+      </div>
+    )
   }
 }
 
