@@ -5,14 +5,15 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
   const [pokemonDetails, setPokemonDetails] = useState([]);
   const [error, setError] = useState("");
 
-  const pokemonImage = getPokemonImage(
-    foundPokemon[0].url.replace(/\D/g, "").slice(1)
-  );
+  let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
+  const pokemonImage = getPokemonImage(pokemonId);
 
+//   let pokemonImage =  pokemonDetails.sprites.other.dream_world.front_default
   const getPokemonDetails = async () => {
 
-    let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1);
-    const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
+    // let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1);
+    let pokemonName = foundPokemon[0].name
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
 
     try {
       const res = await fetch(url);
