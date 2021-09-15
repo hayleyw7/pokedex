@@ -21,9 +21,15 @@ class Search  extends Component  {
         }
         // console.log(queriedPokemon)
         this.props.addPokemon(queriedPokemon)
+        this.resetSearch()
         // if(props.addPokemon(queriedPokemon)
         // then addPokemon(queriedPokemon)
         // else show error
+    }
+
+    resetSearch = () => {
+      
+      this.setState({ queriedPokemon: '' })
     }
 
     render() {
