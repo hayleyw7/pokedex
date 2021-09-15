@@ -1,0 +1,82 @@
+.pokemon-details-page {
+    padding: 1rem;
+    color: white;
+    /* background: black; */
+    /* background: url("https://lh3.googleusercontent.com/ohXfK_gejGdGoxN7Vzf2hE9EWsvXhR9AnPlRqylsbhSFn1hU2pDZ4dkG8Q8Wj8cd4g9hVGShd2X7qBSTkbWiX-2UmhH44u_-M4xpO2nMBYsi0ymKeMpfZFOMWXtTJW28YdTjVquwquv9pTTCBFpTnG_C8euEUgO08mXO63oDcqIN9bmSvh5B8MUDw2MJ_oYAMJoCi8UeI9nvfs7z3UbcQQPNYHyXgi0wKW9aMmz8ogaRUPHf5Z7tKv9Am8my9XsleXNzeZjlTY7qobFffw5xwpNBUGNYdPWfkF-XWQyhrcJsESwGFHUlFDtVvU_V6IOgHA-jZmnmu8e3_wBA50VTO713U-DoDMjhZliK1qSUoR9FBxcPE7Z_O3kVk9v5qFUgwO2wmybVKDmH9gn55vDnBEiHCr-0cfKJgJHYlgIFm3fwguGYtIEpYK5ucGAxjz_NPcM5fw9BNQ-M67dyM5eY9Tdav198oMNTAJLKGmdaEG4v8UqRsxk5hyFhOWeufn6vuaG2TrxB9_kDR5gaYroneuDaYB9CySvKyXo_AmqA3po7mGl8W0HBphFHzOPkfFqyGdpTfeJNurtKuuV99cb57kHxwieMwWCPwUNRFzZwOByzNyfcPkeVMgy8z7tpYj6Eb9SUpt8Y-6j9-Qj9lfxnHJNTZ0CTzxvJ-N_Mwya-YA=w1135-h638-no"); */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pokemon-details-header {
+    border-radius: 7rem;
+    padding: 0 0 .3rem 0;
+    font-size: 60px;
+    margin: 0 0 1rem 0;
+    /* background: white; */
+    color: black;
+  }
+  
+  .features-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .features {
+    background: white;
+    border-radius: 1rem;
+    font-size: 15px;
+    color: black;
+    margin: .2rem;
+    padding: 0.1rem 0.6rem 0.25rem 0.6rem;
+  }
+  
+  .capitalize {
+    text-transform: capitalize;
+  }
+  
+  .pokemon-details-container {
+    /* border: .3rem white solid; */
+    padding: .4rem 2rem 2rem 2rem;
+    /* width: 60rem; */
+    text-align: center;
+    border-radius: 7rem;
+  }
+  
+  .single-pokemon-pic {
+    width: 20rem;
+  }
+  
+  .types-header,
+  .abilities-header,
+  .moves-header {
+    font-size: 30px;
+    border-radius: 7rem;
+    padding: 0 0 .3rem 0;
+    margin: 1rem 0 1rem 0;
+  }
+  
+  .types-header {
+    background: #3D7DCA;
+  }
+  
+  .abilities-header {
+    background: #CC0000;
+  }
+  
+  .moves-header {
+    background: #FFCB05;
+  }
+  
+  .pokemon-details-id {
+    color: white;
+    border-radius: 100rem;
+    background: #CC0000;
+    /* border: 3px black solid; */
+    width: 4rem;
+    padding: .9rem .2rem .9rem .2rem;
+    margin: .3rem 0 .3rem 7.9rem;
+  }
