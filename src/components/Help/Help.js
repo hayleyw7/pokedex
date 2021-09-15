@@ -1,6 +1,7 @@
 import React from 'react';
 import './Help.css';
 import xIcon from '../../assets/x-icon.png'
+import { Link } from 'react-router-dom';
 
 
 const Help = () => {
@@ -8,12 +9,19 @@ const Help = () => {
     <div className='help-page'>
       <div className='help-container'>  
 
-        <img
-          alt='go back icon'
-          className='x-icon'
-          src={xIcon}
-          align='right'
-        ></img>  
+          <Link
+            to={`/`}
+            key={`home`}  
+          >
+
+          <img
+            alt='go back icon'
+            className='x-icon'
+            src={xIcon}
+            align='right'
+          ></img>  
+
+                  </Link>
 
         <h1 className='help-header'>How To Use This PoKedeX</h1>   
 

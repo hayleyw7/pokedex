@@ -1,7 +1,7 @@
 import React from 'react'
 // import ash from '/Images/ash1.png
 import './Header.css'
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 //Assets/Images/ash1.png
 
 
