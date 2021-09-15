@@ -83,11 +83,12 @@ class App extends Component {
       <div className="App">
         <Header />
 
-        <Route exact path='/' 
+        <Route exact path='/'  
           render={() => {
 
             <main className='main-content'>
-              <Search addPokemon={this.addPokemon} />
+              <h1>test</h1>
+              {/* <Search addPokemon={this.addPokemon} />
               {this.state.error && <h2> {this.state.error}</h2>}
               {this.state.foundPokemon.length !== 0 && !this.state.error && (
                 <PokemonDetails
@@ -100,8 +101,9 @@ class App extends Component {
                   pokedexData={this.state.pokeDex}
                   getPokemonImage={this.getPokemonImage}
                 />
-              )}
+              )} */}
             </main>
+
           }}
         />
 

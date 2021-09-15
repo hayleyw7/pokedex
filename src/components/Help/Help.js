@@ -1,5 +1,6 @@
 import React from 'react';
 import './Help.css';
+import xIcon from '../../assets/x-icon.png'
 
 
 const Help = () => {
@@ -7,6 +8,12 @@ const Help = () => {
     <div className='help-page'>
       <div className='help-container'>  
         <h1 className='help-header'>How To Use This PoKedeX</h1>   
+
+        <img
+          alt='go back icon'
+          className='x-icon'
+          src={xIcon}
+        ></img>  
 
         <h2 className='about-header'>About</h2>
         <article className='about-container'>
@@ -36,8 +43,6 @@ const Help = () => {
           <p>
             From either this how-to page or the Pokemon details page, you can return to the home page by clicking the "Back" button.
           </p>
-
-          <button type="button" className>Back</button>
 
         </article>
       </div>
