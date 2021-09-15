@@ -7,13 +7,15 @@ const Help = () => {
   return (
     <div className='help-page'>
       <div className='help-container'>  
-        <h1 className='help-header'>How To Use This PoKedeX</h1>   
 
         <img
           alt='go back icon'
           className='x-icon'
           src={xIcon}
+          align='right'
         ></img>  
+
+        <h1 className='help-header'>How To Use This PoKedeX</h1>   
 
         <h2 className='about-header'>About</h2>
         <article className='about-container'>
