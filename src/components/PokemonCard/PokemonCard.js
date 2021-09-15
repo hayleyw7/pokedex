@@ -6,7 +6,7 @@ const PokemonCard = (props) => {
     return (
         <section className="pokemon-card">
             <h2>{ props.name }</h2>
-            <img src={ props.image } className="pokemon-i" alt={`Pokemon ${ props.name }`} />
+            <img src={ props.image } className="pokemon-image" alt={`Pokemon ${ props.name }`} />
         </section>
     )
 

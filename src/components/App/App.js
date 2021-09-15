@@ -80,7 +80,9 @@ class App extends Component {
         <Header />
 
         <main className='main-content'>
+
           <Search addPokemon={this.addPokemon}/>
+          
           {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
           {(this.state.error && <h2> { this.state.error }</h2>)}
           {(this.state.foundPokemon.length !== 0 && !this.state.error)&&
