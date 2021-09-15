@@ -5,6 +5,7 @@
     border-radius: 2px;
     border: 2px solid black;
 }
-img {
-    width: 80%;
+
+.pokemon-image {
+    width: 100px;
 }
