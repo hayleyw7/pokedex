@@ -80,15 +80,16 @@ class App extends Component {
     // <h1 className='call-to-action-text'>Welcome to PokeDex! Use the search bar below to find a Pokemon now!</h1>
 
     return (
+      
       <div className="App">
         <Header />
 
         <Route exact path='/'  
-          render={() => {
+          render={() => 
 
             <main className='main-content'>
-              <h1>test</h1>
-              {/* <Search addPokemon={this.addPokemon} />
+
+              <Search addPokemon={this.addPokemon} />
               {this.state.error && <h2> {this.state.error}</h2>}
               {this.state.foundPokemon.length !== 0 && !this.state.error && (
                 <PokemonDetails
@@ -101,10 +102,11 @@ class App extends Component {
                   pokedexData={this.state.pokeDex}
                   getPokemonImage={this.getPokemonImage}
                 />
-              )} */}
+              )}
+              
             </main>
 
-          }}
+          }
         />
 
         <Route 

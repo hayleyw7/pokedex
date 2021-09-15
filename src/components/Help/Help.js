@@ -13,15 +13,13 @@ const Help = () => {
             to={`/`}
             key={`home`}  
           >
-
-          <img
-            alt='go back icon'
-            className='x-icon'
-            src={xIcon}
-            align='right'
-          ></img>  
-
-                  </Link>
+            <img
+              alt='go back icon'
+              className='x-icon'
+              src={xIcon}
+              align='right'
+            ></img>  
+          </Link>
 
         <h1 className='help-header'>How To Use This PoKedeX</h1>   
 
