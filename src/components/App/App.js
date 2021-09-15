@@ -56,9 +56,7 @@ class App extends Component {
 
     if (verifiedName === undefined) {
       return this.setState({ error: "Not  a valid name, try again" });
-      console.log("No Good Name!");
     } else {
-      console.log(verifiedName, "IT WORKSSSSSSS!!!!");
       return verifiedName;
     }
   };
@@ -72,7 +70,7 @@ class App extends Component {
   };
 
   render() {
-    
+
     // const text = 'Loading...';
     // {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
     // <h1 className='call-to-action-text'>Welcome to PokeDex! Use the search bar below to find a Pokemon now!</h1>
