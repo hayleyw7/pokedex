@@ -98,10 +98,3 @@ class App extends Component {
 }
 
 export default App;
-
-// pseudocde about how to add the images to the main page
-// let pokemon_id = verifiedName.url.replace(/\D/g, "").slice(1);- it was showing as 225 because it has
-      //  the V2 as a number as well in the url , to fix that i've used slice(1), to take away the 1 number
-      // let pokemon_image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon_id}.png`
-      // console.log(verifiedName.url)
-      // console.log(pokemon_image)
