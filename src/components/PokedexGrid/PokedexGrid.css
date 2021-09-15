@@ -1,13 +1,11 @@
 .all-pokemon {
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     overflow-x: hidden;
     overflow-y: scroll;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'PocketMonk', sans-serif;
     background: white;
     height: 65vh;
     margin-left: 5%;
