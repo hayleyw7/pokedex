@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import Search from '../Search/Search';
-import { getPokedexData } from '../../apiCalls';
-import PokedexGrid from '../PokedexGrid/PokedexGrid';
-import Header from '../Header/Header'
-import './App.css';
+import React, { Component } from "react";
+import Search from "../Search/Search";
+import { getPokedexData } from "../../apiCalls";
+import PokedexGrid from "../PokedexGrid/PokedexGrid";
+import Header from "../Header/Header";
+import "./App.css";
+import PokemonDetails from "../PokemonDetails/PokemonDetails";
 
 class App extends Component {
   constructor() {
@@ -13,62 +14,62 @@ class App extends Component {
       foundPokemon: [],
       error: null,
       // what will we need for favoriting?
-    }
+    };
   }
 
   componentDidMount() {
-    getPokedexData()
-    .then(data => {
+    getPokedexData().then((data) => {
       this.setState({
-        pokeDex: data.results
-      })
-    })
+        pokeDex: data.results,
+      });
+    });
   }
-
+  // i think we will modify this function ? or maybe not just add a function inside that calls the rigth api
   addPokemon = (queriedPokemon) => {
-    const foundPokemon = this.validatePokemonData(queriedPokemon)
+    const foundPokemon = this.validatePokemonData(queriedPokemon);
     this.setState({
-      foundPokemon: [foundPokemon]
-    })
+      foundPokemon: [foundPokemon],
+    });
     //set state with the validated pokemon
-  }
+  };
 
   validatePokemonData = (queriedPokemon) => {
-    const lowerCaseInput = queriedPokemon.queriedPokemon.toLowerCase()
+    const lowerCaseInput = queriedPokemon.queriedPokemon.toLowerCase();
 
     const verifiedName = this.state.pokeDex.find((pokemon, index) => {
-      let lowerCaseName = pokemon.name.toLowerCase()
+      let lowerCaseName = pokemon.name.toLowerCase();
 
-      if (lowerCaseName.includes(lowerCaseInput) && lowerCaseInput !== '' && lowerCaseInput !== undefined) {
-        return pokemon
-      } else if (parseInt(lowerCaseInput)){
-        if (index+1 === parseInt(lowerCaseInput)){
-          return pokemon
+      if (
+        lowerCaseName.includes(lowerCaseInput) &&
+        lowerCaseInput !== "" &&
+        lowerCaseInput !== undefined
+      ) {
+        return pokemon;
+      } else if (parseInt(lowerCaseInput)) {
+        if (index + 1 === parseInt(lowerCaseInput)) {
+          return pokemon;
         }
       }
     });
 
-    console.log(verifiedName)
+    console.log(verifiedName);
 
     if (verifiedName === undefined) {
-      return this.setState({ error: "Not  a valid name, try again" })
-      console.log('No Good Name!')
+      return this.setState({ error: "Not  a valid name, try again" });
+      console.log("No Good Name!");
     } else {
-      console.log(verifiedName, 'IT WORKSSSSSSS!!!!')
-      return verifiedName
+      console.log(verifiedName, "IT WORKSSSSSSS!!!!");
+      return verifiedName;
     }
-
-  }
+  };
 
   // pass the validated query through addPokemon
 
   getPokemonImage = (id) => {
+    let pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 
-    let pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
-
-    return pokemonImage
-
-  }
+    return pokemonImage;
+  };
 
   render() {
 
@@ -76,24 +77,27 @@ class App extends Component {
     // {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
     // <h1 className='call-to-action-text'>Welcome to PokeDex! Use the search bar below to find a Pokemon now!</h1>
 
-    return(
-      <div className='App'>
-
+    return (
+      <div className="App">
         <Header />
-
         <main className='main-content'>
-
-          <Search addPokemon={this.addPokemon}/>
-
-          {(this.state.error && <h2> { this.state.error }</h2>)}
-          {(this.state.foundPokemon.length !== 0 && !this.state.error)&&
-          <PokedexGrid pokedexData={this.state.foundPokemon} getPokemonImage={this.getPokemonImage}/>}
-          {(this.state.foundPokemon.length === 0) &&
-          <PokedexGrid pokedexData={this.state.pokeDex} getPokemonImage={this.getPokemonImage}/>
-          }
+        <Search addPokemon={this.addPokemon} />
+        {this.state.error && <h2> {this.state.error}</h2>}
+        {this.state.foundPokemon.length !== 0 && !this.state.error && (
+          <PokemonDetails
+            foundPokemon={this.state.foundPokemon}
+            getPokemonImage={this.getPokemonImage}
+          />
+        )}
+        {this.state.foundPokemon.length === 0 && (
+          <PokedexGrid
+            pokedexData={this.state.pokeDex}
+            getPokemonImage={this.getPokemonImage}
+          />
+        )}
         </main>
       </div>
-    )
+    );
   }
 }
 

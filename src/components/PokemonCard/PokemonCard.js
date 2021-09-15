@@ -1,6 +1,5 @@
-import React from 'react';
-import './PokemonCard.css';
-
+import React from "react";
+import "./PokemonCard.css";
 
 const PokemonCard = (props) => {
     return (
