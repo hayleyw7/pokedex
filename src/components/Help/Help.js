@@ -36,7 +36,7 @@ const Help = () => {
             From either this how-to page or the Pokemon details page, you can return to the home page by clicking the "Back" button.
           </p>
 
-          <button type="button">Back</button>
+          <button type="button" className>Back</button>
 
         </article>
       </div>
