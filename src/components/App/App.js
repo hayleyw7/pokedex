@@ -13,7 +13,6 @@ class App extends Component {
       pokeDex: [],
       foundPokemon: [],
       error: null,
-      // what will we need for favoriting?
     };
   }
 
@@ -30,7 +29,6 @@ class App extends Component {
     this.setState({
       foundPokemon: [foundPokemon],
     });
-    //set state with the validated pokemon
   };
 
   validatePokemonData = (queriedPokemon) => {
@@ -52,7 +50,7 @@ class App extends Component {
       }
     });
 
-    console.log(verifiedName);
+    console.log('shit', verifiedName);
 
     if (verifiedName === undefined) {
       return this.setState({ error: "Not  a valid name, try again" });
@@ -60,8 +58,6 @@ class App extends Component {
       return verifiedName;
     }
   };
-
-  // pass the validated query through addPokemon
 
   getPokemonImage = (id) => {
     let pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
