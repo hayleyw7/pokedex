@@ -2,14 +2,16 @@ describe('Home page user flow', () => {
     beforeEach(() => {
         cy.onLoad()
     });
-// this first test is skipet because we don't have all the JSX elements yet
-    it.skip('Should contain the Naviagtion bar with all elements ', () => {
-        cy.get()
+// 
+    it('Should contain a Header (the Navigation bar) with a How to and a Image ', () => {
+        cy.get('.header')
           .should('be.visible')
-          .get()
-          .contains()
+          .get('.header-image')
+          .should('be.visible')
+          .get('.how-to')
+          .contains('How To')
 
-        //   we need to add all the elements that will contain in the home page - later also test for the animations
+        //   we need to add test for the animations
     });
 
     it('Should load all the pokemons first generation when the page starts', () => {
