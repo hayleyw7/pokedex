@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
 import { BrowserRouter } from 'react-router-dom';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 const router =
   <BrowserRouter>
@@ -16,4 +16,4 @@ ReactDOM.render(router, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
 // serviceWorkerRegistration.unregister();
-serviceWorkerRegistration.register();
+// serviceWorkerRegistration.register();
