@@ -46,13 +46,12 @@
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
   
   .single-pokemon-pic {
-    width: 20rem;
+    width: 18rem;
   }
   
   .types-header,
