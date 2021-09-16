@@ -8,10 +8,8 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
 
-//   let pokemonImage =  pokemonDetails.sprites.other.dream_world.front_default
   const getPokemonDetails = async () => {
 
-    // let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1);
     let pokemonName = foundPokemon[0].name
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
 
@@ -23,15 +21,10 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
       setError(error.message);
     }
   };
-// for some reason I don't know yet --it is not reseting the state when we type a diferent name or id 
-// i'm not sure if only clearing the search it is what we need, probably we need a way to look into the details again..
   useEffect(() => {
     getPokemonDetails();
-  }, []);
+  }, [foundPokemon]);
 
-//   getPokemonDetails();
-// it only renders all the info in the page if i use the condition before the return otherwise 
-// will have an error and takes a while to set the state 
   if (pokemonDetails.types) {
     return (
       <div className="pokemon-details-page">

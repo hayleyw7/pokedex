@@ -15,7 +15,6 @@ class App extends Component {
       pokeDex: [],
       foundPokemon: [],
       error: null,
-      // what will we need for favoriting?
     };
   }
 
@@ -26,13 +25,12 @@ class App extends Component {
       });
     });
   }
-  // i think we will modify this function ? or maybe not just add a function inside that calls the rigth api
+
   addPokemon = (queriedPokemon) => {
     const foundPokemon = this.validatePokemonData(queriedPokemon);
     this.setState({
       foundPokemon: [foundPokemon],
     });
-    //set state with the validated pokemon
   };
 
   validatePokemonData = (queriedPokemon) => {
@@ -54,18 +52,12 @@ class App extends Component {
       }
     });
 
-    console.log(verifiedName);
-
     if (verifiedName === undefined) {
       return this.setState({ error: "Not  a valid name, try again" });
-      console.log("No Good Name!");
     } else {
-      console.log(verifiedName, "IT WORKSSSSSSS!!!!");
       return verifiedName;
     }
   };
-
-  // pass the validated query through addPokemon
 
   getPokemonImage = (id) => {
     let pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
@@ -74,7 +66,7 @@ class App extends Component {
   };
 
   render() {
-    
+
     // const text = 'Loading...';
     // {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
     // <h1 className='call-to-action-text'>Welcome to PokeDex! Use the search bar below to find a Pokemon now!</h1>
@@ -83,12 +75,9 @@ class App extends Component {
       
       <div className="App">
         <Header />
-
         <Route exact path='/'  
           render={() => 
-
             <main className='main-content'>
-
               <Search addPokemon={this.addPokemon} />
               {this.state.error && <h2> {this.state.error}</h2>}
               {this.state.foundPokemon.length !== 0 && !this.state.error && (
@@ -102,18 +91,14 @@ class App extends Component {
                   pokedexData={this.state.pokeDex}
                   getPokemonImage={this.getPokemonImage}
                 />
-              )}
-              
+              )}             
             </main>
-
           }
         />
-
         <Route 
           exact path='/help' 
           render={() => <Help />}
-        />  
-        
+        />       
       </div>
     )
   }
