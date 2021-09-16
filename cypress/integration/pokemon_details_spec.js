@@ -1,5 +1,5 @@
 // to start the test run npx cypress open into your terminal
-describe('Home page user flow', () => {
+describe('Pokemon Details page user flow', () => {
     beforeEach(() => {
         cy.onLoad()
     });
@@ -35,15 +35,6 @@ describe('Home page user flow', () => {
           .should('be.visible')
     });
 
-    it('Should load all the pokemons first generation when the page starts', () => {
-        cy.get('.all-pokemon')
-          .should('be.visible')
-          .get('.pokemon-card')
-          .contains('bulbasaur')
-          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"]')
-          .should('be.visible')
-    });
-
     it('Should have a search field', () => {
         cy.get('form')
           .should('be.visible')     
@@ -51,8 +42,8 @@ describe('Home page user flow', () => {
 
     it('Should show an error message if the user adds the wrong name', () => {
           cy.get('input[type="search"]')
-            .type('poop')
-            .should('have.value',  'poop')
+            .type('dogachu')
+            .should('have.value',  'dogachu')
             .get('button')
             .click()
             .get('h2')
@@ -62,15 +53,15 @@ describe('Home page user flow', () => {
 
     it('Should be able to search Pokemon by Name', () => {
         cy.get('input[type="search"]')
-          .type('Pikachu')
-          .should('have.value', 'Pikachu')
+          .type('mAnKey')
+          .should('have.value', 'mAnKey')
           .get('button')
           .click()
           .get('.pokemon-details-page')
-          .contains('25')
+          .contains('56')
           .get('.pokemon-details-header')
-          .contains('pikachu')
-          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"]')
+          .contains('mankey')
+          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/56.png"]')
           .should('be.visible')
     });
 
@@ -86,19 +77,54 @@ describe('Home page user flow', () => {
             
     });
 
+    // Should we add another describe block for the same page? with another before each?
+
     it('Should be able to search Pokemon by Id Number', () => {
         cy.get('input[type="search"]')
-          .type('6')
-          .should('have.value',  '6')
+          .type('98')
+          .should('have.value',  '98')
           .get('button')
           .click()
-          .get('.pokemon-details-page')
-          .contains('charizard')
-          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"]')
+          .get('.pokemon-details-header')
+          .contains('krabby')
+          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/98.png"]')
           .should('be.visible')
     });
 
-})
+    it('Should have a type', () => {
+      cy.get('input[type="search"]')
+        .type('98')
+        .get('button')
+        .click()
+        .get('.types-header')
+        .contains('Type')
+        .get('.features')
+        .contains('water')
+    });
 
-// I still want to add a test to show that we can move foward with the browser arrow 
-// would Love to hear from Kayla her input about anything else we should test
+    it('Should have Abilities', () => {
+      cy.get('input[type="search"]')
+        .type('98')
+        .get('button')
+        .click()
+        .get('.abilities-header')
+        .contains('Abilities')
+        .get('.features')
+        .contains('shell armor')
+        .should('be.visible')
+    });
+
+    it('Should have moves', () => {
+      cy.get('input[type="search"]')
+        .type('98')
+        .get('button')
+        .click()
+        .get('.features')
+        .contains('mimic')
+        .should('be.visible')
+        .get('.moves-header')
+        .should('be.visible')
+        .contains('Moves')
+    });
+
+})
