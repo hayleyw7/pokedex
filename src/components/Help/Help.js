@@ -1,6 +1,6 @@
 import React from 'react';
 import './Help.css';
-import xIcon from '../../assets/x-icon.png'
+// import xIcon from '../../assets/x-icon.png'
 import { Link } from 'react-router-dom';
 
 
@@ -16,7 +16,7 @@ const Help = () => {
             <img
               alt='go back icon'
               className='x-icon'
-              src={xIcon}
+              src='Images/x-icon.png'
               align='right'
             ></img>  
           </Link>
@@ -45,8 +45,8 @@ const Help = () => {
 
         </article>
 
-        <h2 className='help-search-header'>Return to Home</h2>
-        <article className='help-search-container'>
+        <h2 className='help-home-header'>Return to Home</h2>
+        <article className='help-home-container'>
 
           <p>
             From either this how-to page or the Pokemon details page, you can return to the home page by clicking the "Back" button.
