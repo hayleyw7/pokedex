@@ -14,6 +14,24 @@ describe('Home page user flow', () => {
         //   we need to add test for the animations
     });
 
+    it('Should be able to click on How to and go to the How To page', () => {
+        cy.get('a')
+          .click()
+          .get('.all-pokemon')
+          .should('not.exist')
+          .get('.help-page')
+          .should('be.visible')
+    });
+
+    it('Should be able to click on the x button ange get back to the home page', () => {
+        cy.get('.x-icon')
+          .click()
+          .get('.help-page')
+          .should('not.exist')
+          .get('.all-pokemon')
+          .should('be.visible')
+    });
+
     it('Should load all the pokemons first generation when the page starts', () => {
         cy.get('.all-pokemon')
           .should('be.visible')
