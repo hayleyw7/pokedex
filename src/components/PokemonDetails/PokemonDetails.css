@@ -14,6 +14,7 @@
     margin: 0 0 1rem 0;
     /* background: white; */
     color: black;
+    font-family: 'PocketMonk';
   }
   
   .features-container {
@@ -53,8 +54,9 @@
   .moves-header {
     font-size: 30px;
     border-radius: 7rem;
-    padding: 0 0 .3rem 0;
+    padding: .5rem 0 .3rem 0;
     margin: 1rem 0 1rem 0;
+    font-family: 'PocketMonk';
   }
   
   .types-header {
@@ -72,9 +74,10 @@
   .pokemon-details-id {
     color: white;
     border-radius: 100rem;
-    background: #CC0000;
+    background: #FFCB05;
     /* border: 3px black solid; */
     width: 4rem;
     padding: .9rem .2rem .9rem .2rem;
     margin: .3rem 0 .3rem 7.9rem;
+    font-family: 'PocketMonk';
   }
