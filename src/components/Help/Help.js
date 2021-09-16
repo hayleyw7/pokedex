@@ -1,6 +1,6 @@
 import React from 'react';
 import './Help.css';
-import xIcon from '../../assets/x-icon.png'
+// import xIcon from '../../assets/x-icon.png'
 import { Link } from 'react-router-dom';
 
 
@@ -16,7 +16,7 @@ const Help = () => {
             <img
               alt='go back icon'
               className='x-icon'
-              src={xIcon}
+              src='Images/x-icon.png'
               align='right'
             ></img>  
           </Link>
