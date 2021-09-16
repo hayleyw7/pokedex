@@ -53,7 +53,7 @@ describe('Pokemon Details page user flow', () => {
     it('Should be able to search Pokemon by Name', () => {
         cy.get('input[type="search"]')
           .type('mAnKey')
-          .should('have.value', 'mankey')
+          .should('have.value', 'mAnKey')
           .get('button')
           .click()
           .get('.pokemon-details-page')
@@ -84,8 +84,8 @@ describe('Pokemon Details page user flow', () => {
           .should('have.value',  '98')
           .get('button')
           .click()
-          .get('.pokemon-details-page')
-          .contains('Krabby')
+          .get('.pokemon-details-header')
+          .contains('krabby')
           .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/98.png"]')
           .should('be.visible')
     });

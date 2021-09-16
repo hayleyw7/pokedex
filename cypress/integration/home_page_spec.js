@@ -98,3 +98,6 @@ describe('Home page user flow', () => {
     });
 
 })
+
+// I still want to add a test to show that we can move foward with the browser arrow 
+// would Love to hear from Kayla her input about anything else we should test
