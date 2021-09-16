@@ -70,20 +70,28 @@
   
   .types-header {
     background: #3D7DCA;
+    background: -webkit-linear-gradient(to right, #5190DC, #276EC3);
+    background: linear-gradient(to right, #5190DC, #276EC3);
   }
   
   .abilities-header {
-    background: #CC0000;
+    background: #D31027;
+    background: -webkit-linear-gradient(to right, #FF0000, #CC0000);
+    background: linear-gradient(to right, #FF0000, #CC0000);
   }
   
   .moves-header {
     background: #FFCB05;
+    background: -webkit-linear-gradient(to right, #FFE47B, #E3B503);
+    background: linear-gradient(to right, #FFE47B, #E3B503);
   }
   
   .pokemon-details-id {
     color: white;
     border-radius: 100rem;
     background: #FFCB05;
+    background: -webkit-linear-gradient(to right, #FFE47B, #E3B503);
+    background: linear-gradient(to right, #FFE47B, #E3B503);
     border: 2px #3b4cca solid;
     width: 4rem;
     padding: .7rem 0 .7rem .1rem;
