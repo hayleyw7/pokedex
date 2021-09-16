@@ -10,3 +10,16 @@
 .x-icon:hover {
   transform: scale(1.09) perspective(1px);  
 }
+
+.help-header {
+  font-family: 'PocketMonk';
+  font-size: 50px;
+  color: #ffde00;
+  -webkit-text-stroke: 0.5px #3b4cca;
+}
+
+.about-header,
+.help-search-header,
+.help-home-header {
+  font-family: 'PocketMonk';
+}

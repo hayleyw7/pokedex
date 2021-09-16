@@ -45,8 +45,8 @@ const Help = () => {
 
         </article>
 
-        <h2 className='help-search-header'>Return to Home</h2>
-        <article className='help-search-container'>
+        <h2 className='help-home-header'>Return to Home</h2>
+        <article className='help-home-container'>
 
           <p>
             From either this how-to page or the Pokemon details page, you can return to the home page by clicking the "Back" button.
