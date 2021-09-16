@@ -1,10 +1,26 @@
 import React from 'react';
 import './Help.css';
+import xIcon from '../../assets/x-icon.png'
+import { Link } from 'react-router-dom';
+
 
 const Help = () => {
   return (
     <div className='help-page'>
       <div className='help-container'>  
+
+          <Link
+            to={`/`}
+            key={`home`}  
+          >
+            <img
+              alt='go back icon'
+              className='x-icon'
+              src={xIcon}
+              align='right'
+            ></img>  
+          </Link>
+
         <h1 className='help-header'>How To Use This PoKedeX</h1>   
 
         <h2 className='about-header'>About</h2>
@@ -35,8 +51,6 @@ const Help = () => {
           <p>
             From either this how-to page or the Pokemon details page, you can return to the home page by clicking the "Back" button.
           </p>
-
-          <button type="button" className>Back</button>
 
         </article>
       </div>
