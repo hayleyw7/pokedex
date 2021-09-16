@@ -22,4 +22,7 @@
 .help-search-header,
 .help-home-header {
   font-family: 'PocketMonk';
+  color: #ffde00;
+  -webkit-text-stroke: 0.5px #3b4cca;
+  font-size: 35px;
 }
