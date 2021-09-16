@@ -15,9 +15,9 @@
     <div id="root"></div>
     <script>
   if('serviceWorker' in navigator) {
-    console.log('Service Worker Present')
-  } else {
-    console.log('No Service Worker Present')
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./serviceWorker')
+    })
   }
     </script>
   </body>
