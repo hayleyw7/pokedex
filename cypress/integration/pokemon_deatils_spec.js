@@ -111,7 +111,7 @@ describe('Pokemon Details page user flow', () => {
         .get('.features')
         .contains('shell armor')
         .should('be.visible')
-    })
+    });
 
     it('Should have moves', () => {
       cy.get('input[type="search"]')
@@ -124,6 +124,6 @@ describe('Pokemon Details page user flow', () => {
         .get('.moves-header')
         .should('be.visible')
         .contains('Moves')
-    })
+    });
 
 })
