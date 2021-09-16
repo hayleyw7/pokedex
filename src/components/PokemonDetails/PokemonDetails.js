@@ -31,7 +31,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
         <div className="pokemon-details-container">
           <h1 className="pokemon-details-id">{pokemonDetails.id}</h1>
 
-          <h1 className="pokemon-details-header capitalize">
+          <h1 className="pokemon-details-header">
             {pokemonDetails.name}{" "}
           </h1>
 

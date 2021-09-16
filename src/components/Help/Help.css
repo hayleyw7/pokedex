@@ -2,15 +2,6 @@
   margin: 0 2rem 4rem 2rem;
 }
 
-.x-icon {
-  width: 3rem;
-  margin: 0 0 0 1rem;  
-}
-
-.x-icon:hover {
-  transform: scale(1.09) perspective(1px);  
-}
-
 .help-header {
   font-family: 'PocketMonk';
   font-size: 50px;
@@ -25,4 +16,13 @@
   color: #ffde00;
   -webkit-text-stroke: 0.5px #3b4cca;
   font-size: 35px;
+}
+
+.x-icon {
+  width: 3rem;
+  margin: 0 0 0 1rem;  
+}
+
+.x-icon:hover {
+  transform: scale(1.09) perspective(1px);  
 }
