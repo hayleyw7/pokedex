@@ -23,8 +23,10 @@ describe('Home page user flow', () => {
           .should('be.visible')
     });
 
-    it('Should be able to click on the x button ange get back to the home page', () => {
-        cy.get('.x-icon')
+    it('Should be able to click on the x button and get back to the home page', () => {
+        cy.get('a')
+          .click()
+          .get('.x-icon')
           .click()
           .get('.help-page')
           .should('not.exist')
@@ -43,8 +45,7 @@ describe('Home page user flow', () => {
 
     it('Should have a search field', () => {
         cy.get('form')
-          .should('be.visible')
-          
+          .should('be.visible')     
     });
 
     it('Should show an error message if the user adds the wrong name', () => {
@@ -60,13 +61,15 @@ describe('Home page user flow', () => {
 
     it('Should be able to search Pokemon by Name', () => {
         cy.get('input[type="search"]')
-          .type('CharmAnder')
-          .should('have.value',  'CharmAnder')
+          .type('Pikachu')
+          .should('have.value', 'Pikachu')
           .get('button')
           .click()
-          .get('.pokemon-card')
-          .contains('charmander')
-          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"]')
+          .get('.pokemon-details-page')
+          .contains('25')
+          .get('.pokemon-details-header')
+          .contains('pikachu')
+          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"]')
           .should('be.visible')
     });
 
@@ -88,7 +91,7 @@ describe('Home page user flow', () => {
           .should('have.value',  '6')
           .get('button')
           .click()
-          .get('.pokemon-card')
+          .get('.pokemon-details-page')
           .contains('charizard')
           .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"]')
           .should('be.visible')
