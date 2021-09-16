@@ -5,98 +5,104 @@
     text-align: center;
   }
   
-  .pokemon-details-header {
-    border-radius: 7rem;
-    padding: 0 0 .3rem 0;
-    font-size: 60px;
-    margin: 0 0 1rem 0;
-    /* background: white; */
-    color: black;
-    font-family: 'PocketMonk';
-    color: #ffde00;
-    -webkit-text-stroke: 0.5px #3b4cca;
-  }
-  
-  .features-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 60%;
-  }
-  
-  .features {
-    background: white;
-    border-radius: 1rem;
-    font-size: 15px;
-    color: black;
-    margin: .2rem;
-    padding: 0.1rem 0.6rem 0.25rem 0.6rem;
-  }
-  
-  .capitalize {
-    text-transform: capitalize;
-  }
-  
-  .pokemon-details-container {
-    border: .15rem black solid;
-    padding: .4rem 2rem 2rem 2rem;
-    margin-top: .9rem;
-    /* width: 60rem; */
-    text-align: center;
-    border-radius: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .single-pokemon-pic {
-    width: 16rem;
-    margin-bottom: .3rem;
-  }
-  
-  .types-header,
-  .abilities-header,
-  .moves-header {
-    font-size: 30px;
-    border-radius: 7rem;
-    padding: .5rem 0 .3rem 0;
-    margin: 1rem 0 1rem 0;
-    font-family: 'PocketMonk';
-    width: 100%;
-    color: white;
-    -webkit-text-stroke: 0.5px black;
-  }
-  
-  .types-header {
-    background: #3D7DCA;
-    background: -webkit-linear-gradient(to right, #5190DC, #276EC3);
-    background: linear-gradient(to left, #5190DC, #276EC3);
-  }
-  
-  .abilities-header {
-    background: #D31027;
-    background: -webkit-linear-gradient(to right, #FF0000, #CC0000);
-    background: linear-gradient(to left, #FF0000, #CC0000);
-  }
-  
-  .moves-header {
-    background: #FFCB05;
-    background: -webkit-linear-gradient(to right, #FFD534, #EEBE07);
-    background: linear-gradient(to left, #FFD534, #EEBE07);
-  }
-  
-  .pokemon-details-id {
-    color: white;
-    border-radius: 100rem;
-    background: #FFCB05;
-    background: -webkit-linear-gradient(to right, #FFD534, #EEBE07);
-    background: linear-gradient(to left, #FFD534, #EEBE07);
-    border: 2px #3b4cca solid;
-    width: 4rem;
-    padding: .7rem 0 .7rem .1rem;
-    /* margin: .3rem 0 .3rem 7.9rem; */
-    font-family: 'PocketMonk';
-    -webkit-text-stroke: 0.5px #3b4cca;
-  }
+.pokemon-details-header {
+  border-radius: 7rem;
+  padding: 0 0 .3rem 0;
+  font-size: 60px;
+  margin: 0 0 1rem 0;
+  /* background: white; */
+  color: black;
+  font-family: 'PocketMonk';
+  color: #ffde00;
+  -webkit-text-stroke: 0.5px #3b4cca;
+}
+
+.features {
+  background: white;
+  border-radius: 1rem;
+  font-size: 15px;
+  color: black;
+  margin: .2rem;
+  padding: 0.1rem 0.6rem 0.25rem 0.6rem;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.pokemon-details-container {
+  border: .15rem black solid;
+  padding: .4rem 2rem 2rem 2rem;
+  margin-top: .9rem;
+  /* width: 60rem; */
+  text-align: center;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-pokemon-pic {
+  width: 15rem;
+  margin-bottom: .3rem;
+}
+
+.types-header,
+.abilities-header,
+.moves-header {
+  font-size: 30px;
+  border-radius: 7rem;
+  padding: .5rem 0 .3rem 0;
+  margin: 1rem 0 1rem 0;
+  font-family: 'PocketMonk';
+  width: 100%;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+}
+
+.types-header {
+  background: #3D7DCA;
+  background: -webkit-linear-gradient(to right, #5190DC, #276EC3);
+  background: linear-gradient(to left, #5190DC, #276EC3);
+}
+
+.abilities-header {
+  background: #D31027;
+  background: -webkit-linear-gradient(to right, #FF0000, #CC0000);
+  background: linear-gradient(to left, #FF0000, #CC0000);
+}
+
+.moves-header {
+  background: #FFCB05;
+  background: -webkit-linear-gradient(to right, #FFD534, #EEBE07);
+  background: linear-gradient(to left, #FFD534, #EEBE07);
+}
+
+.pokemon-details-id {
+  color: white;
+  border-radius: 100rem;
+  background: #FFCB05;
+  background: -webkit-linear-gradient(to right, #FFD534, #EEBE07);
+  background: linear-gradient(to left, #FFD534, #EEBE07);
+  border: 2px #3b4cca solid;
+  width: 4rem;
+  padding: .7rem 0 .7rem .1rem;
+  /* margin: .3rem 0 .3rem 7.9rem; */
+  font-family: 'PocketMonk';
+  -webkit-text-stroke: 0.5px #3b4cca;
+}
+
+.features-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+}
+
+.moves-scroll {
+  overflow-x: hidden;
+  overflow-y: scroll hidden;
+  height: 12rem;  
+}

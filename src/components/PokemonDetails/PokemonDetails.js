@@ -64,7 +64,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
           </article>
 
           <h2 className="moves-header">Moves</h2>
-          <article className="features-container">
+          <article className="features-container moves-scroll">
             {pokemonDetails.moves.map((move) => (
               <p className="features" key={move.move.name}>
                 {move.move.name.split("-").join(" ")}
