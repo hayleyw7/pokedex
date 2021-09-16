@@ -22,6 +22,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: 60%;
   }
   
   .features {
@@ -51,7 +52,7 @@
   }
   
   .single-pokemon-pic {
-    width: 18rem;
+    width: 17rem;
   }
   
   .types-header,
@@ -62,7 +63,7 @@
     padding: .5rem 0 .3rem 0;
     margin: 1rem 0 1rem 0;
     font-family: 'PocketMonk';
-    min-width: 100%;
+    width: 100%;
     color: white;
     -webkit-text-stroke: 0.5px black;
   }
@@ -83,9 +84,10 @@
     color: white;
     border-radius: 100rem;
     background: #FFCB05;
-    /* border: 3px black solid; */
+    border: 2px #3b4cca solid;
     width: 4rem;
     padding: .9rem .2rem .9rem .2rem;
     /* margin: .3rem 0 .3rem 7.9rem; */
     font-family: 'PocketMonk';
+    -webkit-text-stroke: 0.5px #3b4cca;
   }
