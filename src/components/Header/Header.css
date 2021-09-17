@@ -38,20 +38,20 @@ a:hover {
 }
 
 .custom-shape-divider-bottom-1631589819 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1631589819 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 100px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
 }
 
 .custom-shape-divider-bottom-1631589819 .shape-fill {
@@ -84,4 +84,9 @@ a:hover {
     top: 120px;
     left: 30px;
  }   
+
+.how-to {
+  margin-left: -40px;
+}
+
 }
