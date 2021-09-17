@@ -1,5 +1,5 @@
 import React from 'react';
-import './Help.css';
+import './HowTo.css';
 // import xIcon from '../../assets/x-icon.png'
 import { Link } from 'react-router-dom';
 
