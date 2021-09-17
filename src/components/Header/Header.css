@@ -3,7 +3,7 @@
   background: -webkit-linear-gradient(to right, #FF0000, #CC0000);
   background: linear-gradient(to right, #FF0000, #CC0000);
   height: 255px;
-  width: 100%;
+  width: 101%;
   position: relative;
   display: flex;
   justify-content: space-around;
@@ -38,30 +38,56 @@ how-to:hover {
   transform: scale(2);
 }
 
-.header-image {
-  margin-top: 20px;
-  margin-right: 10px;
-  height: 230px;
-  width: 165px;
-}
-
 .custom-shape-divider-bottom-1631589819 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1631589819 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 100px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
 }
 
 .custom-shape-divider-bottom-1631589819 .shape-fill {
     fill: #FFFFFF;
+}
+
+.header-images {
+  position: relative;
+  right: 140px;
+}
+
+.pokeball {
+  width: 91px;
+  height: 91px;
+  position: absolute;
+  top: 120px;
+  left: 29px;
+}
+
+.ash {
+  margin: 20px 30px 0 0;
+  height: 230px;
+  width: 165px;
+  position: absolute;
+  /* left: 0px; */
+}
+
+@media only screen and (max-width: 700px) {
+ .pokeball {
+    top: 120px;
+    left: 30px;
+ }   
+
+.how-to {
+  margin-left: -40px;
+}
+
 }
