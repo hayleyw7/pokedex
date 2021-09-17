@@ -13,10 +13,11 @@
   font-size: 25px;
   text-align: center;
   border-radius: 15px;
-  border: 1px solid #3b4cca;
+  border: 2px solid #3b4cca;
   outline: none!important;
   box-sizing: border-box;
   box-shadow: 0 0 10px #3b4cca;
+  opacity: 0.8;
 }
 
 .catch-button {
