@@ -53,7 +53,7 @@ class App extends Component {
     });
 
     if (verifiedName === undefined) {
-      return this.setState({ error: "Not  a valid name, try again" });
+      return this.setState({ error: "Not  a valid Name or id , try again" });
     } else {
       return verifiedName;
     }
@@ -72,7 +72,7 @@ class App extends Component {
 
   render() {
 
-    // const text = 'Loading...';
+    // const text = 'Loading...';- think about what we want to do with the loading ( do not forget about the loadinh in the details page)
     // {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
     // <h1 className='call-to-action-text'>Welcome to PokeDex! Use the search bar below to find a Pokemon now!</h1>
 

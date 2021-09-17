@@ -1,10 +1,8 @@
 Cypress.Commands.add('onLoad', () => {
     const baseDataURL = 'https://pokeapi.co/api/v2/pokemon';
 
-    // got an error because our map changes the url to be able to access the image, see how can we add the image url as well 
-
     cy.intercept(`${ baseDataURL }?limit=6`, {
-        pokeDex:[
+        pokedex:[
             {
                 "name": "bulbasaur",
                 "url": "https://pokeapi.co/api/v2/pokemon/1/"
@@ -31,12 +29,7 @@ Cypress.Commands.add('onLoad', () => {
             }
         ]
     });
-    // we probably will use this for test pokemon detailed page/ waiting to see how the page will be
-    // cy.intercept(`${ baseDataURL }/8/`, {
-    //     foundPokemon:[
-
-    //     ]
-    // })
+ 
     cy.visit('http://localhost:3000/');
 
 })
