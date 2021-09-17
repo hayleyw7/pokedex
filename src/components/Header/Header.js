@@ -6,6 +6,7 @@ import { Route, Link } from 'react-router-dom';
 
 
 const Header = () => {
+
   return (
     <header className='header'>
 
@@ -15,7 +16,11 @@ const Header = () => {
           key={`help`}  
         >
           <ul className='nav-links'>
-            <li className='how-to'>How To</li>
+            <li
+              className='how-to'
+            >
+              How To
+            </li>
           </ul>
         </Link>
       </nav>
