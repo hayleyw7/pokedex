@@ -79,14 +79,9 @@ a:hover {
   /* left: 0px; */
 }
 
-/* @media only screen and (max-width: 700px) {
-  .ash {
-    top: 10px;
-    left: 10px;
-  }
-
+@media only screen and (max-width: 700px) {
  .pokeball {
     top: 120px;
-    left: 50px;
+    left: 30px;
  }   
-} */
+}
