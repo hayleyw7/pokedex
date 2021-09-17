@@ -37,13 +37,6 @@ a:hover {
   transform: scale(2);
 }
 
-.header-image {
-  margin-top: 20px;
-  margin-right: 10px;
-  height: 230px;
-  width: 165px;
-}
-
 .custom-shape-divider-bottom-1631589819 {
     position: absolute;
     bottom: 0;
@@ -64,3 +57,36 @@ a:hover {
 .custom-shape-divider-bottom-1631589819 .shape-fill {
     fill: #FFFFFF;
 }
+
+.header-images {
+  position: relative;
+  right: 120px;
+}
+
+.pokeball {
+  width: 91px;
+  height: 91px;
+  position: absolute;
+  top: 120px;
+  left: 29px;
+}
+
+.ash {
+  margin: 20px 30px 0 0;
+  height: 230px;
+  width: 165px;
+  position: absolute;
+  /* left: 0px; */
+}
+
+/* @media only screen and (max-width: 700px) {
+  .ash {
+    top: 10px;
+    left: 10px;
+  }
+
+ .pokeball {
+    top: 120px;
+    left: 50px;
+ }   
+} */
