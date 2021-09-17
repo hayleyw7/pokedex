@@ -24,14 +24,15 @@
 .how-to {
   font-size: 30px;
   color: white;
+  text-decoration: none;
 }
 
 a:link {
   text-decoration: none;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
-a:hover {
+how-to:hover {
   text-decoration: underline;
   color: yellow;
   transform: scale(2);
