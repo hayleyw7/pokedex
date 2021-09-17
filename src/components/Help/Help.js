@@ -4,7 +4,12 @@ import './Help.css';
 import { Link } from 'react-router-dom';
 
 
-const Help = () => {
+const Help = (props) => {
+
+  const handleClick = (e) => {
+    props.clearPokemon(e);
+  }
+
   return (
     <div className='help-page'>
       <div className='help-container'>  
@@ -18,6 +23,7 @@ const Help = () => {
               className='x-icon'
               src='Images/x-icon.png'
               align='right'
+              onClick={(e) => handleClick(e)}
             ></img>  
           </Link>
 
