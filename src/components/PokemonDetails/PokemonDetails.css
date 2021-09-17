@@ -20,7 +20,7 @@
   align-items: center;
   /* add those lines fo code in case the group do not like it */
   background: linear-gradient( 145deg, #3b4cca, #ffde00);
-  box-shadow: 4px 4px 10px #d0d0d0, -4px -4px 10px #f0f0f0;
+  box-shadow: 5px 8px 19px 11px #d0d0d0, -4px -4px 10px #f0f0f0;
   width: 70%;
 }  
 
