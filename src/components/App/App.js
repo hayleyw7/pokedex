@@ -70,12 +70,10 @@ class App extends Component {
   }
 
   clearPokemon = (e) => {
-    // e.preventDefault();
-    console.log('before clear', this.state.foundPokemon)
     this.setState({
       foundPokemon: [],
     });
-    console.log('before clear', this.state.foundPokemon)
+    this.clearErrorMessage();
   }
 
   render() {
