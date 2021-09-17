@@ -65,6 +65,11 @@ class App extends Component {
     return pokemonImage;
   };
 
+  clearErrorMessage = () => {
+
+    return this.setState({error: null})
+  }
+
   render() {
 
     // const text = 'Loading...';
@@ -78,7 +83,7 @@ class App extends Component {
         <Route exact path='/'  
           render={() => 
             <main className='main-content'>
-              <Search addPokemon={this.addPokemon} />
+              <Search addPokemon={this.addPokemon} clearErrorMessage={this.clearErrorMessage}/>
               {this.state.error && <h2> {this.state.error}</h2>}
               {this.state.foundPokemon.length !== 0 && !this.state.error && (
                 <PokemonDetails
