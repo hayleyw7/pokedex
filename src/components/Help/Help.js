@@ -21,7 +21,7 @@ const Help = () => {
             ></img>  
           </Link>
 
-        <h1 className='help-header'>How To Use This PoKedeX</h1>   
+        <h1 className='help-header'>How To Use The PoKedeX</h1>   
 
         <h2 className='about-header'>About</h2>
         <article className='about-container'>
@@ -32,7 +32,7 @@ const Help = () => {
 
         </article>
 
-        <h2 className='help-search-header'>Search Pokemon by ID or Name</h2>
+        <h2 className='help-search-header'>Search Pokemon</h2>
         <article className='help-search-container'>
 
           <p>
@@ -45,7 +45,7 @@ const Help = () => {
 
         </article>
 
-        <h2 className='help-home-header'>Return to Home</h2>
+        <h2 className='help-home-header'>Return Home</h2>
         <article className='help-home-container'>
 
           <p>

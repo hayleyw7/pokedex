@@ -21,6 +21,21 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
       setError(error.message);
     }
   };
+
+  const filterMoves = () => {
+    const result = pokemonDetails.moves.map((move) => {
+      const version = move.version_group_details[0].version_group.name
+      const name = move.move.name.split("-").join(" ");
+
+      if (version === 'red-blue') {
+        return name;
+      }	
+    }).filter(move => {
+      return move !== undefined
+    }).sort((elementA, elementB) => elementA - elementB)
+    return result;
+  }  
+
   useEffect(() => {
     getPokemonDetails();
   }, [foundPokemon]);
@@ -64,10 +79,10 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
           </article>
 
           <h2 className="moves-header">Moves</h2>
-          <article className="features-container">
-            {pokemonDetails.moves.map((move) => (
-              <p className="features" key={move.move.name}>
-                {move.move.name.split("-").join(" ")}
+          <article className="features-container move-scroll">
+            {filterMoves().map((move) => (
+              <p className="features" key={move}>
+                {move}
               </p>
             ))}
           </article>

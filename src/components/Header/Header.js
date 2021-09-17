@@ -10,20 +10,17 @@ const Header = () => {
     <header className='header'>
 
       <nav className='nav'>
-        <ul className='nav-links'>
-          <Link
-            to={`/help`}
-            key={`help`}  
-          >
+        <Link
+          to={`/help`}
+          key={`help`}  
+        >
+          <ul className='nav-links'>
             <li className='how-to'>How To</li>
-          </Link>
-
-        </ul>
+          </ul>
+        </Link>
       </nav>
 
-
-        <img className='header-image' src='Images/ash1.png' alt='ash-ketchum'/>
-
+      <img className='header-image' src='Images/ash1.png' alt='ash-ketchum'/>
 
       <div class="custom-shape-divider-bottom-1631589819">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
