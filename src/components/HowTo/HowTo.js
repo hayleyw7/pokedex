@@ -4,7 +4,7 @@ import './HowTo.css';
 import { Link } from 'react-router-dom';
 
 
-const Help = (props) => {
+const HowTo = (props) => {
 
   const handleClick = (e) => {
     props.clearPokemon(e);
@@ -64,4 +64,4 @@ const Help = (props) => {
   )
 }
 
-export default Help;
+export default HowTo;
