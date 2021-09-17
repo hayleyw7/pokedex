@@ -18,10 +18,10 @@ This project was a group project for Turing School of Software & Design during m
 ## A Little Bit About the Developers
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg" alt="Pikachu" width="100" align="right"/>
 
-*Hi! My name is [Joana](https://github.com/joanafbrito) and I am a current Front End Engineering student at Turing School of Software Design. I am a career changer! I've  spent the last decade working to manage two small business, and grabbing the opportunity to move to another country.* 
+*Hi! My name is [Joana](https://github.com/joanafbrito) and I am a current Front End Engineering student at Turing School of Software Design. I am a career changer! I've  spent the last decade working to manage two small business, and grabbing the opportunity to move to another country.*
 *Now, I'm spending my days learning code. As a woman I can contribuit to build a more balanced society, where people can be seen as equals in the software marketing and where I can build apps more inclusive and make a difference using this huge platform of the internet!*
 
-*Info about [Hayley](https://github.com/hayleyw7)🐈 * 
+*Info about [Hayley](https://github.com/hayleyw7)🐈 *
 
 *Info about [Matt](https://github.com/Matt-Roden) 🎸   *
 
@@ -39,7 +39,7 @@ This project was a group project for Turing School of Software & Design during m
 
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Pikachu" width="100" align="right"/>
 
-- React/ JavaScript 
+- React/ JavaScript
 - React Router
 - Service Workers
 - Cache
@@ -49,7 +49,7 @@ This project was a group project for Turing School of Software & Design during m
 - Lighthouse (Accessibility dev-tool)
 - Cypress
 - NPM
-- Fetch API 
+- Fetch API
 - ESLint
 - Miro Wireframe [(link)](https://miro.com/app/board/o9J_lyZfIKA=/)
 - [PokeApi](https://pokeapi.co/)
@@ -87,7 +87,7 @@ This project was a group project for Turing School of Software & Design during m
 
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg" alt="Pikachu" width="100" align="right"/>
 
-- Balancing fun/life with project/work/study time 👩🏻‍💻 💅🏻 💆🏻‍ 🐈 🎸 
+- Balancing fun/life with project/work/study time 👩🏻‍💻 💅🏻 💆🏻‍ 🐈 🎸
 - Managing the media queries for responsive design
 - Learning and using two new tecnologies at the same time (GSAP and PWA)
 
