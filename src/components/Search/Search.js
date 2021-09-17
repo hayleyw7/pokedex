@@ -20,6 +20,7 @@ class Search  extends Component  {
         key: Date.now(),
         ...this.state
     }
+    this.props.clearErrorMessage()
     this.props.addPokemon(queriedPokemon)
     this.resetSearch()
   }
