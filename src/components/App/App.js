@@ -3,7 +3,7 @@ import Search from "../Search/Search";
 import { getPokedexData } from "../../apiCalls";
 import PokedexGrid from "../PokedexGrid/PokedexGrid";
 import Header from "../Header/Header";
-import Help from "../Help/Help";
+import HowTo from "../HowTo/HowTo";
 import "./App.css";
 import PokemonDetails from "../PokemonDetails/PokemonDetails";
 import { Route } from 'react-router-dom';
@@ -110,7 +110,7 @@ class App extends Component {
         />
         <Route 
           exact path='/help' 
-          render={() => <Help clearPokemon={this.clearPokemon}/>}
+          render={() => <HowTo clearPokemon={this.clearPokemon}/>}
         />       
       </div>
     )
