@@ -22,9 +22,11 @@
 }
 
 .how-to {
-  font-size: 30px;
+  font-size: 50px;
   color: white;
+  /* color:#f2b32e; */
   text-decoration: none;
+  -webkit-text-stroke: 2px #3b4cca;
 }
 
 a:link {
