@@ -34,12 +34,12 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
 
       if (version === 'red-blue') {
         return name;
-      }	
+      }
     }).filter(move => {
       return move !== undefined
     }).sort((elementA, elementB) => elementA - elementB)
     return result;
-  }  
+  }
 
   useEffect(() => {
     getPokemonDetails();
