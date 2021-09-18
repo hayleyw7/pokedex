@@ -89,7 +89,7 @@ class App extends Component {
           render={() => 
             <main className='main-content'>
               <Search addPokemon={this.addPokemon} clearErrorMessage={this.clearErrorMessage}/>
-              {this.state.error && <h2> {this.state.error}</h2>}
+              {this.state.error && <h2 className="search-error-message"> {this.state.error}</h2>}
               {this.state.foundPokemon.length !== 0 && !this.state.error && (
                 <PokemonDetails
                   foundPokemon={this.state.foundPokemon}
