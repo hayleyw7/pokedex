@@ -22,11 +22,14 @@
   background: linear-gradient( 145deg, #3b4cca, #ffde00);
   box-shadow: 5px 8px 19px 11px #d0d0d0, -4px -4px 10px #f0f0f0;
   width: 70%;
+  position: relative;
 }  
 
 .x-icon {
   width: 3rem;
-  margin-right: -460px;
+  top: 4px;
+  right:  8px;
+  position: absolute;
 }
 
 .x-icon:hover {
@@ -44,7 +47,7 @@
   padding: .7rem 0 .7rem .1rem;
   font-family: 'PocketMonk';
   -webkit-text-stroke: 0.5px #3b4cca;
-  margin-top: 0;
+  margin-top: 30px;
 }
 
 .single-pokemon-pic {
@@ -126,6 +129,6 @@
 
 @media only screen and (max-width: 600px) {
   .pokemon-details-id {
-    margin-top: -20px;
+    margin-top: 20px;
   }   
 }
