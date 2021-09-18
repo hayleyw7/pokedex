@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { Component } from "react";
 import Search from "../Search/Search";
+import { getPokedexData } from "../../apiCalls";
 import PokedexGrid from "../PokedexGrid/PokedexGrid";
 import Header from "../Header/Header";
 import HowTo from "../HowTo/HowTo";
@@ -7,38 +8,35 @@ import "./App.css";
 import PokemonDetails from "../PokemonDetails/PokemonDetails";
 import { Route } from 'react-router-dom';
 
-const App = () => {
-  const [pokeDex, setPokeDex] = useState([])
-  const [foundPokemon, setFoundPokemon] = useState([])
-  const [error, setError] = useState('')
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      pokeDex: [],
+      foundPokemon: [],
+      error: null,
+    };
+  }
 
-  useEffect(() => {
-    getPokeDexData()
-  }, []);
+  componentDidMount() {
+    getPokedexData().then((data) => {
+      this.setState({
+        pokeDex: data.results,
+      });
+    });
+  }
 
-  const getPokeDexData = async () => {
-    try {
-      const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
-      const pokeDexData = await res.json()
-      setPokeDex(pokeDexData.results)
-    } catch (err) {
-      console.log('Error: ', err)
-    }
+  addPokemon = (queriedPokemon) => {
+    const foundPokemon = this.validatePokemonData(queriedPokemon);
+    this.setState({
+      foundPokemon: [foundPokemon],
+    });
   };
 
-  const addPokemon = (queriedPokemon) => {
-    const foundPokemon = validatePokemonQuery(queriedPokemon)
-    if(foundPokemon === undefined) {
-      setError('Not  a valid Name or id , try again')
-    } else {
-      setFoundPokemon([foundPokemon])
-    }
-  };
+  validatePokemonData = (queriedPokemon) => {
+    const lowerCaseInput = queriedPokemon.queriedPokemon.toLowerCase();
 
-  const validatePokemonQuery = (queriedPokemon) => {
-    const lowerCaseInput = queriedPokemon.toLowerCase();
-
-     return pokeDex.find((pokemon, index) => {
+    const verifiedName = this.state.pokeDex.find((pokemon, index) => {
       let lowerCaseName = pokemon.name.toLowerCase();
 
       if (
@@ -52,53 +50,69 @@ const App = () => {
           return pokemon;
         }
       }
-    })
+    });
+
+    if (verifiedName === undefined) {
+      return this.setState({ error: "Not  a valid Name or id , try again" });
+    } else {
+      return verifiedName;
+    }
   };
 
-  const getPokemonImage = (id) => {
+  getPokemonImage = (id) => {
     let pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`
 
     return pokemonImage;
   };
 
-  const clearErrorMessage = () => {
-    return setError('')
-  };
+  clearErrorMessage = () => {
+    return this.setState({error: null})
+  }
 
-  const clearPokemon = (e) => {
-    setFoundPokemon([])
-    clearErrorMessage();
-  };
+  clearPokemon = (e) => {
+    this.setState({
+      foundPokemon: [],
+    });
+    this.clearErrorMessage();
+  }
 
-  return (
-    <div className="App">
-      <Header />
-      <Route exact path='/'
-        render={() =>
-          <main className='main-content'>
-            <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>
-            {error && <h2 className="search-error-message"> {error}</h2>}
-            {foundPokemon.length !== 0 && !error && (
-              <PokemonDetails
-                foundPokemon={foundPokemon}
-                getPokemonImage={getPokemonImage}
-              />
-            )}
-            {foundPokemon.length === 0 && (
-              <PokedexGrid
-                pokedexData={pokeDex}
-                getPokemonImage={getPokemonImage}
-              />
-            )}
-          </main>
-        }
-      />
-      <Route
-        exact path='/help'
-        render={() => <HowTo clearPokemon={clearPokemon}/>}
-      />
-    </div>
-  )
-};
+  render() {
 
-export default App
+    // const text = 'Loading...';- think about what we want to do with the loading ( do not forget about the loadinh in the details page)
+    // {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
+    // <h1 className='call-to-action-text'>Welcome to PokeDex! Use the search bar below to find a Pokemon now!</h1>
+
+    return (  
+      <div className="App">
+        <Header />
+        <Route exact path='/'  
+          render={() => 
+            <main className='main-content'>
+              <Search addPokemon={this.addPokemon} clearErrorMessage={this.clearErrorMessage}/>
+              {this.state.error && <h2 className="search-error-message"> {this.state.error}</h2>}
+              {this.state.foundPokemon.length !== 0 && !this.state.error && (
+                <PokemonDetails
+                  foundPokemon={this.state.foundPokemon}
+                  getPokemonImage={this.getPokemonImage}
+                  clearPokemon={this.clearPokemon}
+                />
+              )}
+              {this.state.foundPokemon.length === 0 && (
+                <PokedexGrid
+                  pokedexData={this.state.pokeDex}
+                  getPokemonImage={this.getPokemonImage}
+                />
+              )}             
+            </main>
+          }
+        />
+        <Route 
+          exact path='/help' 
+          render={() => <HowTo clearPokemon={this.clearPokemon}/>}
+        />       
+      </div>
+    )
+  }
+}
+
+export default App;
