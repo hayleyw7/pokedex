@@ -2,7 +2,7 @@
   background: #D31027;
   background: -webkit-linear-gradient(to right, #FF0000, #CC0000);
   background: linear-gradient(to right, #FF0000, #CC0000);
-  height: 255px;
+  height: 262px;
   width: 101%;
   position: relative;
   display: flex;
@@ -88,20 +88,26 @@ a:link {
 }
 
 .pokeball {
-  width: 91px;
-  height: 91px;
   position: absolute;
-  top: 120px;
-  left: 29px;
-  animation: rotation 20s infinite linear;    
+  /* animation: rotation 60s infinite linear;  */
+  animation: zoom 5s infinite linear, rotation; 
+  animation-direction: alternate-reverse;       
 }
 
-@keyframes rotation {
+@keyframes zoom {
   from {
-    transform: rotate(0deg);
+    width: 89px;
+    height: 90px;
+    left: 30px;    
+    transform: rotate(0deg); 
+    top: 120px;     
   }
   to {
-    transform: rotate(359deg);
+    width: 135px;
+    height: 135px;
+    left: 14px;
+    transform: rotate(180deg);  
+    top: 69px;    
   }
 }
 
