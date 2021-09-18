@@ -20,7 +20,7 @@ const HowTo = (props) => {
           >
             <img
               alt='go back icon'
-              className='x-icon'
+              className='x-icon-how'
               src='Images/x-icon.png'
               align='right'
               onClick={(e) => handleClick(e)}

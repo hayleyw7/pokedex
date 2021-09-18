@@ -57,7 +57,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
           >
             <img
               alt='go back icon'
-              className='x-icon'
+              className='x-icon-details'
               src='Images/x-icon.png'
               align='right'
               onClick={(e) => handleClick(e)}

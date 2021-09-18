@@ -18,12 +18,12 @@
   font-size: 35px;
 }
 
-.x-icon {
+.x-icon-how {
   width: 3rem;
-  margin: 18rem 1rem 0 1rem;  
+  margin: 0 -1.4rem 0 1rem;  
 }
 
-.x-icon:hover {
+.x-icon-how:hover {
   transform: scale(1.09) perspective(1px);  
 }
 

@@ -24,14 +24,14 @@
   position: relative;
 }  
 
-.x-icon {
+.x-icon-details {
   width: 3rem;
   top: 4px;
   right:  8px;
   position: absolute;
 }
 
-.x-icon:hover {
+.x-icon-details:hover {
   transform: scale(1.09) perspective(1px);  
 }
 
@@ -103,7 +103,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  font-weight: bold;
+  /* font-weight: bold; */
   /* overflow: scroll; */
   /* we should double check the height */
   /* height: 75px; */
@@ -113,10 +113,11 @@
   /* background: white; */
   border-radius: 1rem;
   font-size: 16px;
-  color: white;
+  color: black;
   margin: .2rem;
   padding: 0.1rem 0.6rem 0.25rem 0.6rem;
   -webkit-text-stroke: 0.1px white;
+    background: white;
 }
 
 .moves-scroll {
