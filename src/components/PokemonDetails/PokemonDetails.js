@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./PokemonDetails.css";
 
 const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
-console.log(foundPokemon, 'foundOne<><>')
-
   const [pokemonDetails, setPokemonDetails] = useState([]);
   const [error, setError] = useState("");
 
