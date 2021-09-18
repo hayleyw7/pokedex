@@ -1,10 +1,10 @@
 import React from 'react';
-import './Help.css';
+import './HowTo.css';
 // import xIcon from '../../assets/x-icon.png'
 import { Link } from 'react-router-dom';
 
 
-const Help = (props) => {
+const HowTo = (props) => {
 
   const handleClick = (e) => {
     props.clearPokemon(e);
@@ -59,9 +59,13 @@ const Help = (props) => {
           </p>
 
         </article>
+        <section className='meowth-quote'>
+           <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/151.svg" className="meowth-pic" alt="mew image"/>
+           " We do have a lot in common. The same earth, the same air, the same sky. Maybe if we started looking at what is the same, instead of looking at what is different, well, who knows?"    
+        </section>
       </div>
     </div>
   )
 }
 
-export default Help;
+export default HowTo;

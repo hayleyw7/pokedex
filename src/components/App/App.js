@@ -3,7 +3,7 @@ import Search from "../Search/Search";
 import { getPokedexData } from "../../apiCalls";
 import PokedexGrid from "../PokedexGrid/PokedexGrid";
 import Header from "../Header/Header";
-import Help from "../Help/Help";
+import HowTo from "../HowTo/HowTo";
 import "./App.css";
 import PokemonDetails from "../PokemonDetails/PokemonDetails";
 import { Route } from 'react-router-dom';
@@ -70,12 +70,10 @@ class App extends Component {
   }
 
   clearPokemon = (e) => {
-    // e.preventDefault();
-    console.log('before clear', this.state.foundPokemon)
     this.setState({
       foundPokemon: [],
     });
-    console.log('before clear', this.state.foundPokemon)
+    this.clearErrorMessage();
   }
 
   render() {
@@ -84,15 +82,14 @@ class App extends Component {
     // {(this.state.foundPokemon.length === 0 && !this.state.error) && <h2>{ text }</h2>}
     // <h1 className='call-to-action-text'>Welcome to PokeDex! Use the search bar below to find a Pokemon now!</h1>
 
-    return (
-      
+    return (  
       <div className="App">
         <Header />
         <Route exact path='/'  
           render={() => 
             <main className='main-content'>
               <Search addPokemon={this.addPokemon} clearErrorMessage={this.clearErrorMessage}/>
-              {this.state.error && <h2> {this.state.error}</h2>}
+              {this.state.error && <h2 className="search-error-message"> {this.state.error}</h2>}
               {this.state.foundPokemon.length !== 0 && !this.state.error && (
                 <PokemonDetails
                   foundPokemon={this.state.foundPokemon}
@@ -110,7 +107,7 @@ class App extends Component {
         />
         <Route 
           exact path='/help' 
-          render={() => <Help clearPokemon={this.clearPokemon}/>}
+          render={() => <HowTo clearPokemon={this.clearPokemon}/>}
         />       
       </div>
     )
