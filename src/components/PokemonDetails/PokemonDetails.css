@@ -1,16 +1,16 @@
 .pokemon-details-page {
   /* add flexbox to the parent component to be able to center the card */
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    color: white;
-    margin: 0 2rem 0 2rem;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  color: white;
+  margin: 0 2rem 0 2rem;
+  text-align: center;
   }
 
 .pokemon-details-container {
   border: .15rem #3b4cca solid;
-  padding: .4rem 2rem 2rem 2rem;
+  padding: 0 2rem 2rem 2rem;
   margin: .9rem 0 1rem 0;
   text-align: center;
   border-radius: 1.5rem;
@@ -44,6 +44,7 @@
   padding: .7rem 0 .7rem .1rem;
   font-family: 'PocketMonk';
   -webkit-text-stroke: 0.5px #3b4cca;
+  margin-top: 0;
 }
 
 .single-pokemon-pic {
@@ -121,4 +122,10 @@
   overflow-x: hidden;
   overflow-y: scroll hidden;
   max-height: 12rem;  
+}
+
+@media only screen and (max-width: 600px) {
+  .pokemon-details-id {
+    margin-top: -20px;
+  }   
 }
