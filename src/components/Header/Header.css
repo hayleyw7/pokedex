@@ -47,11 +47,11 @@ a:link {
   /* display: inline-block; */
 }
 
-how-to:hover {
+/* how-to:hover {
   text-decoration: underline;
   color: yellow;
   transform: scale(2);
-}
+} */
 
 .custom-shape-divider-bottom-1631589819 {
   position: absolute;
@@ -79,14 +79,6 @@ how-to:hover {
   right: 140px;
 }
 
-.pokeball {
-  width: 91px;
-  height: 91px;
-  position: absolute;
-  top: 120px;
-  left: 29px;
-}
-
 .ash {
   margin: 20px 30px 0 0;
   height: 230px;
@@ -95,14 +87,31 @@ how-to:hover {
   /* left: 0px; */
 }
 
+.pokeball {
+  width: 91px;
+  height: 91px;
+  position: absolute;
+  top: 120px;
+  left: 29px;
+  animation: rotation 20s infinite linear;    
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 @media only screen and (max-width: 700px) {
  .pokeball {
     top: 120px;
     left: 30px;
  }   
 
-.how-to {
-  margin-left: -40px;
-}
-
+  .how-to {
+    margin-left: -40px;
+  }
 }
