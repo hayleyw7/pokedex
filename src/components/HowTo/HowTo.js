@@ -60,7 +60,8 @@ const HowTo = (props) => {
 
         </article>
         <section className='meowth-quote'>
-           We do have a lot in common. The same earth, the same air, the same sky. Maybe if we started looking at what is the same, instead of looking at what is different, well, who knows? - Meowth
+           " We do have a lot in common. The same earth, the same air, the same sky. Maybe if we started looking at what is the same, instead of looking at what is different, well, who knows?"    
+           <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/151.svg" class="single-pokemon-pic" alt="mew image"/>
         </section>
       </div>
     </div>

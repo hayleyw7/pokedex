@@ -26,3 +26,12 @@
 .x-icon:hover {
   transform: scale(1.09) perspective(1px);  
 }
+
+.meowth-quote {
+  font-family: 'PocketMonk';
+  font-size: 20px;
+  color: #ffde00;
+  -webkit-text-stroke: 0.8px #3b4cca;
+  text-align: center;
+  margin-top: 10%;
+}
