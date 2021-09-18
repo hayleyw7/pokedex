@@ -6,8 +6,8 @@ const Search = ({ addPokemon, clearErrorMessage }) => {
 
   const handleClick = (e) => {
     e.preventDefault()
-    addPokemon(queriedPokemon)
     clearErrorMessage()
+    addPokemon(queriedPokemon)
   }
 
   return (

@@ -33,11 +33,8 @@ const App = () => {
     } else {
       setFoundPokemon([foundPokemon])
     }
-
-
   };
 
-// 👇 Only working for a valid query, breaks page on invalid query
   const validatePokemonQuery = (queriedPokemon) => {
     const lowerCaseInput = queriedPokemon.toLowerCase();
 
@@ -56,16 +53,6 @@ const App = () => {
         }
       }
     })
-    // console.log(verifiedName, '<><><><>')
-    // console.log(foundPokemon, '<><>foundPokemon<><>')
-// This condition not working
-    // if (verifiedName === undefined) {
-    //   return setError("Not  a valid Name or id , try again");
-    //   console.log('test!!!!')
-    // } else {
-    //   return verifiedName;
-    // }
-    // console.log(error, 'error<><><>')
   };
 
   const getPokemonImage = (id) => {
