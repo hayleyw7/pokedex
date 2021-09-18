@@ -1,17 +1,16 @@
 .pokemon-details-page {
   /* add flexbox to the parent component to be able to center the card */
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    color: white;
-    margin: 0 2rem 0 2rem;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  color: white;
+  text-align: center;
   }
 
 .pokemon-details-container {
   border: .15rem #3b4cca solid;
-  padding: .4rem 2rem 2rem 2rem;
-  margin-top: .9rem;
+  padding: 0 2rem 2rem 2rem;
+  margin: .9rem 0 1rem 0;
   text-align: center;
   border-radius: 1.5rem;
   display: flex;
@@ -22,7 +21,19 @@
   background: linear-gradient( 145deg, #3b4cca, #ffde00);
   box-shadow: 5px 8px 19px 11px #d0d0d0, -4px -4px 10px #f0f0f0;
   width: 70%;
+  position: relative;
 }  
+
+.x-icon-details {
+  width: 3rem;
+  top: 4px;
+  right:  8px;
+  position: absolute;
+}
+
+.x-icon-details:hover {
+  transform: scale(1.09) perspective(1px);  
+}
 
 .pokemon-details-id {
   color: white;
@@ -35,6 +46,13 @@
   padding: .7rem 0 .7rem .1rem;
   font-family: 'PocketMonk';
   -webkit-text-stroke: 0.5px #3b4cca;
+  margin-top: 30px;
+}
+
+.single-pokemon-pic {
+  width: 70%;
+  margin-bottom: .3rem;  transition: 300ms;
+  position: relative;
 }
   
 .pokemon-details-header {
@@ -47,11 +65,6 @@
   color: #ffde00;
   -webkit-text-stroke: 0.5px #3b4cca;
   text-transform: capitalize;
-}
-
-.single-pokemon-pic {
-  width: 70%;
-  margin-bottom: .3rem;
 }
 
 .types-header,
@@ -90,22 +103,31 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  overflow: scroll;
+  /* font-weight: bold; */
+  /* overflow: scroll; */
   /* we should double check the height */
-  height: 75px;
+  /* height: 75px; */
 }
 
 .features {
-  background: white;
+  /* background: white; */
   border-radius: 1rem;
-  font-size: 15px;
+  font-size: 16px;
   color: black;
   margin: .2rem;
   padding: 0.1rem 0.6rem 0.25rem 0.6rem;
+  -webkit-text-stroke: 0.1px white;
+  background: white;
 }
 
 .moves-scroll {
   overflow-x: hidden;
   overflow-y: scroll hidden;
   max-height: 12rem;  
+}
+
+@media only screen and (max-width: 600px) {
+  .pokemon-details-id {
+    margin-top: 20px;
+  }   
 }

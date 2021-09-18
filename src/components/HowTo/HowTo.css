@@ -18,24 +18,25 @@
   font-size: 35px;
 }
 
-.x-icon {
+.x-icon-how {
   width: 3rem;
-  margin: 0 0 0 1rem;  
+  margin: 0 -1.4rem 0 1rem;  
 }
 
-.x-icon:hover {
+.x-icon-how:hover {
   transform: scale(1.09) perspective(1px);  
 }
 
 .meowth-quote {
   font-family: 'PocketMonk';
-  font-size: 20px;
+  font-size: 30px;
   color: #ffde00;
-  -webkit-text-stroke: 0.8px #3b4cca;
+  -webkit-text-stroke: 1.2px #3b4cca;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 4%;
 }
 
 .meowth-pic {
-  width: 10%;
+  margin-top: 20px;
+  width: 150px;   
 }

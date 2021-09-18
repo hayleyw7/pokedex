@@ -82,6 +82,7 @@ const App = () => {
               <PokemonDetails
                 foundPokemon={foundPokemon}
                 getPokemonImage={getPokemonImage}
+                clearPokemon={clearPokemon}
               />
             )}
             {foundPokemon.length === 0 && (
