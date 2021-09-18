@@ -61,7 +61,8 @@ const HowTo = (props) => {
         </article>
         <section className='mew-quote'>
            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/151.svg" className="mew-pic" alt="mew"/>
-           "We do have a lot in common. The same earth, the same air, the same sky. Maybe if we started looking at what is the same, instead of looking at what is different, well, who knows?"    
+           
+           <p>"We do have a lot in common. The same earth, the same air, the same sky. Maybe if we started looking at what is the same, instead of looking at what is different, well, who knows?"</p>
         </section>
       </div>
     </div>
