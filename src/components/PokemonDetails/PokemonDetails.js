@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./PokemonDetails.css";
+import { Link } from 'react-router-dom';
 
 const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
   const [pokemonDetails, setPokemonDetails] = useState([]);
@@ -44,6 +45,21 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
     return (
       <div className="pokemon-details-page">
         <div className="pokemon-details-container">
+
+
+          <Link
+            to={`/`}
+            key={`home`}  
+          >
+            <img
+              alt='go back icon'
+              className='x-icon'
+              src='Images/x-icon.png'
+              align='right'
+              // onClick={(e) => handleClick(e)}
+            ></img>  
+          </Link>        
+        
           <h1 className="pokemon-details-id">{pokemonDetails.id}</h1>
 
           <h1 className="pokemon-details-header capitalize">

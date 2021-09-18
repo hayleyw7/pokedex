@@ -24,6 +24,15 @@
   width: 70%;
 }  
 
+.x-icon {
+  width: 3rem;
+  margin-right: -460px;
+}
+
+.x-icon:hover {
+  transform: scale(1.09) perspective(1px);  
+}
+
 .pokemon-details-id {
   color: white;
   border-radius: 100rem;
