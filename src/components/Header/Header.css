@@ -30,7 +30,7 @@
   transition: 300ms;
   animation: vert-bounce 4.5s infinite linear;
   position: relative;
-  margin-left: -4.5rem;
+  margin: 2.5rem 0 0 -4.5rem;
 }
 
 @keyframes vert-bounce {
