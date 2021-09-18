@@ -10,7 +10,7 @@ import { Route } from 'react-router-dom';
 const App = () => {
   const [pokeDex, setPokeDex] = useState([])
   const [foundPokemon, setFoundPokemon] = useState([])
-  const [error, setError] = useState(null)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     getPokeDexData()
@@ -20,7 +20,6 @@ const App = () => {
     try {
       const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
       const pokeDexData = await res.json()
-      console.log(pokeDexData)
       setPokeDex(pokeDexData.results)
     } catch (err) {
       console.log('Error: ', err)
@@ -29,9 +28,10 @@ const App = () => {
 
   const addPokemon = (queriedPokemon) => {
     const foundPokemon = validatePokemonQuery(queriedPokemon)
-    setFoundPokemon([foundPokemon])
+      setFoundPokemon([foundPokemon])
   };
 
+// 👇 Only working for a valid query, breaks page on invalid query
   const validatePokemonQuery = (queriedPokemon) => {
     const lowerCaseInput = queriedPokemon.toLowerCase();
 
@@ -50,9 +50,9 @@ const App = () => {
         }
       }
     })
-
+// This condition not working
     if (verifiedName === undefined) {
-      return this.setState({ error: "Not  a valid Name or id , try again" });
+      setError("Not  a valid Name or id , try again");
     } else {
       return verifiedName;
     }
@@ -65,7 +65,7 @@ const App = () => {
   };
 
   const clearErrorMessage = () => {
-    return setError(null)
+    return setError('')
   };
 
   const clearPokemon = (e) => {
