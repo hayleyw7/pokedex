@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./PokemonDetails.css";
 
 const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
+console.log(foundPokemon, 'foundOne<><>')
+
   const [pokemonDetails, setPokemonDetails] = useState([]);
   const [error, setError] = useState("");
 
@@ -29,12 +31,12 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
 
       if (version === 'red-blue') {
         return name;
-      }	
+      }
     }).filter(move => {
       return move !== undefined
     }).sort((elementA, elementB) => elementA - elementB)
     return result;
-  }  
+  }
 
   useEffect(() => {
     getPokemonDetails();

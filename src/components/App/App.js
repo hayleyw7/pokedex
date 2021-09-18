@@ -28,14 +28,20 @@ const App = () => {
 
   const addPokemon = (queriedPokemon) => {
     const foundPokemon = validatePokemonQuery(queriedPokemon)
+    if(foundPokemon === undefined) {
+      setError('Not  a valid Name or id , try again')
+    } else {
       setFoundPokemon([foundPokemon])
+    }
+
+
   };
 
 // 👇 Only working for a valid query, breaks page on invalid query
   const validatePokemonQuery = (queriedPokemon) => {
     const lowerCaseInput = queriedPokemon.toLowerCase();
 
-    const verifiedName = pokeDex.find((pokemon, index) => {
+     return pokeDex.find((pokemon, index) => {
       let lowerCaseName = pokemon.name.toLowerCase();
 
       if (
@@ -50,13 +56,16 @@ const App = () => {
         }
       }
     })
-    console.log(verifiedName, '<><><><>')
+    // console.log(verifiedName, '<><><><>')
+    // console.log(foundPokemon, '<><>foundPokemon<><>')
 // This condition not working
-    if (verifiedName === undefined) {
-      setError("Not  a valid Name or id , try again");
-    } else {
-      return verifiedName;
-    }
+    // if (verifiedName === undefined) {
+    //   return setError("Not  a valid Name or id , try again");
+    //   console.log('test!!!!')
+    // } else {
+    //   return verifiedName;
+    // }
+    // console.log(error, 'error<><><>')
   };
 
   const getPokemonImage = (id) => {
