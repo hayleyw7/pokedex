@@ -94,6 +94,7 @@ class App extends Component {
                 <PokemonDetails
                   foundPokemon={this.state.foundPokemon}
                   getPokemonImage={this.getPokemonImage}
+                  clearPokemon={this.clearPokemon}
                 />
               )}
               {this.state.foundPokemon.length === 0 && (

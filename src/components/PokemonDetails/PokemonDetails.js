@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./PokemonDetails.css";
 import { Link } from 'react-router-dom';
 
-const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
+const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   const [pokemonDetails, setPokemonDetails] = useState([]);
   const [error, setError] = useState("");
 
@@ -22,6 +22,10 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
       setError(error.message);
     }
   };
+
+  const handleClick = (e) => {
+    clearPokemon(e);
+  }  
 
   const filterMoves = () => {
     const result = pokemonDetails.moves.map((move) => {
@@ -56,7 +60,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
               className='x-icon'
               src='Images/x-icon.png'
               align='right'
-              // onClick={(e) => handleClick(e)}
+              onClick={(e) => handleClick(e)}
             ></img>  
           </Link>        
         
