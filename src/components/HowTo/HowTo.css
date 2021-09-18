@@ -31,11 +31,11 @@
   font-family: 'PocketMonk';
   font-size: 30px;
   color: #ffde00;
-  -webkit-text-stroke: 0.8px #3b4cca;
+  -webkit-text-stroke: 1.2px #3b4cca;
   text-align: center;
   margin-top: 4%;
 }
 
 .mew-pic {
-  width: 10%;   
+  width: 15%;   
 }
