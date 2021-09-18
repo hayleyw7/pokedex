@@ -51,7 +51,19 @@
 
 .single-pokemon-pic {
   width: 70%;
-  margin-bottom: .3rem;
+  margin-bottom: .3rem;  transition: 300ms;
+  animation: vert-bounce 4.5s infinite linear;
+  position: relative;
+}
+
+@keyframes vert-bounce {
+  0%{top: 0em}
+  40%{top: 0em}
+  43%{top: -0.3em}
+  46%{top: 0em}
+  48%{top: -0.1em}
+  50%{top: 0em}
+  100%{top: 0em;}
 }
 
 .types-header,
