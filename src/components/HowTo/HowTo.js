@@ -59,9 +59,9 @@ const HowTo = (props) => {
           </p>
 
         </article>
-        <article className='meowth-quote'>
+        <section className='meowth-quote'>
            We do have a lot in common. The same earth, the same air, the same sky. Maybe if we started looking at what is the same, instead of looking at what is different, well, who knows? - Meowth
-        </article>
+        </section>
       </div>
     </div>
   )
