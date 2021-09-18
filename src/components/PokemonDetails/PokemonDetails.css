@@ -45,6 +45,13 @@
   font-family: 'PocketMonk';
   -webkit-text-stroke: 0.5px #3b4cca;
 }
+
+.single-pokemon-pic {
+  width: 70%;
+  margin-bottom: .3rem;  transition: 300ms;
+  animation: vert-bounce 4.5s infinite linear;
+  position: relative;
+}
   
 .pokemon-details-header {
   border-radius: 7rem;
