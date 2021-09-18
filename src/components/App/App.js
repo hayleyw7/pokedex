@@ -66,8 +66,16 @@ class App extends Component {
   };
 
   clearErrorMessage = () => {
-
     return this.setState({error: null})
+  }
+
+  clearPokemon = (e) => {
+    // e.preventDefault();
+    console.log('before clear', this.state.foundPokemon)
+    this.setState({
+      foundPokemon: [],
+    });
+    console.log('before clear', this.state.foundPokemon)
   }
 
   render() {
@@ -102,7 +110,7 @@ class App extends Component {
         />
         <Route 
           exact path='/help' 
-          render={() => <Help />}
+          render={() => <Help clearPokemon={this.clearPokemon}/>}
         />       
       </div>
     )
