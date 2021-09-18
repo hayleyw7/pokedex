@@ -21,5 +21,6 @@
 }
 
 .pokemon-image {
-    width: 100px;
+    /* width: 100px; */
+    width: 35%;
 }
