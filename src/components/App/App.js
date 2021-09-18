@@ -33,7 +33,7 @@ const App = () => {
   };
 
   const validatePokemonQuery = (queriedPokemon) => {
-    const lowerCaseInput = queriedPokemon.queriedPokemon.toLowerCase();
+    const lowerCaseInput = queriedPokemon.toLowerCase();
 
     const verifiedName = pokeDex.find((pokemon, index) => {
       let lowerCaseName = pokemon.name.toLowerCase();
