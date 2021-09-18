@@ -27,7 +27,7 @@
   transform: scale(1.09) perspective(1px);  
 }
 
-.meowth-quote {
+.mew-quote {
   font-family: 'PocketMonk';
   font-size: 20px;
   color: #ffde00;
@@ -36,6 +36,6 @@
   margin-top: 10%;
 }
 
-.meowth-pic {
+.mew-pic {
   width: 10%;
 }

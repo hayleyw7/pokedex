@@ -43,10 +43,10 @@ const HowTo = (props) => {
 
           <p>
             When you visit the app on a computer or tablet, you should be able to see a seach box and a display of all Pokemon by ID number. On a mobile device, you should just see the search box.
-            
           <p>
+
           </p>
-            From there the home page, you can the search box to access details about individual Generation 1 Pokemon by name or ID, including image, type, moves, and abilities. And if you're on desktop or a tablet, in additition, you also an image of a Pokemon to access the same details.
+            From there the home page, you can the search box to access details about individual Generation 1 Pokemon by name or ID, including image, type, moves, and abilities.
           </p>
 
         </article>
@@ -59,9 +59,9 @@ const HowTo = (props) => {
           </p>
 
         </article>
-        <section className='meowth-quote'>
-           <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/151.svg" className="meowth-pic" alt="mew image"/>
-           " We do have a lot in common. The same earth, the same air, the same sky. Maybe if we started looking at what is the same, instead of looking at what is different, well, who knows?"    
+        <section className='mew-quote'>
+           <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/151.svg" className="mew-pic" alt="mew"/>
+           "We do have a lot in common. The same earth, the same air, the same sky. Maybe if we started looking at what is the same, instead of looking at what is different, well, who knows?"    
         </section>
       </div>
     </div>
