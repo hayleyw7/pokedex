@@ -50,6 +50,7 @@ const App = () => {
         }
       }
     })
+    console.log(verifiedName, '<><><><>')
 // This condition not working
     if (verifiedName === undefined) {
       setError("Not  a valid Name or id , try again");
