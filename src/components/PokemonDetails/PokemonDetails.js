@@ -29,12 +29,12 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage }) => {
 
       if (version === 'red-blue') {
         return name;
-      }	
+      }
     }).filter(move => {
       return move !== undefined
     }).sort((elementA, elementB) => elementA - elementB)
     return result;
-  }  
+  }
 
   useEffect(() => {
     getPokemonDetails();
