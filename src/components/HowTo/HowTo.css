@@ -7,7 +7,8 @@
   /* sugestion???- not sure - i don't like on iphone- it will need a @mediaQuery*/
   border: 2px solid #ec0d0d52; 
   background: linear-gradient( 
-    145deg, #3b4cca, #ffde00);
+145deg, #e00000d1, #3b4cca);
+
   box-shadow: 5px 8px 19px 11px #d0d0d0, -4px -4px 10px #f0f0f0;
   text-align: center;
   color: white;

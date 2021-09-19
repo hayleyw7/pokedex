@@ -23,6 +23,25 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
       const res = await fetch(url);
       const pokemonDetails = await res.json();
       setPokemonDetails(pokemonDetails);
+      
+      gsap.fromTo('.single-pokemon-pic' , .8, 
+      {
+        opacity: 0,
+        x: 10,
+        y: -100,
+        ease: Power3.easeOut,
+        repeat:true
+      },
+      {
+        opacity: 1,
+        x: 10,
+        y: 10,
+        ease: Power3.easeOut,
+        repeat: true
+      }
+    )
+
+    console.log('here')
     } catch (error) {
       setError(error.message);
     }
@@ -48,17 +67,29 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   }
 
   useEffect(() => {
-    gsap.to('.single-pokemon-pic' , .3, 
-      {
-        opacity: 1,
-        x: 100,
-        y: -100,
-        ease: Power3.easeOut
-      }
-    )
     getPokemonDetails();
+ 
     // pkimg.style.display='none';
   }, [foundPokemon]);
+
+  // useEffect(() => {
+  
+  // //   gsap.fromTo('.single-pokemon-pic' , .3, 
+  // //   {
+  // //     opacity: 0,
+  // //     x: 10,
+  // //     y: -100,
+  // //     ease: Power3.easeOut
+  // //   },
+  // //   {
+  // //     opacity: 1,
+  // //     x: 10,
+  // //     y: 10,
+  // //     ease: Power3.easeOut
+  // //   }
+  // // )
+
+  // },[])
  
 
   if (pokemonDetails.types) {
