@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./PokemonDetails.css";
 import { Link } from 'react-router-dom';
+import { gsap } from 'gsap';
 
 const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   const [pokemonDetails, setPokemonDetails] = useState([]);
