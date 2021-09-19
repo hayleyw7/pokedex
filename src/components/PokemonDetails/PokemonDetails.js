@@ -48,12 +48,18 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   useEffect(() => {
     getPokemonDetails();
     // pkimg.style.display='none';
-    gsap.to('.single-pokemon-pic' , 2, 
+    gsap.to('.single-pokemon-pic' , .3, 
       {
       opacity: 1,
+      x: 100,
       y: -100,
       ease: Power3.easeOut
     }
+    // .from('.single-pokemon-pic', .3,{
+    //   opacity: 1,
+    //   x: -100,
+    //   ease: Power3.easeOut
+    // })
     )
   }, [foundPokemon]);
  
