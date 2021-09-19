@@ -1,5 +1,14 @@
 import React from 'react'
 import './Error.css';
+import { gsap, Power3 } from 'gsap';
+
+document.querySelectorAll(".jigglypuff-error").forEach((dot, i) => {  
+  gsap.to(dot, {
+    duration: 1,
+    ease: easeArr[i],
+    delay: i * 0.06
+  });
+});
 
 const Error = () => {
   return (
