@@ -9,8 +9,8 @@ const Header = ( clearPokemon ) => {
 
       <nav className='nav'>
         <Link
-          to={`/help`}
-          key={`help`}
+          to={`/howto`}
+          key={`howto`}
         >
           <ul className='nav-links'>
             <li

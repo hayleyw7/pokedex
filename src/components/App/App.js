@@ -95,7 +95,7 @@ const App = () => {
         }
       />
       <Route
-        exact path='/help'
+        exact path='/howto'
         render={() => <HowTo clearPokemon={clearPokemon}/>}
       />
     </div>
