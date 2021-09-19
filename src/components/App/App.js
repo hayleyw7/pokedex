@@ -30,7 +30,7 @@ const App = () => {
   const addPokemon = (queriedPokemon) => {
     const foundPokemon = validatePokemonQuery(queriedPokemon)
     if(foundPokemon === undefined) {
-      setError('error')
+      setError('Not a valid Name or id , try again')
     } else {
       setFoundPokemon([foundPokemon])
     }
@@ -78,7 +78,7 @@ const App = () => {
         render={() =>
           <main className='main-content'>
             <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>
-            {error && <Error />}
+            {error && <h2 className="search-error-message"> {error}</h2>}
             {foundPokemon.length !== 0 && !error && (
               <PokemonDetails
                 foundPokemon={foundPokemon}
