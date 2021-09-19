@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Search from "../Search/Search";
 import PokedexGrid from "../PokedexGrid/PokedexGrid";
 import Header from "../Header/Header";
-import Error from "../Error/Error";
 import HowTo from "../HowTo/HowTo";
 import "./App.css";
 import PokemonDetails from "../PokemonDetails/PokemonDetails";
@@ -30,7 +29,7 @@ const App = () => {
   const addPokemon = (queriedPokemon) => {
     const foundPokemon = validatePokemonQuery(queriedPokemon)
     if(foundPokemon === undefined) {
-      setError('Not a valid Name or id , try again')
+      setError('Not  a valid Name or id , try again')
     } else {
       setFoundPokemon([foundPokemon])
     }
