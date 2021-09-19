@@ -4,7 +4,7 @@
   padding: 1rem;
   color: white;
   text-align: center;
-  }
+}
 
 .pokemon-details-container {
   border: .15rem #3b4cca solid;
@@ -128,4 +128,8 @@
   .pokemon-details-id {
     margin-top: 20px;
   }   
+
+  .pokemon-details-page {
+    padding: .5rem;
+  }
 }

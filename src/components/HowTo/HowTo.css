@@ -1,4 +1,4 @@
-.help-container {
+.howto-container {
   display: flex;
   flex-direction: column;
   margin: 50px 10% 50px 10%;
@@ -6,15 +6,14 @@
   border-radius: 25px;
   /* sugestion???- not sure - i don't like on iphone- it will need a @mediaQuery*/
   border: 2px solid #ec0d0d52; 
-  background: linear-gradient( 
-145deg, #e00000d1, #3b4cca);
+  background: linear-gradient(145deg, #e00000d1, #3b4cca);
 
   box-shadow: 5px 8px 19px 11px #d0d0d0, -4px -4px 10px #f0f0f0;
   text-align: center;
   color: white;
 }
 
-.help-header {
+.howto-header {
   font-family: 'PocketMonk';
   font-size: 50px;
   color: #ffde00;
@@ -22,8 +21,8 @@
 }
 
 .about-header,
-.help-search-header,
-.help-home-header {
+.howto-search-header,
+.howto-home-header {
   font-family: 'PocketMonk';
   color: #ffde00;
   -webkit-text-stroke: 0.5px #3b4cca;
@@ -31,8 +30,8 @@
 }
 
 .about-container,
-.help-search-container,
-.help-home-container {
+.howto-search-container,
+.howto-home-container {
   font-family: monospace;
   font-size: 25px;
   /* -webkit-text-stroke: 0.5px black; */
@@ -59,4 +58,14 @@
 .meowth-pic {
   margin-top: 20px;
   width: 150px;   
+}
+
+@media only screen and (max-width: 600px) {
+  .pokemon-details-id {
+    margin-top: 20px;
+  }   
+
+  .pokemon-details-page {
+    margin: .5rem .5rem .5rem .5rem;
+  }
 }
