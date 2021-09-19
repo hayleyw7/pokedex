@@ -3,7 +3,14 @@
   flex-direction: column;
   margin: 50px 10% 50px 10%;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 25px;
+  /* sugestion???- not sure - i don't like on iphone- it will need a @mediaQuery*/
+  border: 1px solid #ec0d0d52; 
+  background: linear-gradient( 
+    145deg, #3b4cca, #ffde00);
+  box-shadow: 5px 8px 19px 11px #d0d0d0, -4px -4px 10px #f0f0f0;
+  text-align: center;
+  color:#f0f0f0;
 }
 
 .help-header {
@@ -26,12 +33,13 @@
 .help-search-container,
 .help-home-container {
   font-family: monospace;
-  font-size: 20px;
+  font-size: 28px;
+  /* -webkit-text-stroke: 0.5px black; */
 }
 
 .x-icon-how {
   width: 3rem;
-  margin: 0 -1.4rem 0 1rem;  
+  /* margin: 0 -1.4rem 0 1rem;   */
 }
 
 .x-icon-how:hover {
