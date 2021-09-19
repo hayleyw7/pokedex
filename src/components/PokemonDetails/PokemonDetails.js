@@ -11,6 +11,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
 
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
+  let poKemonImg2 =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`
 
 
 
@@ -23,23 +24,41 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
       const res = await fetch(url);
       const pokemonDetails = await res.json();
       setPokemonDetails(pokemonDetails);
-      
-      gsap.fromTo('.single-pokemon-pic' , .8, 
-      {
-        opacity: 0,
-        x: 0,
-        y: -200,
-        ease: Power3.easeOut,
-        repeat:true
-      },
-      {
-        opacity: 1,
-        x: 70,
-        y: 10,
-        ease: Power3.easeOut,
-        repeat: true
-      }
-    )
+      console.log(poKemonImg2)
+
+      // gsap.set('.single-pokemon-pic', { attr: { src:{ pokemonImage } }})
+      gsap.fromTo('.single-pokemon-pic' , 
+        { 
+          opacity: 1,
+          duration: 2.5, 
+          ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
+          y: -500 
+        },
+        { 
+            opacity: 2,
+            duration: 2.5, 
+            ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
+            y: 0 
+        })
+        // gsap.set('.single-pokemon-pic', { attr: { src:{ poKemonImg2 } }})
+        console.log(poKemonImg2)
+
+      // {
+      //   opacity: 0,
+      //   x: -200,
+      //   y: -200,
+      //   ease:'foward',
+      //   ease: Power3.easeOut,
+      //   repeat:true
+      // },
+      // {
+      //   opacity: 1,
+      //   x: 0,
+      //   y: 10,
+      //   ease: Power3.easeOut,
+      //   repeat: true
+      // }
+    // )
 
     console.log('here')
     } catch (error) {
