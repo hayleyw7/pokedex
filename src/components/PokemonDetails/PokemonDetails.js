@@ -27,14 +27,14 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
       gsap.fromTo('.single-pokemon-pic' , .8, 
       {
         opacity: 0,
-        x: 10,
-        y: -100,
+        x: 0,
+        y: -200,
         ease: Power3.easeOut,
         repeat:true
       },
       {
         opacity: 1,
-        x: 10,
+        x: 70,
         y: 10,
         ease: Power3.easeOut,
         repeat: true
