@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./PokemonDetails.css";
 import { Link } from 'react-router-dom';
-import { gsap } from 'gsap';
+import { gsap, Power3 } from 'gsap';
+
 
 const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   const [pokemonDetails, setPokemonDetails] = useState([]);
@@ -9,6 +10,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
 
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
+
 
   const getPokemonDetails = async () => {
 
@@ -23,6 +25,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
       setError(error.message);
     }
   };
+
 
   const handleClick = (e) => {
     clearPokemon(e);
@@ -44,7 +47,16 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
 
   useEffect(() => {
     getPokemonDetails();
+    // pkimg.style.display='none';
+    gsap.to('.single-pokemon-pic' , 2, 
+      {
+      opacity: 1,
+      y: -100,
+      ease: Power3.easeOut
+    }
+    )
   }, [foundPokemon]);
+ 
 
   if (pokemonDetails.types) {
     return (
@@ -72,6 +84,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
           </h1>
 
           <img
+            // ref={ el => {pkimg = el}}
             src={pokemonImage}
             className="single-pokemon-pic"
             alt={`${pokemonDetails.name} image`}

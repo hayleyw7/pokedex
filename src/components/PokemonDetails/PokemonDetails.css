@@ -51,6 +51,8 @@
   width: 70%;
   margin-bottom: .3rem;  transition: 300ms;
   position: relative;
+  /* added this line for animation */
+  opacity: 0;
 }
   
 .pokemon-details-header {
