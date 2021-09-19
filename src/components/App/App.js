@@ -40,9 +40,9 @@ const App = () => {
 
      return pokeDex.find((pokemon, index) => {
       let lowerCaseName = pokemon.name.toLowerCase();
-
+// add === to this condition 
       if (
-        lowerCaseName.includes(lowerCaseInput) &&
+        lowerCaseName === lowerCaseInput &&
         lowerCaseInput !== "" &&
         lowerCaseInput !== undefined
       ) {

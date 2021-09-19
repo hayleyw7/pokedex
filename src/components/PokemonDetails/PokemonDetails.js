@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./PokemonDetails.css";
 import { Link } from 'react-router-dom';
+import { gsap, Power3 } from 'gsap';
+
 
 const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   const [pokemonDetails, setPokemonDetails] = useState([]);
   const [error, setError] = useState("");
+  // let pkimg = useRef(null);
 
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
+
+
 
   const getPokemonDetails = async () => {
 
@@ -18,10 +23,30 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
       const res = await fetch(url);
       const pokemonDetails = await res.json();
       setPokemonDetails(pokemonDetails);
+      
+      gsap.fromTo('.single-pokemon-pic' , .8, 
+      {
+        opacity: 0,
+        x: 0,
+        y: -200,
+        ease: Power3.easeOut,
+        repeat:true
+      },
+      {
+        opacity: 1,
+        x: 70,
+        y: 10,
+        ease: Power3.easeOut,
+        repeat: true
+      }
+    )
+
+    console.log('here')
     } catch (error) {
       setError(error.message);
     }
   };
+
 
   const handleClick = (e) => {
     clearPokemon(e);
@@ -43,7 +68,29 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
 
   useEffect(() => {
     getPokemonDetails();
+ 
+    // pkimg.style.display='none';
   }, [foundPokemon]);
+
+  // useEffect(() => {
+  
+  // //   gsap.fromTo('.single-pokemon-pic' , .3, 
+  // //   {
+  // //     opacity: 0,
+  // //     x: 10,
+  // //     y: -100,
+  // //     ease: Power3.easeOut
+  // //   },
+  // //   {
+  // //     opacity: 1,
+  // //     x: 10,
+  // //     y: 10,
+  // //     ease: Power3.easeOut
+  // //   }
+  // // )
+
+  // },[])
+ 
 
   if (pokemonDetails.types) {
     return (
@@ -71,6 +118,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
           </h1>
 
           <img
+            // ref={ el => {pkimg = el}}
             src={pokemonImage}
             className="single-pokemon-pic"
             alt={`${pokemonDetails.name} image`}
