@@ -7,9 +7,11 @@ import { gsap, Power3 } from 'gsap';
 const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   const [pokemonDetails, setPokemonDetails] = useState([]);
   const [error, setError] = useState("");
+  // let pkimg = useRef(null);
 
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
+
 
 
   const getPokemonDetails = async () => {
@@ -46,21 +48,16 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   }
 
   useEffect(() => {
-    getPokemonDetails();
-    // pkimg.style.display='none';
     gsap.to('.single-pokemon-pic' , .3, 
       {
-      opacity: 1,
-      x: 100,
-      y: -100,
-      ease: Power3.easeOut
-    }
-    // .from('.single-pokemon-pic', .3,{
-    //   opacity: 1,
-    //   x: -100,
-    //   ease: Power3.easeOut
-    // })
+        opacity: 1,
+        x: 100,
+        y: -100,
+        ease: Power3.easeOut
+      }
     )
+    getPokemonDetails();
+    // pkimg.style.display='none';
   }, [foundPokemon]);
  
 

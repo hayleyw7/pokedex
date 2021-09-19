@@ -5,7 +5,7 @@
   padding: 10px;
   border-radius: 25px;
   /* sugestion???- not sure - i don't like on iphone- it will need a @mediaQuery*/
-  border: 1px solid #ec0d0d52; 
+  border: 2px solid #ec0d0d52; 
   background: linear-gradient( 
     145deg, #3b4cca, #ffde00);
   box-shadow: 5px 8px 19px 11px #d0d0d0, -4px -4px 10px #f0f0f0;
