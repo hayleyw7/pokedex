@@ -61,7 +61,7 @@ describe('Home page user flow', () => {
             .contains('Everybody makes a wrong turn once in a while!')
     });
 
-    it.skip('Should be able to search Pokemon by Name', () => {
+    it('Should be able to search Pokemon by Name', () => {
         cy.get('input[type="search"]')
           .type('Pikachu')
           .should('have.value', 'Pikachu')
