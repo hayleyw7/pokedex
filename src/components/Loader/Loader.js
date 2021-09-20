@@ -29,7 +29,7 @@ const Loader = () => {
     gsap.to([pokeball], {
       rotation: "+=900",
       ease: "power1.in",
-      duration: 1.4
+      duration: 1.45
     });
 
   }, []);
