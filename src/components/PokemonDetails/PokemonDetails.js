@@ -12,8 +12,6 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
 
-
-
   const getPokemonDetails = async () => {
 
     let pokemonName = foundPokemon[0].name

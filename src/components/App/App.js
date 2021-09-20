@@ -85,12 +85,21 @@ const App = () => {
                 clearPokemon={clearPokemon}
               />
             )}
+            
             {foundPokemon.length === 0 && (
               <PokedexGrid
                 pokedexData={pokeDex}
                 getPokemonImage={getPokemonImage}
               />
             )}
+
+            {error !== '' && (
+              <PokedexGrid
+                pokedexData={pokeDex}
+                getPokemonImage={getPokemonImage}
+              />
+            )}
+
           </main>
         }
       />
