@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import Loader from '../Loader/Loader'
 import "./PokemonDetails.css";
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
@@ -20,7 +21,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
       const res = await fetch(url);
       const pokemonDetails = await res.json();
       setPokemonDetails(pokemonDetails);
-  
+
     } catch (error) {
       setError(error.message);
     }
@@ -28,7 +29,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
 
   const handleClick = (e) => {
     clearPokemon(e);
-  }  
+  }
 
   const filterMoves = () => {
     const result = pokemonDetails.moves.map((move) => {
@@ -44,24 +45,24 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   }
 
   useEffect(() => {
-    getPokemonDetails();
+    setTimeout(() => {getPokemonDetails()}, 1400);
   }, [foundPokemon]);
 
   useEffect(() => {
-      gsap.fromTo('.single-pokemon-pic' , 
-        { 
+      gsap.fromTo('.single-pokemon-pic' ,
+        {
           opacity: 0,
           scale: -5,
-          duration: 2.5, 
-          ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
-          y: -1000, 
+          duration: 2.5,
+          ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})",
+          y: -1000,
           rotation: 1080,
           delay: -8
         },
-        { 
+        {
             opacity: 1,
-            duration: 2.5, 
-            ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
+            duration: 2.5,
+            ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})",
             y: 0,
             scale: 1,
             rotation: 0
@@ -73,7 +74,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
             audio.play()
         }
   },[pokemonDetails]);
- 
+
   if (pokemonDetails.types) {
     return (
       <div className="pokemon-details-page">
@@ -81,7 +82,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
           <audio className="pokemon-audio"></audio>
           <Link
             to={`/`}
-            key={`home`}  
+            key={`home`}
           >
             <img
               alt='go back icon'
@@ -89,9 +90,9 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
               src='Images/x-icon.png'
               align='right'
               onClick={(e) => handleClick(e)}
-            ></img>  
-          </Link>        
-        
+            ></img>
+          </Link>
+
           <h1 className="pokemon-details-id">{pokemonDetails.id}</h1>
 
           <h1 className="pokemon-details-header capitalize">
@@ -138,7 +139,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
       </div>
     );
   } else {
-    return <h2 className="moves-header">Loading...</h2>;
+    return <Loader />;
   }
 };
 
