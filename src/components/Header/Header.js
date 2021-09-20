@@ -4,7 +4,8 @@ import { Route, Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 
 const Header = ({ hideHowToBtn, foundPokemon }) => {
-
+// we have decided to keep this code for further study but 
+// we did not like with all the animations togehter
   // useEffect(()=> {
   //   gsap.fromTo('.pokeball', 
   //   { 
