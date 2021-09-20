@@ -98,7 +98,7 @@ describe('Home page user flow', () => {
             
     });
 
-    it.skip('Should be able to search Pokemon by Id Number', () => {
+    it('Should be able to search Pokemon by Id Number', () => {
         cy.get('input[type="search"]')
           .type('6')
           .should('have.value',  '6')
