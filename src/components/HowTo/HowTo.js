@@ -33,20 +33,20 @@ const HowTo = (props) => {
         <article className='about-container'>
 
           <p>
-            The PoKedeX is a Progressive Web Application that gives a user the ability to quickly search and access information about any Generation 1 Pokemon. If one encounters a Pokemon in the wild, and they need to find quick information about it, even without internet service, this is the app for them!
+            The PoKedeX is a Progressive Web Application that gives a user the ability to quickly search and access information about any Generation 1 Pokemon and later reference that information for offline access. If one encounters a Pokemon in the wild, and they need to find quick information about it, this is the application for them!
           </p>
 
         </article>
 
-        <h2 className='howto-search-header'>Search Pokemon</h2>
+        <h2 className='howto-search-header'>Access Pokemon</h2>
         <article className='howto-search-container'>
 
           <p>
-            When one visits the app on a computer or tablet, they should be able to see a seach box and a display of Pokemon images & names, sorted by ID number. When one visits the app on a mobile device, they should only see the search box.
+            When one visits the application on a computer or tablet, they should be able to see a seach box and a display of Pokemon images & names, sorted by ID number. When one visits the application on a mobile device, they should only see the search box.
           <p>
 
           </p>
-            From there the home page, one can type either a name or ID number in the search box. After pressing the "Catch!!!" button, they can access that Pokemon's details, including image, type, moves, and abilities, and return to the Home page by clicking the "x" icon.
+            From there the Home page, one can type either a name or ID number in the search box. After pressing the "Catch!!!" button, they can access that Pokemon's details, including image, type, moves, and abilities, and return to the Home page by clicking the "x" icon. Once a Pokemon has been viewed on a device, that information will then be available offline for future access.
           </p>
 
         </article>
@@ -55,7 +55,7 @@ const HowTo = (props) => {
         <article className='howto-home-container'>
 
           <p>
-            From either this how-to page or the Pokemon details page, one can return to the Home page by clicking the "x" icon.
+            From either this How-To page or the Pokemon Details page, one can return to the Home page by clicking the "x" icon.
           </p>
 
         </article>
