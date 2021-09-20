@@ -64,15 +64,15 @@ Outside of Software Development, I have a passion for music and music technology
 
 ### Mobile
 ![mobile home page screenshot](./public/Images/mobile-home.png) 
-![dashboard gif](./public/Images/dashboard.gif) 
+![mobile pokemon details screenshot](./public/Images/mobile-pokemon.png) 
 
 ### Desktop
-![dashboard gif](./src/images/dashboard.gif) 
-![dashboard gif](./src/images/dashboard.gif) 
+![desktop home page screenshot](./public/Images/desktop-home.png) 
+![desktop pokemon page screenshot](./public/Images/desktop-pokemon.png) 
 
 ### Error & Loader
-![dashboard gif](./src/images/dashboard.gif) 
-![dashboard gif](./src/images/dashboard.gif) 
+![error screenshot](./public/Images/error.png) 
+![loader screenshot](./public/Images/loader.png) 
 
 ## Reflections
 
