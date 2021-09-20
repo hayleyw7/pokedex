@@ -14,14 +14,14 @@ const App = () => {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    getPokeDexData()
+    setTimeout(() => {getPokeDexData()}, 1400)  // setTimeout is for animations
   }, []);
 
   const getPokeDexData = async () => {
     try {
       const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
       const pokeDexData = await res.json()
-      setTimeout(() => {setPokeDex(pokeDexData.results)}, 1400)
+      setPokeDex(pokeDexData.results)
     } catch (err) {
       console.log('Error: ', err)
     }
