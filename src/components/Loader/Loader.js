@@ -4,9 +4,9 @@ import './Loader.css'
 const Loader = () => {
 
   return (
-    <section>
-      <h1>Just a moment please!</h1>
-      <img src='Images/pokeball.png'/>
+    <section className='loader-container'>
+      <h1 className='loader-text'>Just a moment please!</h1>
+      <img src='Images/pokeball.png' className='loader-image' alt='pokeball loading icon'/>
     </section>
   )
 };
