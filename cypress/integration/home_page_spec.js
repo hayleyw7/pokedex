@@ -36,7 +36,7 @@ describe('Home page user flow', () => {
           .should('be.visible')
     });
 
-    it.skip('Should load all the pokemons first generation when the page starts', () => {
+    it('Should load all the pokemons first generation when the page starts', () => {
         cy.get('.all-pokemon')
           .should('be.visible')
           .get('.pokemon-card')
