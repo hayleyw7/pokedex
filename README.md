@@ -21,9 +21,9 @@ This project was a group project for Turing School of Software & Design during m
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg" alt="Pikachu" width="100" align="right"/>
 
 *Hi! My name is [Joana](https://github.com/joanafbrito) and I am a current Front End Engineering student at Turing School of Software Design. I am a career changer! I've  spent the last decade working to manage two small business, and grabbing the opportunity to move to another country.*
-*Now, I'm spending my days learning code. As a woman I can contribuit to build a more balanced society, where people can be seen as equals in the software marketing and where I can build apps more inclusive and make a difference using this huge platform of the internet!*
+*Now, I'm spending my days learning code. As a woman I can contribute to build a more balanced society, where people can be seen as equals in the software marketing and where I can build apps more inclusive and make a difference using this huge platform of the internet!*
 
-*Info about [Hayley](https://github.com/hayleyw7)🐈 *
+Hi, I'm [Hayley](https://github.com/hayleyw7)! 🐰🌻🐱 I am a front-end engineer with a propensity for empathy and accessibility have led me to place considerable focus on a variety of user experiences and representation. My favorite projectscombine my experience with software development, the cannabis industry, community organization, start-ups, and design.
 
 Info about [Matt](https://github.com/Matt-Roden) 🎸  :  I'm a software developer with a passion for accessability and designing tools that are delightful to use. I have a strong interest in learning and implementing new technologies and tools. My backround in Mechatronics and Engineering as a Field Service Technician for an industrial manufacturer allowed me to expand on my passion for learning and allowed for implementation on the fly. I also gained the experience to travel globally,  and I enjoy learning about different cultures and perspectives and then finding ways to integrate this knowledge into my own life in order to become a more well rounded person.
 
