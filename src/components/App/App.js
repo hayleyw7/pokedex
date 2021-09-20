@@ -3,6 +3,7 @@ import Search from "../Search/Search";
 import PokedexGrid from "../PokedexGrid/PokedexGrid";
 import Header from "../Header/Header";
 import HowTo from "../HowTo/HowTo";
+import Loader from '../Loader/Loader'
 import "./App.css";
 import PokemonDetails from "../PokemonDetails/PokemonDetails";
 import { Route } from 'react-router-dom';
@@ -40,7 +41,7 @@ const App = () => {
 
      return pokeDex.find((pokemon, index) => {
       let lowerCaseName = pokemon.name.toLowerCase();
-// add === to this condition 
+// add === to this condition
       if (
         lowerCaseName === lowerCaseInput &&
         lowerCaseInput !== "" &&
@@ -73,6 +74,7 @@ const App = () => {
   return (
     <div className="App">
       <Header />
+      <Loader />
       <Route exact path='/'
         render={() =>
           <main className='main-content'>
