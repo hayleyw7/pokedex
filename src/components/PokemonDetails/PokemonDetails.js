@@ -58,7 +58,8 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
           ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
           y: -1000, 
           // scale: 2,
-          rotation: 1080
+          rotation: 1080,
+          delay: 4
         },
         { 
             opacity: 1,
