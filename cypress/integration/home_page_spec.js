@@ -41,7 +41,7 @@ describe('Home page user flow', () => {
           .should('be.visible')
           .get('.pokemon-card')
           .contains('bulbasaur')
-          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"]')
+          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"]')
           .should('be.visible')
     });
 
