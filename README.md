@@ -23,9 +23,9 @@ This project was a group project for Turing School of Software & Design during m
 
 *Info about [Hayley](https://github.com/hayleyw7)🐈 *
 
-*Info about [Matt](https://github.com/Matt-Roden) 🎸  : I'm a software developer with a passion for accessability and designing tools that are delightful to use. I have a strong interest in learning and implementing new technologies and tools. My backround in Mechatronics and Engineering as a Field Service Technician for an industrial manufacturer allowed me to expand on my passion for learning and allowed for implementation on the fly. I also gained the experience to travel globally in my prior career, and I enjoy learning about different cultures and perspectives and finding ways to integrate this knowledge into my own life.
+Info about [Matt](https://github.com/Matt-Roden) 🎸  : I'm a software developer with a passion for accessability and designing tools that are delightful to use. I have a strong interest in learning and implementing new technologies and tools. My backround in Mechatronics and Engineering as a Field Service Technician for an industrial manufacturer allowed me to expand on my passion for learning and allowed for implementation on the fly. I also gained the experience to travel globally in my prior career, and I enjoy learning about different cultures and perspectives and finding ways to integrate this knowledge into my own life.
 
-Outside of Software Development, I have a passion for music and music technology, hiking mountains, finding and cruising skateparks, and hanging out with my loved ones and dog!*
+Outside of Software Development, I have a passion for music and music technology, hiking mountains, finding and cruising skateparks, and hanging out with my loved ones and dog!x
 
 ## Learning Goals and Objectives
 
