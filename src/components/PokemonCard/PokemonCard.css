@@ -23,6 +23,7 @@
 .pokemon-image {
     /* width: 100px; */
     width: 35%;
+    max-height: 40%
 }
 
 @media only screen and (max-width: 600px) {
