@@ -45,7 +45,7 @@ describe('Home page user flow', () => {
           .should('be.visible')
     });
 
-    it.skip('Should have a search field', () => {
+    it('Should have a search field', () => {
         cy.get('form')
           .should('be.visible')     
     });
