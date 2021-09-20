@@ -109,5 +109,4 @@ describe('Home page user flow', () => {
           .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"]')
           .should('be.visible')
     });
-
 })
