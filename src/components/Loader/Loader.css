@@ -1,0 +1,9 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+}
+
+.loader-image {
+  width: 75px;
+  height: 75px;
+}
