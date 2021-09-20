@@ -53,11 +53,12 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
       gsap.fromTo('.single-pokemon-pic' , 
         { 
           opacity: 0,
+          scale: -5,
           duration: 2.5, 
           ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
-          y: -500, 
-          scale: 1.8,
-          rotation: 1440
+          y: -1000, 
+          // scale: 2,
+          rotation: 0
         },
         { 
             opacity: 1,
@@ -65,7 +66,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
             ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
             y: 0,
             scale: 1,
-            rotation: 0
+            rotation: 1080
         })
       if (pokemonDetails.name === "pikachu") {
             var audio  = document.getElementsByClassName("pokemon-audio")[0]

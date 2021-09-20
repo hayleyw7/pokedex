@@ -53,6 +53,8 @@
   position: relative;
   /* added this line for animation */
   opacity: 0;
+  y: -500;
+  /* scale: -5; */
 }
   
 .pokemon-details-header {
