@@ -57,7 +57,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
           ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
           y: -500, 
           scale: 1.8,
-          rotation: 0
+          rotation: 1440
         },
         { 
             opacity: 1,
@@ -65,7 +65,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
             ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
             y: 0,
             scale: 1,
-            rotation: 1440
+            rotation: 0
         })
       if (pokemonDetails.name === "pikachu") {
             var audio  = document.getElementsByClassName("pokemon-audio")[0]
@@ -79,7 +79,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
     return (
       <div className="pokemon-details-page">
         <div className="pokemon-details-container">
-          <audio className="pokemon-audio" />
+          <audio className="pokemon-audio"></audio>
           <Link
             to={`/`}
             key={`home`}  
