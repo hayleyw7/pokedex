@@ -42,11 +42,11 @@ const HowTo = (props) => {
         <article className='howto-search-container'>
 
           <p>
-            When one visits the application on a computer or tablet, they should be able to see a seach box and a display of Pokemon images & names, sorted by ID number. When one visits the application on a mobile device, they should only see the search box.
+            When one visits the application on a computer or tablet, they should be able to see a seach box and a display of Pokemon images & names, sorted by ID number. When one visits the application on a mobile device, they should only see the Search box, even if offline.
           <p>
 
           </p>
-            From that Home page, one can type either a name or ID number in the search box. After pressing the "Catch!!!" button, they can access that Pokemon's details, including image, type, moves, and abilities, and return to the Home page by clicking the "x" icon. Once a Pokemon has been viewed on a device, that information will then be available offline for future access.
+            From that Home page, one can type either a name or ID number in the Search box. After pressing the "Catch!!!" button, they can access that Pokemon's details, including image, type, moves, and abilities. Once a Pokemon has been viewed on a device, that information will then be available offline for future access.
           </p>
 
         </article>
@@ -55,7 +55,7 @@ const HowTo = (props) => {
         <article className='howto-home-container'>
 
           <p>
-            From either this How-To page or the Pokemon Details page, one can return to the Home page by clicking the "x" icon.
+            From either the How-To page or the Pokemon Details page, one can return to the Home page by clicking the "x" icon.
           </p>
 
         </article>
