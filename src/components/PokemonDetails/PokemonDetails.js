@@ -10,7 +10,8 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
 
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
-  let poKemonImg2 =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`
+  // next line of code is still a test
+  // let poKemonImg2 =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`
 
   const getPokemonDetails = async () => {
 
