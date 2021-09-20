@@ -16,7 +16,6 @@ describe('Home page user flow', () => {
           .get('.how-to')
           .contains('How To')
 
-        //   we need to add test for the animations
     });
 
     it.skip('Should be able to click on How to and go to the How To page', () => {
