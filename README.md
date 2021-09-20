@@ -79,11 +79,11 @@ Outside of Software Development, I have a passion for music and music technology
 
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg" alt="Pikachu" width="100" align="right"/>
 
-- Creating the React components and have them communicate as desired
-- Learning the behavior of JSX and how to apply CSS to elements
-- Including a search bar for search Pokemon by name for better user experience
-- Applying Cypress testing
-- Receiving a Lighthouse score over 90, even while still learning JSX
+- Built a Progressive Web Application that is installable and fully functions offline
+- Learned and Applied JS Animations using the GSAP Library
+- Finding common grounds when building the application amongst a team!
+- Making the application accessible all platforms
+- Learning and Implemetings new technologies on the fly
 
 ### Challenges
 
@@ -97,4 +97,4 @@ Outside of Software Development, I have a passion for music and music technology
 
 - The user will be able to login/logout with username and password.
 - The user will be able to save their favorite cards within their account.
-- The user will be able to play the game in the app.
+- The user will be able to play a game in the app.
