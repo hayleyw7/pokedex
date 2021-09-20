@@ -10,8 +10,6 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
 
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
-  // next line of code is still a test
-  // let poKemonImg2 =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`
 
   const getPokemonDetails = async () => {
 
@@ -57,9 +55,8 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
           duration: 2.5, 
           ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
           y: -1000, 
-          // scale: 2,
           rotation: 1080,
-          delay: 4
+          delay: -8
         },
         { 
             opacity: 1,
