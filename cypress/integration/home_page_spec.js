@@ -106,7 +106,7 @@ describe('Home page user flow', () => {
           .click()
           .get('.pokemon-details-page')
           .contains('charizard')
-          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"]')
+          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"]')
           .should('be.visible')
     });
 
