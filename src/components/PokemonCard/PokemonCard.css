@@ -17,10 +17,18 @@
 .pokemon-card:hover {
   transform: scale(1.04);
   box-shadow:  8px 8px 9px #d0d0d0,
-           -8px -8px 9px #f0f0f0;
+              -8px -8px 9px #f0f0f0;
 }
 
 .pokemon-image {
     /* width: 100px; */
     width: 35%;
+}
+
+@media only screen and (max-width: 600px) {
+  .pokemon-card  {
+    margin-left: 0;
+    height: 150px;
+    min-width: 150px;
+  }
 }
