@@ -2,7 +2,11 @@ import React from 'react'
 import './Header.css'
 import { Route, Link } from 'react-router-dom';
 
-const Header = ( clearPokemon ) => {
+const Header = ( props ) => {
+
+  const handleClick = (e) => {
+    props.hideHowToBtn(e);
+  }  
 
   return (
     <header className='header'>
@@ -15,6 +19,7 @@ const Header = ( clearPokemon ) => {
           <ul className='nav-links'>
             <li
               className='how-to'
+              onClick={(e) => handleClick(e)}
             >
               How To
             </li>
