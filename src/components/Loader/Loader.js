@@ -33,7 +33,7 @@ const Loader = () => {
       duration: 1.4
     });
 
-  }, [loadingMessage, pokeball]);
+  }, []);
 
   return (
     <section className='loader-container'>
