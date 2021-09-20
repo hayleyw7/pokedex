@@ -42,7 +42,7 @@ const HowTo = (props) => {
         <article className='howto-search-container'>
 
           <p>
-            When one visits the application on a computer or tablet, they should be able to see a seach box and a display of Pokemon images & names, sorted by ID number. When one visits the application on a mobile device, they should only see the Search box, even if offline.
+            When a user visits the application on a computer or tablet, they should be able to see a seach box and a display of Pokemon images & names, sorted by ID number. When one visits the application on a mobile device, they should only see the Search box, even if offline.
           <p>
 
           </p>
