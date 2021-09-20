@@ -4,10 +4,8 @@ describe('Home page user flow', () => {
         cy.onLoad()
     });
 // 
-    it('Should contain a Header with a How to and a Image ', () => {
+    it('Should contain a Header with a How to and the Images ', () => {
         cy.get('.header')
-          .should('be.visible')
-          .get('.header-images')
           .should('be.visible')
           .get('.ash')
           .should('be.visible')
