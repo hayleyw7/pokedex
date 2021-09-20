@@ -48,12 +48,12 @@ describe('Home page user flow', () => {
           .should('be.visible')
     });
 
-    it('Should have a search field', () => {
+    it.skip('Should have a search field', () => {
         cy.get('form')
           .should('be.visible')     
     });
 
-    it('Should show an error message if the user adds the wrong name', () => {
+    it.skip('Should show an error message if the user adds the wrong name', () => {
           cy.get('input[type="search"]')
             .type('poop')
             .should('have.value',  'poop')
@@ -64,7 +64,7 @@ describe('Home page user flow', () => {
             .contains('try again')
     });
 
-    it('Should be able to search Pokemon by Name', () => {
+    it.skip('Should be able to search Pokemon by Name', () => {
         cy.get('input[type="search"]')
           .type('Pikachu')
           .should('have.value', 'Pikachu')
@@ -78,7 +78,7 @@ describe('Home page user flow', () => {
           .should('be.visible')
     });
 
-    it('Should show an error message if the user adds the wrong id number', () => {
+    it.skip('Should show an error message if the user adds the wrong id number', () => {
         cy.get('input[type="search"]')
           .type('200')
           .should('have.value',  '200')
@@ -90,7 +90,7 @@ describe('Home page user flow', () => {
             
     });
 
-    it('Should be able to search Pokemon by Id Number', () => {
+    it.skip('Should be able to search Pokemon by Id Number', () => {
         cy.get('input[type="search"]')
           .type('6')
           .should('have.value',  '6')
