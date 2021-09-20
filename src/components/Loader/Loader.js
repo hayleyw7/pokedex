@@ -28,9 +28,9 @@ const Loader = () => {
     });
 
     gsap.to([pokeball], {
-      rotation: "+=360",
+      rotation: "+=900",
       ease: "power1.in",
-      duration: 1
+      duration: 1.4
     });
 
   }, [loadingMessage, pokeball]);
