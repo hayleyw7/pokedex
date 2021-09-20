@@ -25,7 +25,7 @@ describe('Home page user flow', () => {
           .should('be.visible')
     });
 
-    it.skip('Should be able to click on the x button and get back to the home page', () => {
+    it('Should be able to click on the x button and get back to the home page', () => {
         cy.get('a')
           .click()
           .get('.x-icon')
