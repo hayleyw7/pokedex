@@ -16,12 +16,12 @@ describe('Home page user flow', () => {
 
     });
 
-    it.skip('Should be able to click on How to and go to the How To page', () => {
+    it('Should be able to click on How to and go to the How To page', () => {
         cy.get('a')
           .click()
           .get('.all-pokemon')
           .should('not.exist')
-          .get('.help-page')
+          .get('.howTo-page')
           .should('be.visible')
     });
 
