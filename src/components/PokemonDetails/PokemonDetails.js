@@ -68,7 +68,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
             ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
             y: 0 ,
             scale: 1,
-            rotation: 3600
+            rotation: 1440
         })
       if (pokemonDetails.name === "pikachu") {
             var audio  = document.getElementsByClassName("pokemon-audio")[0]
