@@ -64,18 +64,24 @@ Outside of Software Development, I have a passion for music and music technology
 
 ### Mobile
 
-<img src="./public/Images/mobile-home.png" alt="mobile home page screenshot" width="200"/>
-<img src="./public/Images/mobile-pokemon.png" alt="mobile pokemon details screenshot" width="200"/>
+<p>
+  <img src="./public/Images/mobile-home.png" alt="mobile home page screenshot" width="200"/>
+  <img src="./public/Images/mobile-pokemon.png" alt="mobile pokemon details screenshot" width="200"/>
+</p>
 
 ### Desktop
 
-<img src="./public/Images/desktop-home.png" alt="desktop home page screenshot" width="200"/>
-<img src="./public/Images/desktop-pokemon.png" alt="desktop pokemon page screenshot" width="200"/>
+<p>
+  <img src="./public/Images/desktop-home.png" alt="desktop home page screenshot" width="200"/>
+  <img src="./public/Images/desktop-pokemon.png" alt="desktop pokemon page screenshot" width="200"/>
+</p>
 
 ### Error & Loader
 
-<img src="./public/Images/error.png" alt="error screenshot" width="200"/>
-<img src="./public/Images/loader.png" alt="loader screenshot" width="200"/>
+<p>
+  <img src="./public/Images/error.png" alt="error screenshot" width="200"/>
+  <img src="./public/Images/loader.png" alt="loader screenshot" width="200"/>
+</p>
 
 ## Reflections
 
