@@ -94,7 +94,7 @@ const App = () => {
               />
             )}
 
-            {error !== '' && (
+            {error !== '' && foundPokemon.length !== 0 && (
               <PokedexGrid
                 pokedexData={pokeDex}
                 getPokemonImage={getPokemonImage}
