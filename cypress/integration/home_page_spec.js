@@ -50,7 +50,7 @@ describe('Home page user flow', () => {
           .should('be.visible')     
     });
 
-    it.skip('Should show an error message if the user adds the wrong name', () => {
+    it('Should show an error message if the user adds the wrong name', () => {
           cy.get('input[type="search"]')
             .type('poop')
             .should('have.value',  'poop')
