@@ -72,7 +72,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Header foundPokemon={foundPokemon}/>
       <Route exact path='/'
         render={() =>
           <main className='main-content'>
