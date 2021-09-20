@@ -21,7 +21,7 @@ describe('Home page user flow', () => {
           .click()
           .get('.all-pokemon')
           .should('not.exist')
-          .get('.howTo-page')
+          .get('.howto-page')
           .should('be.visible')
     });
 
