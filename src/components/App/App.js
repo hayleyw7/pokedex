@@ -78,9 +78,8 @@ const App = () => {
         render={() =>
 
           <main className='main-content'>
-            <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>
             {!pokeDex.length && <Loader />}
-
+            <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>
             {error && <h2 className="search-error-message"> {error}</h2>}
             {foundPokemon.length !== 0 && !error && (
               <PokemonDetails
