@@ -45,7 +45,7 @@ Outside of Software Development, I have a passion for music and music technology
 
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Pikachu" width="100" align="right"/>
 
-- React/ JavaScript
+- React/JavaScript
 - React Router
 - Service Workers
 - Cache
