@@ -19,11 +19,11 @@
  .all-pokemon {
    margin-left: 1%;
    margin-right: 0;
-     height: 200px;
-     display: flex;
-     flex-wrap: nowrap;
-     overflow-x: scroll;
-     overflow-y: hidden;
-     justify-content: flex-start;
+   height: 200px;
+   display: flex;
+   flex-wrap: nowrap;
+   overflow-x: scroll;
+   overflow-y: hidden;
+   justify-content: flex-start;
  }
 }

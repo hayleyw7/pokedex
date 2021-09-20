@@ -89,7 +89,7 @@ const App = () => {
 
           <main className='main-content'>
             {!pokeDex.length && <Loader />}
-            {pokeDex.length && <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>}
+            {pokeDex.length > 0 && <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>}
             {error && <Error />}
             {foundPokemon.length !== 0 && !error && (
               <PokemonDetails
