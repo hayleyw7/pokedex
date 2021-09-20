@@ -84,7 +84,6 @@ const App = () => {
   return (
     <div className="App">
       <Header hideHowToBtn={hideHowToBtn} foundPokemon={foundPokemon}/>
-
       <Route exact path='/'
         render={() =>
 
