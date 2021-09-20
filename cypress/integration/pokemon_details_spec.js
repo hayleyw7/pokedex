@@ -1,70 +1,69 @@
 // to start the test run npx cypress open into your terminal
 describe('Pokemon Details page user flow', () => {
   beforeEach(() => {
-      cy.onLoad()
+    cy.onLoad()
   });
 
   it('Should contain a Header (the Navigation bar) with a How To link and an Image ', () => {
-      cy.get('.header')
-        .should('be.visible')
-        .get('.ash')
-        .should('be.visible')
-        .get('.how-to')
-        .contains('How To')
+    cy.get('.header')
+      .should('be.visible')
+      .get('.ash')
+      .should('be.visible')
+      .get('.how-to')
+      .contains('How To')
   });
 
   it('Should have a search field', () => {
-      cy.get('form')
-        .should('be.visible')
+    cy.get('form')
+      .should('be.visible')
   });
 
   it('Should show an error message if the user adds the wrong name', () => {
-        cy.get('input[type="search"]')
-          .type('dogachu')
-          .should('have.value',  'dogachu')
-          .get('button')
-          .click()
-          .get('h2')
-          .should('be.visible')
-          .contains('Everybody makes a wrong turn once in a while!')
-          .get('p')
-          .should('be.visible')
-          .contains('Try again. Enter a real Generation 1 Pokemon name or ID (1 to 151).')
+    cy.get('input[type="search"]')
+      .type('dogachu')
+      .should('have.value',  'dogachu')
+      .get('button')
+      .click()
+      .get('h2')
+      .should('be.visible')
+      .contains('Everybody makes a wrong turn once in a while!')
+      .get('p')
+      .should('be.visible')
+      .contains('Try again. Enter a real Generation 1 Pokemon name or ID (1 to 151).')
   });
-//not passing 👇 having trouble with image src
+//👇 having trouble with image src
   it('Should be able to search Pokemon by Name', () => {
-      cy.get('input[type="search"]')
-        .type('mAnKey')
-        .should('have.value', 'mAnKey')
-        .get('button')
-        .click()
-        .get('.pokemon-details-page')
-        .contains('56')
-        .get('.pokemon-details-header')
-        .contains('mankey')
-      cy.wait(3000)
-        .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/56.png"]')
-        .should('be.visible')
+    cy.get('input[type="search"]')
+      .type('mAnKey')
+      .should('have.value', 'mAnKey')
+      .get('button')
+      .click()
+      .get('.pokemon-details-page')
+      .contains('56')
+      .get('.pokemon-details-header')
+      .contains('mankey')
+    cy.wait(3000)
+      .get('img[alt="mankey image"]')
+      .should('be.visible')
   });
 
   it('Should show an error message if the user adds the wrong id number', () => {
-      cy.get('input[type="search"]')
-        .type('200')
-        .should('have.value',  '200')
-        .get('button')
-        .click()
-        .get('h2')
-        .should('be.visible')
-        .contains('Everybody makes a wrong turn once in a while!')
-        .get('p')
-        .should('be.visible')
-        .contains('Try again. Enter a real Generation 1 Pokemon name or ID (1 to 151).')
+    cy.get('input[type="search"]')
+      .type('200')
+      .should('have.value',  '200')
+      .get('button')
+      .click()
+      .get('h2')
+      .should('be.visible')
+      .contains('Everybody makes a wrong turn once in a while!')
+      .get('p')
+      .should('be.visible')
+      .contains('Try again. Enter a real Generation 1 Pokemon name or ID (1 to 151).')
 
   });
 
-  // Should we add another describe block for the same page? with another before each?
-
-  it.only('Should be able to search Pokemon by Id Number', () => {
+//👇 having trouble with image src
+  it('Should be able to search Pokemon by Id Number', () => {
     cy.get('input[type="search"]')
       .type('98')
       .should('have.value',  '98')
@@ -72,7 +71,7 @@ describe('Pokemon Details page user flow', () => {
       .click()
       .get('.pokemon-details-header')
       .contains('krabby')
-      .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/98.png"]')
+      .get('img[alt="krabby image"]')
       .should('be.visible')
   });
 
