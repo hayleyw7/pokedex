@@ -7,7 +7,7 @@ const Loader = () => {
   let pokeball = useRef(null)
 
   useEffect(() => {
-    gsap.from([loadingMessage, pokeball], 0.25, {
+    gsap.from([pokeball, loadingMessage], 0.25, {
       delay: 0.15,
       ease: "power3.out",
       x: -1164,
