@@ -1,6 +1,7 @@
 .loader-container {
   margin-top: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -13,7 +14,7 @@
 
 .loader-text {
   font-family: 'PocketMonk';
-  font-size: 50px;
+  font-size: 30px;
   color: #ffde00;
   -webkit-text-stroke: 0.5px #3b4cca;
 }
