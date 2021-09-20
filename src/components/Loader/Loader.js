@@ -21,7 +21,7 @@ const Loader = () => {
     gsap.to([loadingMessage, pokeball], {
       delay: 1.12,
       ease: "power3.out",
-      x: -1164,
+      x: 900,
       stagger: {
         amount: 0.1
       }
