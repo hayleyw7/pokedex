@@ -71,9 +71,19 @@ const App = () => {
     clearErrorMessage();
   };
 
+  const hideHowToBtn = (e) => {
+    const howTo = document.querySelector(".how-to");
+    howTo.classList.add("hidden");
+  }
+
+  const showHowToBtn = (e) => {
+    const howTo = document.querySelector(".how-to");
+    howTo.classList.remove("hidden");
+  }  
+
   return (
     <div className="App">
-      <Header />
+      <Header hideHowToBtn={hideHowToBtn}/>
       <Route exact path='/'
         render={() =>
           
@@ -109,7 +119,7 @@ const App = () => {
       />
       <Route
         exact path='/howto'
-        render={() => <HowTo clearPokemon={clearPokemon}/>}
+        render={() => <HowTo clearPokemon={clearPokemon} showHowToBtn={showHowToBtn}/>}
       />
     </div>
   )

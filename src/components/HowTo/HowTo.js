@@ -8,6 +8,7 @@ const HowTo = (props) => {
 
   const handleClick = (e) => {
     props.clearPokemon(e);
+    props.showHowToBtn()
   }
 
   return (
