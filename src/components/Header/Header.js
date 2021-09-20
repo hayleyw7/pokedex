@@ -3,7 +3,7 @@ import './Header.css'
 import { Route, Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 
-const Header = ({ foundPokemon }) => {
+const Header = ({ hideHowToBtn, foundPokemon }) => {
 
   useEffect(()=> {
     gsap.fromTo('.pokeball', 
@@ -25,17 +25,22 @@ const Header = ({ foundPokemon }) => {
     })
   }, [ foundPokemon]);
 
+  const handleClick = (e) => {
+    hideHowToBtn(e);
+  }  
+
   return (
     <header className='header'>
 
       <nav className='nav'>
         <Link
-          to={`/help`}
-          key={`help`}
+          to={`/howto`}
+          key={`howto`}
         >
           <ul className='nav-links'>
             <li
               className='how-to'
+              onClick={(e) => handleClick(e)}
             >
               How To
             </li>

@@ -8,11 +8,12 @@ const HowTo = (props) => {
 
   const handleClick = (e) => {
     props.clearPokemon(e);
+    props.showHowToBtn()
   }
 
   return (
-    <div className='help-page'>
-      <div className='help-container'>  
+    <div className='howto-page'>
+      <div className='howto-container'>  
 
           <Link
             to={`/`}
@@ -27,7 +28,7 @@ const HowTo = (props) => {
             ></img>  
           </Link>
 
-        <h1 className='help-header'>How To Use The PoKedeX</h1>   
+        <h1 className='howto-header'>How To Use The PoKedeX</h1>   
 
         <h2 className='about-header'>About</h2>
         <article className='about-container'>
@@ -38,8 +39,8 @@ const HowTo = (props) => {
 
         </article>
 
-        <h2 className='help-search-header'>Search Pokemon</h2>
-        <article className='help-search-container'>
+        <h2 className='howto-search-header'>Search Pokemon</h2>
+        <article className='howto-search-container'>
 
           <p>
             When you visit the app on a computer or tablet, you should be able to see a seach box and a display of all Pokemon by ID number. On a mobile device, you should just see the search box.
@@ -51,8 +52,8 @@ const HowTo = (props) => {
 
         </article>
 
-        <h2 className='help-home-header'>Return Home</h2>
-        <article className='help-home-container'>
+        <h2 className='howto-home-header'>Return Home</h2>
+        <article className='howto-home-container'>
 
           <p>
             From either this how-to page or the Pokemon details page, you can return to the home page by clicking the "Back" button.
