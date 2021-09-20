@@ -4,15 +4,16 @@ describe('Home page user flow', () => {
         cy.onLoad()
     });
 // 
-    it('Should contain a Header (the Navigation bar) with a How to and a Image ', () => {
+    it('Should contain a Header with a How to and the Images ', () => {
         cy.get('.header')
           .should('be.visible')
-          .get('.header-image')
+          .get('.ash')
+          .should('be.visible')
+          .get('.pokeball')
           .should('be.visible')
           .get('.how-to')
           .contains('How To')
 
-        //   we need to add test for the animations
     });
 
     it('Should be able to click on How to and go to the How To page', () => {
@@ -20,16 +21,16 @@ describe('Home page user flow', () => {
           .click()
           .get('.all-pokemon')
           .should('not.exist')
-          .get('.help-page')
+          .get('.howto-page')
           .should('be.visible')
     });
 
     it('Should be able to click on the x button and get back to the home page', () => {
         cy.get('a')
           .click()
-          .get('.x-icon')
+          .get('.x-icon-how')
           .click()
-          .get('.help-page')
+          .get('.howto-page')
           .should('not.exist')
           .get('.all-pokemon')
           .should('be.visible')
@@ -40,7 +41,7 @@ describe('Home page user flow', () => {
           .should('be.visible')
           .get('.pokemon-card')
           .contains('bulbasaur')
-          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"]')
+          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"]')
           .should('be.visible')
     });
 
@@ -57,7 +58,7 @@ describe('Home page user flow', () => {
             .click()
             .get('h2')
             .should('be.visible')
-            .contains('try again')
+            .contains('Everybody makes a wrong turn once in a while!')
     });
 
     it('Should be able to search Pokemon by Name', () => {
@@ -70,8 +71,19 @@ describe('Home page user flow', () => {
           .contains('25')
           .get('.pokemon-details-header')
           .contains('pikachu')
-          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"]')
+          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"]')
           .should('be.visible')
+    });
+
+    it('Should play a sound if you search for Pikachu', () => {
+        cy.get('input[type="search"]')
+          .type('Pikachu')
+          .should('have.value', 'Pikachu')
+          .get('button')
+          .click()
+          .get('.pokemon-audio')
+          .should('exist')
+         
     });
 
     it('Should show an error message if the user adds the wrong id number', () => {
@@ -82,7 +94,7 @@ describe('Home page user flow', () => {
           .click()
           .get('h2')
           .should('be.visible')
-          .contains('try again')           
+          .contains('Everybody makes a wrong turn once in a while!')           
             
     });
 
@@ -94,11 +106,7 @@ describe('Home page user flow', () => {
           .click()
           .get('.pokemon-details-page')
           .contains('charizard')
-          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"]')
+          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"]')
           .should('be.visible')
     });
-
 })
-
-// I still want to add a test to show that we can move foward with the browser arrow 
-// would Love to hear from Kayla her input about anything else we should test
