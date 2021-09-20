@@ -86,6 +86,7 @@ Outside of Software Development, I have a passion for music and music technology
 - Finding common grounds when building the application amongst a team!
 - Making the application accessible all platforms
 - Learning and Implemetings new technologies on the fly
+- Refactoring the app to use Hooks
 
 ### Challenges
 
