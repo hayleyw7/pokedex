@@ -5,25 +5,25 @@ import { gsap } from 'gsap';
 
 const Header = ({ hideHowToBtn, foundPokemon }) => {
 
-  useEffect(()=> {
-    gsap.fromTo('.pokeball', 
-    { 
-      opacity: 1,
-      duration: 2, 
-      ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
-      y: 0, 
-      scale: 2.5,
-      rotation: 720
-    },
-    {   
-        scale: 1,
-        opacity: 0,
-        duration: 2.5, 
-        ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
-        y: 0,   
-        rotation: 0
-    })
-  }, [ foundPokemon]);
+  // useEffect(()=> {
+  //   gsap.fromTo('.pokeball', 
+  //   { 
+  //     opacity: 1,
+  //     duration: 2, 
+  //     ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
+  //     y: 0, 
+  //     scale: 2.5,
+  //     rotation: 720
+  //   },
+  //   {   
+  //       scale: 1,
+  //       opacity: 0,
+  //       duration: 2.5, 
+  //       ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
+  //       y: 0,   
+  //       rotation: 0
+  //   })
+  // }, [ foundPokemon]);
 
   const handleClick = (e) => {
     hideHowToBtn(e);
