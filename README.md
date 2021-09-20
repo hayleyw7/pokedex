@@ -63,8 +63,8 @@ Outside of Software Development, I have a passion for music and music technology
 ## Screenshots
 
 ### Mobile
-![dashboard gif](Images/mobile-home.png) 
-![dashboard gif](./src/images/dashboard.gif) 
+![mobile home page screenshot](./public/Images/mobile-home.png) 
+![dashboard gif](./public/Images/dashboard.gif) 
 
 ### Desktop
 ![dashboard gif](./src/images/dashboard.gif) 
