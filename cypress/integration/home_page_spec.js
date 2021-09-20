@@ -58,7 +58,7 @@ describe('Home page user flow', () => {
             .click()
             .get('h2')
             .should('be.visible')
-            .contains('try again')
+            .contains('Everybody makes a wrong turn once in a while!')
     });
 
     it.skip('Should be able to search Pokemon by Name', () => {
