@@ -75,6 +75,10 @@ describe('Home page user flow', () => {
           .should('be.visible')
     });
 
+    it('Should play a sound if you search for Pikachu', () => {
+
+    })
+
     it.skip('Should show an error message if the user adds the wrong id number', () => {
         cy.get('input[type="search"]')
           .type('200')
