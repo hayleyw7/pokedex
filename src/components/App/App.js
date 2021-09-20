@@ -21,7 +21,7 @@ const App = () => {
     try {
       const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
       const pokeDexData = await res.json()
-      setTimeout(() => {setPokeDex(pokeDexData.results)}, 1250)
+      setTimeout(() => {setPokeDex(pokeDexData.results)}, 1400)
     } catch (err) {
       console.log('Error: ', err)
     }
@@ -88,7 +88,7 @@ const App = () => {
                 clearPokemon={clearPokemon}
               />
             )}
-            
+
             {foundPokemon.length === 0 && (
               <PokedexGrid
                 pokedexData={pokeDex}
