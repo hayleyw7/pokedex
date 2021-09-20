@@ -7,7 +7,6 @@ import { gsap, Power3 } from 'gsap';
 const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   const [pokemonDetails, setPokemonDetails] = useState([]);
   const [error, setError] = useState("");
-  // let pkimg = useRef(null);
 
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
@@ -25,42 +24,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
       const pokemonDetails = await res.json();
       setPokemonDetails(pokemonDetails);
       console.log(poKemonImg2)
-
-      // gsap.set('.single-pokemon-pic', { attr: { src:{ pokemonImage } }})
-      gsap.fromTo('.single-pokemon-pic' , 
-        { 
-          opacity: 1,
-          duration: 2.5, 
-          ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
-          y: -500 
-        },
-        { 
-            opacity: 2,
-            duration: 2.5, 
-            ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
-            y: 0 
-        })
         // gsap.set('.single-pokemon-pic', { attr: { src:{ poKemonImg2 } }})
-        console.log(poKemonImg2)
-
-      // {
-      //   opacity: 0,
-      //   x: -200,
-      //   y: -200,
-      //   ease:'foward',
-      //   ease: Power3.easeOut,
-      //   repeat:true
-      // },
-      // {
-      //   opacity: 1,
-      //   x: 0,
-      //   y: 10,
-      //   ease: Power3.easeOut,
-      //   repeat: true
-      // }
-    // )
-
-    console.log('here')
     } catch (error) {
       setError(error.message);
     }
@@ -87,30 +51,29 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
 
   useEffect(() => {
     getPokemonDetails();
- 
-    // pkimg.style.display='none';
   }, [foundPokemon]);
 
-  // useEffect(() => {
-  
-  // //   gsap.fromTo('.single-pokemon-pic' , .3, 
-  // //   {
-  // //     opacity: 0,
-  // //     x: 10,
-  // //     y: -100,
-  // //     ease: Power3.easeOut
-  // //   },
-  // //   {
-  // //     opacity: 1,
-  // //     x: 10,
-  // //     y: 10,
-  // //     ease: Power3.easeOut
-  // //   }
-  // // )
-
-  // },[])
+  useEffect(() => {
+      gsap.fromTo('.single-pokemon-pic' , 
+        { 
+          opacity: 0,
+          duration: 2.5, 
+          ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
+          y: -500, 
+          scale:1.8,
+          rotation:0
+        },
+        { 
+            opacity: 1,
+            duration: 2.5, 
+            // ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
+            y: 0 ,
+            scale:1,
+            rotation:3600,
+            delay:.5
+        })
+  },[pokemonDetails]);
  
-
   if (pokemonDetails.types) {
     return (
       <div className="pokemon-details-page">
@@ -137,7 +100,6 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
           </h1>
 
           <img
-            // ref={ el => {pkimg = el}}
             src={pokemonImage}
             className="single-pokemon-pic"
             alt={`${pokemonDetails.name} image`}
