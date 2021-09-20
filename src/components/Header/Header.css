@@ -85,7 +85,8 @@ a:link {
   position: absolute;
   top: 120px;
   left: 29px;
-  animation: rotation 15s infinite linear;    
+  /* animation: rotation 15s infinite linear;  */
+  z-index: 1;   
 }
 
 .ash {
