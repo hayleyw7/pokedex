@@ -42,7 +42,7 @@ const App = () => {
 
      return pokeDex.find((pokemon, index) => {
       let lowerCaseName = pokemon.name.toLowerCase();
-// add === to this condition
+
       if (
         lowerCaseName === lowerCaseInput &&
         lowerCaseInput !== "" &&
@@ -59,7 +59,6 @@ const App = () => {
 
   const getPokemonImage = (id) => {
     let pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`
-
     return pokemonImage;
   };
 
@@ -80,18 +79,17 @@ const App = () => {
   const showHowToBtn = (e) => {
     const howTo = document.querySelector(".how-to");
     howTo.classList.remove("hidden");
-  }  
+  }
 
   return (
     <div className="App">
       <Header hideHowToBtn={hideHowToBtn} foundPokemon={foundPokemon}/>
-
       <Route exact path='/'
         render={() =>
-          
+
           <main className='main-content'>
             {!pokeDex.length && <Loader />}
-            {pokeDex.length && <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>}
+            {pokeDex.length > 0 && <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>}
             {error && <Error />}
             {foundPokemon.length !== 0 && !error && (
               <PokemonDetails
