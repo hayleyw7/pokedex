@@ -7,13 +7,13 @@ const Error = () => {
   return (
     <div className='error-container'>
       <img
-        alt='Jigglypuff Error'
-        className='jigglypuff-error'
-        src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/39.svg'
+        alt='Professor Oak'
+        className='prof-oak'
+        src='Images/prof-oak.png'
       ></img>
       <div className='error-message'>
         <h2 className='error-quote'>"Everybody makes a wrong turn once in a while!"</h2>
-        <p className='error-note'>Please enter a valid Generation 1 Pokemon name or ID (1 to 152).</p>
+        <p className='error-note'>Try again. Enter a real Generation 1 Pokemon name or ID (1 to 152).</p>
       </div>
     </div>     
   )
