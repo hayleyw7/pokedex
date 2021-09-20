@@ -76,8 +76,15 @@ describe('Home page user flow', () => {
     });
 
     it('Should play a sound if you search for Pikachu', () => {
-
-    })
+        cy.get('input[type="search"]')
+          .type('Pikachu')
+          .should('have.value', 'Pikachu')
+          .get('button')
+          .click()
+          .get('.pokemon-audio')
+          .audio('https://play.pokemonshowdown.com/audio/cries/pikachu.ogg')
+          .should('be.playing')
+    });
 
     it.skip('Should show an error message if the user adds the wrong id number', () => {
         cy.get('input[type="search"]')
