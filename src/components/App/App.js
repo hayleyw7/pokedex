@@ -78,7 +78,7 @@ const App = () => {
         render={() =>
           <main className='main-content'>
             <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>
-            {error && <Error clearPokemon={clearPokemon}/>}
+            {error && <Error />}
             {foundPokemon.length !== 0 && !error && (
               <PokemonDetails
                 foundPokemon={foundPokemon}
