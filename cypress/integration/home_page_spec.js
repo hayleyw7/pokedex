@@ -71,7 +71,7 @@ describe('Home page user flow', () => {
           .contains('25')
           .get('.pokemon-details-header')
           .contains('pikachu')
-          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"]')
+          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"]')
           .should('be.visible')
     });
 
