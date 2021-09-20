@@ -7,12 +7,21 @@ const Loader = () => {
   let pokeball = useRef(null)
 
   useEffect(() => {
-    gsap.from([pokeball, loadingMessage], 0.25, {
+    gsap.from([pokeball, loadingMessage], {
       delay: 0.15,
       ease: "power3.out",
       x: -1164,
+      y: -2000,
       stagger: {
-        amount: 0.15
+        amount: 0.25
+      }
+    })
+    gsap.to([loadingMessage, pokeball], {
+      delay: 1.12,
+      ease: "power3.out",
+      x: -1164,
+      stagger: {
+        amount: 0.1
       }
     })
 
