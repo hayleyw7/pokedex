@@ -8,6 +8,8 @@
 * When offline, the user will have complete access to the application features as well as any Pokemon information that has been successfully queried prior to going offline.
 * This will be a very useful app for someone who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
 
+[Deployment Link](https://pokedex2105.surge.sh/)
+
 - PoKedeX: As a user, when I visit the app, I should be able to search for Pokemon by name.
 - PoKedeX: As a user, when I visit the app on a computer or tablet, I should be able to see a display of all Pokemon.
 - How To: As a user, when I visit the app, I have a "How To" button, and if I click it, I can access a page that explains how to use the app.
@@ -57,12 +59,6 @@ Outside of Software Development, I have a passion for music and music technology
 - ESLint
 - Miro Wireframe [(link)](https://miro.com/app/board/o9J_lyZfIKA=/)
 - [PokeApi](https://pokeapi.co/)
-
-## Accessing and Using the App
-
-[deployment link](deployment link)
-
-[describe steps of how to use & navigate the app]
 
 ## GIFs
 
