@@ -15,7 +15,7 @@ const Error = () => {
         <h2 className='error-quote'>"Everybody makes a wrong turn once in a while!"</h2>
         <p className='error-note'>Please enter a valid Generation 1 Pokemon name or ID (1 to 152).</p>
       </div>
-    </div> 
+    </div>     
   )
 }
 

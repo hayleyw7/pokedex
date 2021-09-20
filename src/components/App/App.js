@@ -78,7 +78,7 @@ const App = () => {
         render={() =>
           <main className='main-content'>
             <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>
-            {error && <Error />}
+            {error && <Error clearPokemon={clearPokemon}/>}
             {foundPokemon.length !== 0 && !error && (
               <PokemonDetails
                 foundPokemon={foundPokemon}
@@ -86,7 +86,7 @@ const App = () => {
                 clearPokemon={clearPokemon}
               />
             )}
-            {foundPokemon.length === 0 && (
+            {foundPokemon.length === 0 || error != '' && (
               <PokedexGrid
                 pokedexData={pokeDex}
                 getPokemonImage={getPokemonImage}
