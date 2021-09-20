@@ -60,16 +60,19 @@ Outside of Software Development, I have a passion for music and music technology
 - Miro Wireframe [(link)](https://miro.com/app/board/o9J_lyZfIKA=/)
 - [PokeApi](https://pokeapi.co/)
 
-## GIFs
+## Screenshots
 
-- User selects a Pokemon to find more details about it
-![recording (8)]()
+### Mobile
+![dashboard gif](Images/mobile-home.png) 
+![dashboard gif](./src/images/dashboard.gif) 
 
-- User searches for a particular Pokemon in the PoKedeX search bar
-![recording (9)]()
+### Desktop
+![dashboard gif](./src/images/dashboard.gif) 
+![dashboard gif](./src/images/dashboard.gif) 
 
-- Fully responsive user experience
-![recording (11)]()
+### Error & Loader
+![dashboard gif](./src/images/dashboard.gif) 
+![dashboard gif](./src/images/dashboard.gif) 
 
 ## Reflections
 
