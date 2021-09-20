@@ -21,7 +21,7 @@ const App = () => {
     try {
       const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
       const pokeDexData = await res.json()
-      setTimeout(() => {setPokeDex(pokeDexData.results)}, 1000)
+      setTimeout(() => {setPokeDex(pokeDexData.results)}, 1250)
     } catch (err) {
       console.log('Error: ', err)
     }
