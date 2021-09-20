@@ -28,7 +28,7 @@ describe('Home page user flow', () => {
     it('Should be able to click on the x button and get back to the home page', () => {
         cy.get('a')
           .click()
-          .get('.x-icon')
+          .get('.x-icon-how')
           .click()
           .get('.howto-page')
           .should('not.exist')
