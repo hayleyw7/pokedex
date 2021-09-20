@@ -46,7 +46,7 @@ const HowTo = (props) => {
           <p>
 
           </p>
-            From that Home page, one can type either a name or ID number in the Search box. After pressing the "Catch!!!" button, they can access that Pokemon's details, including image, type, moves, and abilities. Once a Pokemon has been viewed on a device, that information will then be available offline for future access.
+            From that Home page, one can type either a name or ID number in the Search box. After pressing the "Catch!!!" button, they can access the respective Pokemon Details, including image, type, moves, and abilities. Once a Pokemon has been viewed on a device, that information will then be available offline for future access.
           </p>
 
         </article>
