@@ -23,8 +23,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
       const res = await fetch(url);
       const pokemonDetails = await res.json();
       setPokemonDetails(pokemonDetails);
-      console.log(poKemonImg2)
-        // gsap.set('.single-pokemon-pic', { attr: { src:{ poKemonImg2 } }})
+  
     } catch (error) {
       setError(error.message);
     }
@@ -60,26 +59,30 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
           duration: 2.5, 
           ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
           y: -500, 
-          scale:1.8,
-          rotation:0
+          scale: 1.8,
+          rotation: 0
         },
         { 
             opacity: 1,
             duration: 2.5, 
-            // ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
+            ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
             y: 0 ,
-            scale:1,
-            rotation:3600,
-            delay:.5
+            scale: 1,
+            rotation: 3600
         })
+      if (pokemonDetails.name === "pikachu") {
+            var audio  = document.getElementsByClassName("pokemon-audio")[0]
+            audio.loop = false;
+            audio.src  = `https://play.pokemonshowdown.com/audio/cries/${pokemonDetails.name}.ogg`;
+            audio.play()
+        }
   },[pokemonDetails]);
  
   if (pokemonDetails.types) {
     return (
       <div className="pokemon-details-page">
         <div className="pokemon-details-container">
-
-
+          <audio className="pokemon-audio" />
           <Link
             to={`/`}
             key={`home`}  
