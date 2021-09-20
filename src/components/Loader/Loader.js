@@ -12,7 +12,6 @@ const Loader = () => {
       delay: 0.1,
       ease: "power3.out",
       x: -1164,
-      // y: -2000,
       stagger: {
         amount: 0.25
       }
