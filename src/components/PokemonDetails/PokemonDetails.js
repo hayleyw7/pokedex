@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./PokemonDetails.css";
 import { Link } from 'react-router-dom';
-import { gsap, Power3 } from 'gsap';
+import { gsap } from 'gsap';
 
 
 const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
@@ -11,8 +11,6 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
   let poKemonImg2 =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`
-
-
 
   const getPokemonDetails = async () => {
 
@@ -29,7 +27,6 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
     }
   };
 
-
   const handleClick = (e) => {
     clearPokemon(e);
   }  
@@ -38,7 +35,6 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
     const result = pokemonDetails.moves.map((move) => {
       const version = move.version_group_details[0].version_group.name
       const name = move.move.name.split("-").join(" ");
-
       if (version === 'red-blue') {
         return name;
       }
@@ -66,7 +62,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
             opacity: 1,
             duration: 2.5, 
             ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
-            y: 0 ,
+            y: 0,
             scale: 1,
             rotation: 1440
         })
