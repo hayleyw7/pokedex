@@ -76,10 +76,11 @@ const App = () => {
       <Header />
       <Route exact path='/'
         render={() =>
-
+          
           <main className='main-content'>
             {!pokeDex.length && <Loader />}
-            <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>
+            {pokeDex.length && <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>}
+
             {error && <h2 className="search-error-message"> {error}</h2>}
             {foundPokemon.length !== 0 && !error && (
               <PokemonDetails
