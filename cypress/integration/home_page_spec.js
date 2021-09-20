@@ -30,7 +30,7 @@ describe('Home page user flow', () => {
           .click()
           .get('.x-icon')
           .click()
-          .get('.help-page')
+          .get('.howto-page')
           .should('not.exist')
           .get('.all-pokemon')
           .should('be.visible')
