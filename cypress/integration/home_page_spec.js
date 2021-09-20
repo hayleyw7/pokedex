@@ -86,7 +86,7 @@ describe('Home page user flow', () => {
          
     });
 
-    it.skip('Should show an error message if the user adds the wrong id number', () => {
+    it('Should show an error message if the user adds the wrong id number', () => {
         cy.get('input[type="search"]')
           .type('200')
           .should('have.value',  '200')
