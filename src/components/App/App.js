@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Search from "../Search/Search";
 import PokedexGrid from "../PokedexGrid/PokedexGrid";
 import Header from "../Header/Header";
+import Error from "../Error/Error";
 import HowTo from "../HowTo/HowTo";
 import Loader from '../Loader/Loader'
 import "./App.css";
@@ -30,7 +31,7 @@ const App = () => {
   const addPokemon = (queriedPokemon) => {
     const foundPokemon = validatePokemonQuery(queriedPokemon)
     if(foundPokemon === undefined) {
-      setError('Not  a valid Name or id , try again')
+      setError('error')
     } else {
       setFoundPokemon([foundPokemon])
     }
@@ -91,8 +92,7 @@ const App = () => {
           <main className='main-content'>
             {!pokeDex.length && <Loader />}
             {pokeDex.length && <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>}
-
-            {error && <h2 className="search-error-message"> {error}</h2>}
+            {error && <Error />}
             {foundPokemon.length !== 0 && !error && (
               <PokemonDetails
                 foundPokemon={foundPokemon}
@@ -108,7 +108,7 @@ const App = () => {
               />
             )}
 
-            {error !== '' && (
+            {error !== '' && foundPokemon.length !== 0 && (
               <PokedexGrid
                 pokedexData={pokeDex}
                 getPokemonImage={getPokemonImage}
