@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./PokemonDetails.css";
 import { Link } from 'react-router-dom';
-import { gsap, Power3 } from 'gsap';
+import { gsap } from 'gsap';
 
 
 const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   const [pokemonDetails, setPokemonDetails] = useState([]);
   const [error, setError] = useState("");
-  // let pkimg = useRef(null);
 
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
@@ -21,30 +20,11 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
       const res = await fetch(url);
       const pokemonDetails = await res.json();
       setPokemonDetails(pokemonDetails);
-      
-      gsap.fromTo('.single-pokemon-pic' , .8, 
-      {
-        opacity: 0,
-        x: 0,
-        y: -200,
-        ease: Power3.easeOut,
-        repeat:true
-      },
-      {
-        opacity: 1,
-        x: 70,
-        y: 10,
-        ease: Power3.easeOut,
-        repeat: true
-      }
-    )
-
-    console.log('here')
+  
     } catch (error) {
       setError(error.message);
     }
   };
-
 
   const handleClick = (e) => {
     clearPokemon(e);
@@ -54,7 +34,6 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
     const result = pokemonDetails.moves.map((move) => {
       const version = move.version_group_details[0].version_group.name
       const name = move.move.name.split("-").join(" ");
-
       if (version === 'red-blue') {
         return name;
       }
@@ -66,36 +45,40 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
 
   useEffect(() => {
     getPokemonDetails();
- 
-    // pkimg.style.display='none';
   }, [foundPokemon]);
 
-  // useEffect(() => {
-  
-  // //   gsap.fromTo('.single-pokemon-pic' , .3, 
-  // //   {
-  // //     opacity: 0,
-  // //     x: 10,
-  // //     y: -100,
-  // //     ease: Power3.easeOut
-  // //   },
-  // //   {
-  // //     opacity: 1,
-  // //     x: 10,
-  // //     y: 10,
-  // //     ease: Power3.easeOut
-  // //   }
-  // // )
-
-  // },[])
+  useEffect(() => {
+      gsap.fromTo('.single-pokemon-pic' , 
+        { 
+          opacity: 0,
+          scale: -5,
+          duration: 2.5, 
+          ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
+          y: -1000, 
+          rotation: 1080,
+          delay: -8
+        },
+        { 
+            opacity: 1,
+            duration: 2.5, 
+            ease: "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp: false})", 
+            y: 0,
+            scale: 1,
+            rotation: 0
+        })
+      if (pokemonDetails.name === "pikachu") {
+            var audio  = document.getElementsByClassName("pokemon-audio")[0]
+            audio.loop = false;
+            audio.src  = `https://play.pokemonshowdown.com/audio/cries/${pokemonDetails.name}.ogg`;
+            audio.play()
+        }
+  },[pokemonDetails]);
  
-
   if (pokemonDetails.types) {
     return (
       <div className="pokemon-details-page">
         <div className="pokemon-details-container">
-
-
+          <audio className="pokemon-audio"></audio>
           <Link
             to={`/`}
             key={`home`}  
@@ -116,7 +99,6 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
           </h1>
 
           <img
-            // ref={ el => {pkimg = el}}
             src={pokemonImage}
             className="single-pokemon-pic"
             alt={`${pokemonDetails.name} image`}

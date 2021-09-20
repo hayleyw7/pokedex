@@ -83,7 +83,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header hideHowToBtn={hideHowToBtn}/>
+      <Header hideHowToBtn={hideHowToBtn} foundPokemon={foundPokemon}/>
+
       <Route exact path='/'
         render={() =>
           
