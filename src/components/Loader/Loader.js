@@ -8,10 +8,10 @@ const Loader = () => {
 
   useEffect(() => {
     gsap.from([pokeball, loadingMessage], {
-      delay: 0.15,
+      delay: 0.1,
       ease: "power3.out",
       x: -1164,
-      y: -2000,
+      // y: -2000,
       stagger: {
         amount: 0.25
       }
@@ -24,8 +24,7 @@ const Loader = () => {
         amount: 0.1
       }
     })
-
-  }, [loadingMessage, pokeball])
+  }, [loadingMessage, pokeball]);
 
   return (
     <section className='loader-container'>
