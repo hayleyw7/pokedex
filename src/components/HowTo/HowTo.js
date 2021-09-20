@@ -33,7 +33,10 @@ const HowTo = (props) => {
         <article className='about-container'>
 
           <p>
-            The PoKedeX is a Progressive Web Application that gives a user the ability to quickly search and access information about any Generation 1 Pokemon and later reference that information for offline access. If one encounters a Pokemon in the wild, and they need to find quick information about it, this is the application for them!
+            The PoKedeX is a Progressive Web Application that gives a user the ability to quickly search and access information about any Generation 1 Pokemon. They will then then have that information saved for offline reference.
+          </p>
+          <p>                      
+            If one encounters a Pokemon in the wild, and they need to find quick information about it, this is the application for them!
           </p>
 
         </article>
@@ -42,11 +45,17 @@ const HowTo = (props) => {
         <article className='howto-search-container'>
 
           <p>
-            When a user visits the application on a computer or tablet, they should be able to see a seach box and a display of Pokemon images & names, sorted by ID number. When one visits the application on a mobile device, they should only see the Search box, even if offline.
+            When a user visits the application on a desktop computer, laptop, or tablet, they should see a Search box and a grid of cards that contain all Generation 1 Pokemon images and names, which are sorted by ID number.
+          </p>
+          <p>  
+            When one visits the application on a mobile device, they should only see the Search box, even if offline.
           <p>
 
           </p>
-            From that Home page, one can type either a name or ID number in the Search box. After pressing the "Catch!!!" button, they can access the respective Pokemon Details, including image, type, moves, and abilities. Once a Pokemon has been viewed on a device, that information will then be available offline for future access.
+            From the Home or Pokemon Details pages, one can type either a name or ID number in the Search box. After pressing the "Catch!!!" button, they can access the respective Pokemon's image, type, moves, and abilities.
+          </p>
+          <p>
+            Once viewed on a device, that Pokemon Details page will then be available offline for future access.
           </p>
 
         </article>
@@ -55,7 +64,7 @@ const HowTo = (props) => {
         <article className='howto-home-container'>
 
           <p>
-            From either the How-To page or the Pokemon Details page, one can return to the Home page by clicking the "x" icon.
+            From either the How-To page or the Pokemon Details page, a user can return to the Home page by clicking the "x" icon.
           </p>
 
         </article>
