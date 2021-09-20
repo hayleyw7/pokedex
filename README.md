@@ -4,12 +4,14 @@
 
 ## Abstract
 
-* The PoKedeX App is a Progressive Web Application that gives a user the ability to search through Generation 1 Pokemon and quickly find information on them. This will be a very useful app for someone who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
+* The PoKedeX App is a Progressive Web Application that gives a user the ability to search through Generation 1 Pokemon and quickly find information on them. 
+* When offline, the user will have complete access to the application features as well as any Pokemon information that has been successfully queried prior to going offline.
+* This will be a very useful app for someone who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
 
 - PoKedeX: As a user, when I visit the app, I should be able to search for Pokemon by name.
 - PoKedeX: As a user, when I visit the app on a computer or tablet, I should be able to see a display of all Pokemon.
-- Help: As a user, when I visit the app, I have a "help" button, and if I click it, I can access a page that explains how to use the app.
-- PokemonDetails: As a user, I should be able to access a page that contains a Pokemon's details by either a) clicking their image or b) searching for their name, and no other Pokemon details or images should be visible.
+- How To: As a user, when I visit the app, I have a "How To" button, and if I click it, I can access a page that explains how to use the app.
+- PokemonDetails: As a user, I should be able to access a page that contains a Pokemon's details by searching for their `name` or `ID (1-151)`. 
 - PokemonDetails & Help: As a user, I should be able to return to the PoKedeX from any other page.
 
 This project was a group project for Turing School of Software & Design during module 3. [The project rubric is linked here.](https://frontend.turing.edu/projects/module-3/stretch.html)
