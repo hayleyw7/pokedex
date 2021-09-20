@@ -21,7 +21,7 @@ const App = () => {
     try {
       const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
       const pokeDexData = await res.json()
-      setPokeDex(pokeDexData.results)
+      setTimeout(() => {setPokeDex(pokeDexData.results)}, 1000)
     } catch (err) {
       console.log('Error: ', err)
     }
@@ -74,11 +74,13 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Loader />
       <Route exact path='/'
         render={() =>
+
           <main className='main-content'>
             <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>
+            {!pokeDex.length && <Loader />}
+
             {error && <h2 className="search-error-message"> {error}</h2>}
             {foundPokemon.length !== 0 && !error && (
               <PokemonDetails
