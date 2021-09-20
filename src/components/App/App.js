@@ -4,6 +4,7 @@ import PokedexGrid from "../PokedexGrid/PokedexGrid";
 import Header from "../Header/Header";
 import Error from "../Error/Error";
 import HowTo from "../HowTo/HowTo";
+import Loader from '../Loader/Loader'
 import "./App.css";
 import PokemonDetails from "../PokemonDetails/PokemonDetails";
 import { Route } from 'react-router-dom';
@@ -14,7 +15,7 @@ const App = () => {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    getPokeDexData()
+    setTimeout(() => {getPokeDexData()}, 1450)  // setTimeout is for animations
   }, []);
 
   const getPokeDexData = async () => {
@@ -41,7 +42,7 @@ const App = () => {
 
      return pokeDex.find((pokemon, index) => {
       let lowerCaseName = pokemon.name.toLowerCase();
-// add === to this condition 
+// add === to this condition
       if (
         lowerCaseName === lowerCaseInput &&
         lowerCaseInput !== "" &&
@@ -71,13 +72,26 @@ const App = () => {
     clearErrorMessage();
   };
 
+  const hideHowToBtn = (e) => {
+    const howTo = document.querySelector(".how-to");
+    howTo.classList.add("hidden");
+  }
+
+  const showHowToBtn = (e) => {
+    const howTo = document.querySelector(".how-to");
+    howTo.classList.remove("hidden");
+  }  
+
   return (
     <div className="App">
-      <Header />
+      <Header hideHowToBtn={hideHowToBtn} foundPokemon={foundPokemon}/>
+
       <Route exact path='/'
         render={() =>
+          
           <main className='main-content'>
-            <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>
+            {!pokeDex.length && <Loader />}
+            {pokeDex.length && <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>}
             {error && <Error />}
             {foundPokemon.length !== 0 && !error && (
               <PokemonDetails
@@ -86,7 +100,7 @@ const App = () => {
                 clearPokemon={clearPokemon}
               />
             )}
-            
+
             {foundPokemon.length === 0 && (
               <PokedexGrid
                 pokedexData={pokeDex}
@@ -106,7 +120,7 @@ const App = () => {
       />
       <Route
         exact path='/howto'
-        render={() => <HowTo clearPokemon={clearPokemon}/>}
+        render={() => <HowTo clearPokemon={clearPokemon} showHowToBtn={showHowToBtn}/>}
       />
     </div>
   )

@@ -24,7 +24,6 @@
 .how-to {
   font-size: 50px;
   color: white;
-  /* color:#f2b32e; */
   text-decoration: none;
   -webkit-text-stroke: 2px #3b4cca;
   transition: 300ms;
@@ -86,7 +85,8 @@ a:link {
   position: absolute;
   top: 120px;
   left: 29px;
-  animation: rotation 15s infinite linear;    
+  /* animation: rotation 15s infinite linear;  */
+  z-index: 1;   
 }
 
 .ash {
@@ -106,4 +106,8 @@ a:link {
   .how-to {
     margin: -15px 0 0 -62px;
   }
+}
+
+.hidden {
+  display: none;
 }
