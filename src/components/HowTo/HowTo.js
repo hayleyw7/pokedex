@@ -29,7 +29,7 @@ const HowTo = (props) => {
 
         <h1 className='howto-header'>How To Use The PoKedeX</h1>   
 
-        <h2 className='about-header'>About</h2>
+        <h2 className='about-header'>About Application</h2>
         <article className='about-container'>
 
           <p>
