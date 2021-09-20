@@ -1,6 +1,5 @@
 import React from 'react';
 import './HowTo.css';
-// import xIcon from '../../assets/x-icon.png'
 import { Link } from 'react-router-dom';
 
 
@@ -34,7 +33,7 @@ const HowTo = (props) => {
         <article className='about-container'>
 
           <p>
-            The PoKedeX is a Progressive Web Application that gives a user the ability to search through Generation 1 Pokemon and quickly find information on them. If you encounter a Pokemon in the wild, and you need to find quick information about it, even without internet service, this is the app for you!
+            The PoKedeX is a Progressive Web Application that gives a user the ability to quickly search and access information about any Generation 1 Pokemon. If one encounters a Pokemon in the wild, and they need to find quick information about it, even without internet service, this is the app for them!
           </p>
 
         </article>
@@ -43,11 +42,11 @@ const HowTo = (props) => {
         <article className='howto-search-container'>
 
           <p>
-            When you visit the app on a computer or tablet, you should be able to see a seach box and a display of all Pokemon by ID number. On a mobile device, you should just see the search box.
+            When one visits the app on a computer or tablet, they should be able to see a seach box and a display of Pokemon images & names, sorted by ID number. When one visits the app on a mobile device, they should only see the search box.
           <p>
 
           </p>
-            From there the home page, you can the search box to access details about individual Generation 1 Pokemon by name or ID, including image, type, moves, and abilities.
+            From there the home page, one can type either a name or ID number in the search box. After pressing the "Catch!!!" button, they can access that Pokemon's details, including image, type, moves, and abilities, and return to the Home page by clicking the "x" icon.
           </p>
 
         </article>
@@ -56,7 +55,7 @@ const HowTo = (props) => {
         <article className='howto-home-container'>
 
           <p>
-            From either this how-to page or the Pokemon details page, you can return to the home page by clicking the "Back" button.
+            From either this how-to page or the Pokemon details page, one can return to the Home page by clicking the "x" icon.
           </p>
 
         </article>
