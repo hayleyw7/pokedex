@@ -8,7 +8,7 @@
 * When offline, the user will have complete access to the application features as well as any Pokemon information that has been successfully queried prior to going offline.
 * This will be a very useful app for someone who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
 
-[Deployment Link](https://pokedex2105.surge.sh/)
+[Deployment Link](https://pokedex-git-main-matt-roden.vercel.app/)
 
 - PoKedeX: As a user, when I visit the app, I should be able to search for Pokemon by name.
 - PoKedeX: As a user, when I visit the app on a computer or tablet, I should be able to see a display of all Pokemon.
