@@ -48,3 +48,17 @@
     padding-left: 1.2rem;
   }
 }
+
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+  .search-bar {
+    margin-top: 5rem;
+    padding-left: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 800px) {
+  .search-bar {
+    margin-top: -3rem;
+    padding-left: 1.2rem;
+  }
+}
