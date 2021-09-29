@@ -5,7 +5,6 @@ import Header from "../Header/Header";
 import Error from "../Error/Error";
 import HowTo from "../HowTo/HowTo";
 import Loader from '../Loader/Loader'
-import Footer from '../Footer/Footer'
 import "./App.css";
 import PokemonDetails from "../PokemonDetails/PokemonDetails";
 import { Route } from 'react-router-dom';
@@ -127,7 +126,6 @@ const App = () => {
         exact path='/howto'
         render={() => <HowTo clearPokemon={clearPokemon} showHowToBtn={showHowToBtn}/>}
       />
-      <Footer />
     </div>
   )
 };
