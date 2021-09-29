@@ -26,12 +26,12 @@
   text-decoration: none;
   -webkit-text-stroke: 2px #3b4cca;
   transition: 300ms;
-  animation: vert-bounce 4.5s infinite linear;
+  /* animation: vert-bounce 4.5s infinite linear; */
   position: relative;
   margin: 2.5rem 0 0 -4.5rem;
 }
 
-@keyframes vert-bounce {
+/* @keyframes vert-bounce {
   0%{top: 0em}
   40%{top: 0em}
   43%{top: -0.3em}
@@ -39,7 +39,7 @@
   48%{top: -0.1em}
   50%{top: 0em}
   100%{top: 0em;}
-}
+} */
 
 a:link {
   text-decoration: none;
