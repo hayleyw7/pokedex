@@ -67,7 +67,7 @@ Outside of Software Development, I have a passion for music and music technology
 
 <p>
   <img src="./public/Images/home-mobile.png" alt="mobile home page screenshot" width="200"/>
-  <img src="./public/Images/pokemon-mobile.png" alt="mobile pokemon details screenshot" width="200"/>
+  <img src="./public/Images/pokemon-mobile-2.png" alt="mobile pokemon details screenshot" width="200"/>
   <img src="./public/Images/howto-mobile.png" alt="desktop how to page screenshot" width="200"/>    
 </p>
 
@@ -76,7 +76,7 @@ Outside of Software Development, I have a passion for music and music technology
 <p>
   <img src="./public/Images/home-desktop.png" alt="desktop home page screenshot" width="200"/>
   <img src="./public/Images/pokemon-desktop.png" alt="desktop pokemon page screenshot" width="200"/>
-  <img src="./public/Images/howto-desktop.png" alt="desktop how to page screenshot" width="200"/>  
+  <img src="./public/Images/howto-desktop-2.png" alt="desktop how to page screenshot" width="200"/>  
 </p>
 
 ### Error & Loader
