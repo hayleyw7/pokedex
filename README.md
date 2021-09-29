@@ -8,7 +8,7 @@
 * When offline, the user will have complete access to the application features as well as any Pokemon information that has been successfully queried prior to going offline.
 * This will be a very useful app for someone who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
 
-[Deployment Link](https://pokedex-git-main-matt-roden.vercel.app/)
+[Deployment Link](http://pocket-pokedex.surge.sh/)
 
 - PoKedeX: As a user, when I visit the app, I should be able to search for Pokemon by name.
 - PoKedeX: As a user, when I visit the app on a computer or tablet, I should be able to see a display of all Pokemon.
@@ -18,6 +18,7 @@
 
 This project was a group project for Turing School of Software & Design during module 3. [The project rubric is linked here.](https://frontend.turing.edu/projects/module-3/stretch.html)
 
+Note: Since the group completed the project and received a grade, the app has been significantly updated and edited on this personal fork.
 
 ## A Little Bit About the Developers
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg" alt="Pikachu" width="100" align="right"/>
@@ -65,15 +66,17 @@ Outside of Software Development, I have a passion for music and music technology
 ### Mobile
 
 <p>
-  <img src="./public/Images/mobile-home.png" alt="mobile home page screenshot" width="200"/>
-  <img src="./public/Images/mobile-pokemon.png" alt="mobile pokemon details screenshot" width="200"/>
+  <img src="./public/Images/home-mobile.png" alt="mobile home page screenshot" width="200"/>
+  <img src="./public/Images/pokemon-mobile.png" alt="mobile pokemon details screenshot" width="200"/>
+  <img src="./public/Images/howto-mobile.png" alt="desktop how to page screenshot" width="200"/>    
 </p>
 
 ### Desktop
 
 <p>
-  <img src="./public/Images/desktop-home.png" alt="desktop home page screenshot" width="200"/>
-  <img src="./public/Images/desktop-pokemon.png" alt="desktop pokemon page screenshot" width="200"/>
+  <img src="./public/Images/home-desktop.png" alt="desktop home page screenshot" width="200"/>
+  <img src="./public/Images/pokemon-desktop.png" alt="desktop pokemon page screenshot" width="200"/>
+  <img src="./public/Images/howto-desktop.png" alt="desktop how to page screenshot" width="200"/>  
 </p>
 
 ### Error & Loader

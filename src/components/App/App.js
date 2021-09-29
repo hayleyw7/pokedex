@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     setTimeout(() => {getPokeDexData()}, 1450)  // setTimeout is for animations
-  }, []);
+  }, []); 
 
   const getPokeDexData = async () => {
     try {
