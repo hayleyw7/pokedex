@@ -28,6 +28,7 @@ const App = () => {
     }
   };
 
+  // eslint-disable-next-line    
   const addPokemon = (queriedPokemon) => {
     const foundPokemon = validatePokemonQuery(queriedPokemon)
     if(foundPokemon === undefined) {
@@ -40,6 +41,7 @@ const App = () => {
   const validatePokemonQuery = (queriedPokemon) => {
     const lowerCaseInput = queriedPokemon.toLowerCase();
 
+    // eslint-disable-next-line
      return pokeDex.find((pokemon, index) => {
       let lowerCaseName = pokemon.name.toLowerCase();
 

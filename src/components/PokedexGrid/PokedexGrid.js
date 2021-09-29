@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import PokemonCard from "../PokemonCard/PokemonCard";
 import "./PokedexGrid.css";
 
