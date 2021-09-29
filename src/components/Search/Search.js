@@ -22,7 +22,7 @@ const Search = ({ addPokemon, clearErrorMessage }) => {
         className="catch-button"
         type="submit"
         onClick={(e) => handleClick(e)}>
-        Catch!!!</button>
+        Catch</button>
     </form>
   )
 };
