@@ -16,7 +16,7 @@ const Search = ({ addPokemon, clearErrorMessage }) => {
         className="search-bar"
         type="search"
         name="queriedPokemon"
-        placeholder="Find A Pokemon..."
+        placeholder="Find A Pokemon"
         onChange={(e) => setQueriedPokemon(e.target.value)}/>
       <button
         className="catch-button"
