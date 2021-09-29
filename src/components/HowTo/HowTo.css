@@ -1,7 +1,7 @@
 .howto-container {
   display: flex;
   flex-direction: column;
-  margin: 50px 10% 50px 10%;
+  margin: 3.2rem 10rem 3.2rem 10rem;
   /* padding: 10px 15px 10px 15px; */
   /* border-radius: 25px; */
   /* sugestion???- not sure - i don't like on iphone- it will need a @mediaQuery*/
@@ -43,7 +43,7 @@
 
 .x-icon-how {
   width: 3rem;
-  /* margin: 0 -1.4rem 0 1rem;   */
+  margin: 0 -1.4rem 0 1rem;  
 }
 
 .x-icon-how:hover {
@@ -63,6 +63,12 @@
   margin-top: 20px;
   width: 150px;   
 } */
+
+@media only screen and (max-width: 800px) {
+  .howto-container {
+    margin: 3.2rem 2rem 3.2rem 2rem;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .pokemon-details-id {

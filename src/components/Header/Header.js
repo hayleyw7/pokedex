@@ -5,7 +5,7 @@ import { gsap } from 'gsap';
 
 const Header = ({ hideHowToBtn, foundPokemon }) => {
 // we have decided to keep this code for further study but 
-// we did not like with all the animations togehter
+// we did not like with all the animations together
   // useEffect(()=> {
   //   gsap.fromTo('.pokeball', 
   //   { 
