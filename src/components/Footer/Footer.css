@@ -3,9 +3,19 @@
   background: -webkit-linear-gradient(to right, #FF0000, #CC0000);
   background: linear-gradient(to right, #FF0000, #CC0000);
   height: 3rem;
-  width: 101%;
+  width: 100%;
   position: relative;
   display: flex;
   justify-content: space-around;
-  bottom: 0;
+  bottom: -3.6rem;
+}
+
+.footer-container {
+  background: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    width: 94%;
+  }
 }
