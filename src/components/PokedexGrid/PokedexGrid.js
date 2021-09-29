@@ -6,6 +6,7 @@ const PokedexGrid = (props) => {
   const [queriedPokemon, setQueriedPokemon] = useState('')
 
   const handleClick = (e) => {
+    setQueriedPokemon()
     e.preventDefault()
     this.props.clearErrorMessage()
     this.props.addPokemon(queriedPokemon)
@@ -21,7 +22,7 @@ const PokedexGrid = (props) => {
         id={pokemonId}
         image={pokemonImage}
         name={pokemon.name}
-        // onClick={()=> getPokemonDetaisl({pokemonId})}
+        onClick={()=> handleClick({pokemonId})}
       />
     );
   });

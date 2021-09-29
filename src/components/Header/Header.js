@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Header.css'
 import { Route, Link } from 'react-router-dom';
 import { gsap } from 'gsap';

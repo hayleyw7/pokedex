@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Search from "../Search/Search";
-import PokedexGrid from "../PokedexGrid/PokedexGrid";
+// import PokedexGrid from "../PokedexGrid/PokedexGrid";
 import Header from "../Header/Header";
 import Error from "../Error/Error";
 import HowTo from "../HowTo/HowTo";
@@ -99,7 +99,7 @@ const App = () => {
               />
             )}
 
-            {foundPokemon.length === 0 && (
+            {/* {foundPokemon.length === 0 && (
               <PokedexGrid
                 pokedexData={pokeDex}
                 getPokemonImage={getPokemonImage}
@@ -115,7 +115,7 @@ const App = () => {
                 addPokemon={addPokemon}
                 clearErrorMessage={clearErrorMessage}                
               />
-            )}
+            )} */}
 
           </main>
         }
