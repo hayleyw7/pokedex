@@ -10,12 +10,16 @@
   bottom: -3.6rem;
 }
 
-.footer-container {
+.shape-fill {
   background: white;
 }
 
-@media only screen and (max-width: 600px) {
+/* .footer-container {
+  background: white;
+} */
+
+/* @media only screen and (max-width: 600px) {
   .footer {
     width: 94%;
   }
-}
+} */

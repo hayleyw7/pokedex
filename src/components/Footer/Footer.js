@@ -4,7 +4,7 @@ import './Footer.css'
 const Footer = ({ hideHowToBtn, foundPokemon }) => {
 
   return (
-    <div className='footer-container'>
+
       <div className='footer'>
         <svg
           data-name="Layer 1"
@@ -19,7 +19,6 @@ const Footer = ({ hideHowToBtn, foundPokemon }) => {
           </path>
         </svg>
       </div>
-    </div>
   )
 }
 
