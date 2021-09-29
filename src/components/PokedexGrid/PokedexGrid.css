@@ -1,21 +1,21 @@
 .all-pokemon {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  /* justify-content: space-around; */
+  /* overflow-x: hidden;
+  overflow-y: scroll; */
   text-align: center;
   font-family: 'PocketMonk', sans-serif;
   background: white;
   /* suggestion */
   /* height: 455px; */
-  height: 70vh;
-  margin: 50px 10% 50px 10%;
-  padding: 10px;
-  border-radius: 5px;
+  /* height: 70vh; */
+  /* margin: 50px 10% 50px 10%; */
+  /* padding: 10px; */
+  /* border-radius: 5px; */
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
  .all-pokemon {
    margin-left: 1%;
    margin-right: 0;
@@ -26,4 +26,4 @@
    overflow-y: hidden;
    justify-content: flex-start;
  }
-}
+} */
