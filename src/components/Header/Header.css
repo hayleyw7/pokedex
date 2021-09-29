@@ -2,7 +2,7 @@
   background: #D31027;
   background: -webkit-linear-gradient(to right, #FF0000, #CC0000);
   background: linear-gradient(to right, #FF0000, #CC0000);
-  height: 262px;
+  height: 280px;
   width: 101%;
   position: relative;
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 .pokeball {
-  animation: rotation 15s infinite linear;    
+  animation: rotation 30s infinite linear;    
 }
 
 @keyframes rotation {
@@ -89,6 +89,15 @@ a:link {
   position: absolute;
 }
 
+.white-line {
+  background: yellow;
+  width: 23rem;
+  height: .1rem;
+  position: absolute;
+  top: 279px;
+  left: -190px;
+}
+
 @media only screen and (max-width: 700px) {
  .pokeball {
     top: 120px;
@@ -96,7 +105,7 @@ a:link {
  }   
 
   .how-to {
-    margin: -15px 0 0 -62px;
+    margin: -10px 0 0 -62px;
   }
 }
 
