@@ -76,7 +76,7 @@ Outside of Software Development, I have a passion for music and music technology
 <p>
   <img src="./public/Images/home-desktop.png" alt="desktop home page screenshot" width="200"/>
   <img src="./public/Images/pokemon-desktop.png" alt="desktop pokemon page screenshot" width="200"/>
-  <img src="./public/Images/howto-desktop.png" alt="desktop how to page screenshot" width="200"/>  
+  <img src="./public/Images/howto-desktop-2.png" alt="desktop how to page screenshot" width="200"/>  
 </p>
 
 ### Error & Loader
