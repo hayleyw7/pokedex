@@ -74,14 +74,16 @@ const App = () => {
   };
 
   const hideHowToBtn = (e) => {
-    const howTo = document.querySelector(".how-to");
-    howTo.classList.add("hidden");
+    document.querySelector(".how-to").add("hidden");
   }
 
   const showHowToBtn = (e) => {
-    const howTo = document.querySelector(".how-to");
-    howTo.classList.remove("hidden");
+    document.querySelector(".how-to").classList.remove("hidden");
   }
+
+  const hideSearch = (e) => {
+    document.querySelector(".search-form").classList.add("hidden");
+  }  
 
   return (
     <div className="App">
@@ -91,7 +93,7 @@ const App = () => {
 
           <main className='main-content'>
             {!pokeDex.length && <Loader />}
-            {pokeDex.length > 0 && <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage}/>}
+            {pokeDex.length > 0 && <Search addPokemon={addPokemon} clearErrorMessage={clearErrorMessage} hideSearch={hideSearch} />}
             {error && <Error />}
             {foundPokemon.length !== 0 && !error && (
               <PokemonDetails
@@ -100,24 +102,6 @@ const App = () => {
                 clearPokemon={clearPokemon}
               />
             )}
-
-            {/* {foundPokemon.length === 0 && (
-              <PokedexGrid
-                pokedexData={pokeDex}
-                getPokemonImage={getPokemonImage}
-                addPokemon={addPokemon}
-                clearErrorMessage={clearErrorMessage}
-              />
-            )}
-
-            {error !== '' && foundPokemon.length !== 0 && (
-              <PokedexGrid
-                pokedexData={pokeDex}
-                getPokemonImage={getPokemonImage}
-                addPokemon={addPokemon}
-                clearErrorMessage={clearErrorMessage}                
-              />
-            )} */}
 
           </main>
         }

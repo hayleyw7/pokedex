@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import './Search.css'
 
-const Search = ({ addPokemon, clearErrorMessage }) => {
+const Search = ({ addPokemon, clearErrorMessage, hideSearch }) => {
   const [queriedPokemon, setQueriedPokemon] = useState('')
 
   const handleClick = (e) => {
     e.preventDefault()
     clearErrorMessage()
     addPokemon(queriedPokemon)
+    hideSearch()
   }
 
   return (

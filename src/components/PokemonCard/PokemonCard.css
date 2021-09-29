@@ -1,9 +1,0 @@
-.pokemon-card {
-  font-size: .7rem;
-  transition: transform 420ms, box-shadow 420ms;
-}
-
-.pokemon-image {
-    width: 6rem;
-    max-height: 3rem;
-}
