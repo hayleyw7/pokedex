@@ -19,29 +19,7 @@ describe('Home page user flow', () => {
     it('Should be able to click on How to and go to the How To page', () => {
         cy.get('a')
           .click()
-          .get('.all-pokemon')
-          .should('not.exist')
           .get('.howto-page')
-          .should('be.visible')
-    });
-
-    it('Should be able to click on the x button and get back to the home page', () => {
-        cy.get('a')
-          .click()
-          .get('.x-icon-how')
-          .click()
-          .get('.howto-page')
-          .should('not.exist')
-          .get('.all-pokemon')
-          .should('be.visible')
-    });
-
-    it('Should load all the pokemons first generation when the page starts', () => {
-        cy.get('.all-pokemon')
-          .should('be.visible')
-          .get('.pokemon-card')
-          .contains('bulbasaur')
-          .get('img[src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"]')
           .should('be.visible')
     });
 

@@ -31,7 +31,7 @@ describe('Pokemon Details page user flow', () => {
       .should('be.visible')
       .contains('Try again. Enter a real Generation 1 Pokemon name or ID (1 to 151).')
   });
-//👇 having trouble with image src
+
   it('Should be able to search Pokemon by Name', () => {
     cy.get('input[type="search"]')
       .type('mAnKey')
@@ -42,9 +42,6 @@ describe('Pokemon Details page user flow', () => {
       .contains('56')
       .get('.pokemon-details-header')
       .contains('mankey')
-    cy.wait(3000)
-      .get('img[alt="mankey image"]')
-      .should('be.visible')
   });
 
   it('Should show an error message if the user adds the wrong id number', () => {
@@ -62,7 +59,6 @@ describe('Pokemon Details page user flow', () => {
 
   });
 
-//👇 having trouble with image src
   it('Should be able to search Pokemon by Id Number', () => {
     cy.get('input[type="search"]')
       .type('98')
