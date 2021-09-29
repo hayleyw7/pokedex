@@ -74,7 +74,7 @@ const App = () => {
   };
 
   const hideHowToBtn = (e) => {
-    document.querySelector(".how-to").add("hidden");
+    document.querySelector(".how-to").classList.add("hidden");
   }
 
   const showHowToBtn = (e) => {
