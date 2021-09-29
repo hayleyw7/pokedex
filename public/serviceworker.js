@@ -1,7 +1,7 @@
 // the cache version gets updated every time there is a new deployment
 const CACHE_VERSION = 1;
 const CURRENT_CACHE = `main-Cache-${CACHE_VERSION}`;
-
+ 
 // these are the routes we are going to cache for offline support
 const cacheFiles = [
   '/',
