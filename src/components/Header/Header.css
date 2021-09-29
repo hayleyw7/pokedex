@@ -9,6 +9,19 @@
   justify-content: space-around;
 }
 
+.pokeball {
+  animation: rotation 15s infinite linear;    
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .nav {
   margin-top: 15px;
   width: 200px;
