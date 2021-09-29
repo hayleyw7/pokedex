@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState, useEffect} from 'react'
 import PokemonCard from "../PokemonCard/PokemonCard";
 import "./PokedexGrid.css";
 
 const PokedexGrid = (props) => {
+  const [queriedPokemon, setQueriedPokemon] = useState('')
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    this.props.clearErrorMessage()
+    this.props.addPokemon(queriedPokemon)
+  }
+
   const myPokemon = props.pokedexData.map((pokemon) => {
     let pokemonId = pokemon.url.replace(/\D/g, "").slice(1);
     let pokemonImage = props.getPokemonImage(pokemonId);

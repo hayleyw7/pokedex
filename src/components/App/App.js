@@ -103,6 +103,8 @@ const App = () => {
               <PokedexGrid
                 pokedexData={pokeDex}
                 getPokemonImage={getPokemonImage}
+                addPokemon={addPokemon}
+                clearErrorMessage={clearErrorMessage}
               />
             )}
 
@@ -110,6 +112,8 @@ const App = () => {
               <PokedexGrid
                 pokedexData={pokeDex}
                 getPokemonImage={getPokemonImage}
+                addPokemon={addPokemon}
+                clearErrorMessage={clearErrorMessage}                
               />
             )}
 
