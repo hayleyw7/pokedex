@@ -33,6 +33,8 @@ const Header = ({ hideHowToBtn, foundPokemon }) => {
 
         <img className='pokeball' src='Images/pokeball.png' alt='pokeball'/>
 
+        <img className='white-line' src='Images/white-box.png' alt='white-line'/>
+
       </article>
 
       <div className="custom-shape-divider-bottom-1631589819">
