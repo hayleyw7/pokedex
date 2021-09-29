@@ -18,7 +18,7 @@
 
 This project was a group project for Turing School of Software & Design during module 3. [The project rubric is linked here.](https://frontend.turing.edu/projects/module-3/stretch.html)
 
-Note: Since the group completed the project and received a grade, the App has been significantly updated and edited on this personal fork.
+Note: Since the group completed the project and received a grade, the app has been significantly updated and edited on this personal fork.
 
 ## A Little Bit About the Developers
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg" alt="Pikachu" width="100" align="right"/>
