@@ -8,7 +8,7 @@
 * When offline, the user will have complete access to the application features as well as any Pokemon information that has been successfully queried prior to going offline.
 * This will be a very useful app for someone who is in a real life Poke-battle and needs to find quick information about Pokemon, even without internet service!
 
-[Deployment Link](https://pokedex-git-main-matt-roden.vercel.app/)
+[Deployment Link](http://pocket-pokedex.surge.sh/)
 
 - PoKedeX: As a user, when I visit the app, I should be able to search for Pokemon by name.
 - PoKedeX: As a user, when I visit the app on a computer or tablet, I should be able to see a display of all Pokemon.
@@ -18,6 +18,7 @@
 
 This project was a group project for Turing School of Software & Design during module 3. [The project rubric is linked here.](https://frontend.turing.edu/projects/module-3/stretch.html)
 
+Note: Since the group completed the project and received a grade, the App has been significantly updated and edited on this personal fork.
 
 ## A Little Bit About the Developers
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg" alt="Pikachu" width="100" align="right"/>
