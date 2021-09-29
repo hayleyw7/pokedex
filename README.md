@@ -1,6 +1,6 @@
 # PoKedeX
 
-<img src="https://i.imgur.com/iPvcyJv.png" alt="drawing" width="500" align="right"/>
+<img src="https://i.imgur.com/iPvcyJv.png" alt="drawing" width="300" align="right"/>
 
 ## Abstract
 
