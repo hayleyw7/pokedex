@@ -16,6 +16,11 @@
   margin-top: 2.1rem;
 }
 
+@media only screen and (max-width: 800px) {
+  .all-pokemon {
+    display: none;
+  }
+
 /* @media only screen and (max-width: 600px) {
  .all-pokemon {
    margin-left: 1%;
@@ -26,5 +31,5 @@
    overflow-x: scroll;
    overflow-y: hidden;
    justify-content: flex-start;
- }
-} */
+ } */
+}
