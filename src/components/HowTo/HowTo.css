@@ -28,7 +28,7 @@
 .howto-search-container,
 .howto-home-container {
   font-family: monospace;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .x-icon-how {
@@ -55,7 +55,14 @@
     margin: .5rem .5rem .5rem .5rem;
   }
 
-.howto-header {
-  width: 270px;
-}  
+  .about-container,
+  .howto-search-container,
+  .howto-home-container {
+    font-size: 16px;
+    margin-top: -10px;
+  }  
+
+  .howto-header {
+    margin: -80px 0 0 0;
+  }
 }
