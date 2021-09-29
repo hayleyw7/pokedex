@@ -67,8 +67,6 @@ describe('Pokemon Details page user flow', () => {
       .click()
       .get('.pokemon-details-header')
       .contains('krabby')
-      .get('img[alt="krabby image"]')
-      .should('be.visible')
   });
 
   it('Should have a type', () => {
@@ -106,5 +104,4 @@ describe('Pokemon Details page user flow', () => {
       .should('be.visible')
       .contains('Moves')
   });
-
 })
