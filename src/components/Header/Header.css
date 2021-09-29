@@ -123,3 +123,16 @@ a:link {
 .hidden {
   display: none;
 }
+
+/* footer */
+
+.header {
+  background: #D31027;
+  background: -webkit-linear-gradient(to right, #FF0000, #CC0000);
+  background: linear-gradient(to right, #FF0000, #CC0000);
+  height: 260px;
+  width: 101%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
