@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Loader from '../Loader/Loader'
 import "./PokemonDetails.css";
 import { Link } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { gsap } from 'gsap';
 
 const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
   const [pokemonDetails, setPokemonDetails] = useState([]);
-  const [error, setError] = useState("");
+  const [setError] = useState("");
 
   let pokemonId = foundPokemon[0].url.replace(/\D/g, "").slice(1)
   const pokemonImage = getPokemonImage(pokemonId);
@@ -31,7 +31,9 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
     clearPokemon(e);
   }
 
+  // eslint-disable-next-line 
   const filterMoves = () => {
+    // eslint-disable-next-line 
     const result = pokemonDetails.moves.map((move) => {
       const version = move.version_group_details[0].version_group.name
       const name = move.move.name.split("-").join(" ");
@@ -46,6 +48,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
 
   useEffect(() => {
     setTimeout(() => {getPokemonDetails()}, 1400);
+    // eslint-disable-next-line 
   }, [foundPokemon]);
 
   useEffect(() => {
@@ -102,7 +105,7 @@ const PokemonDetails = ({ foundPokemon, getPokemonImage, clearPokemon }) => {
           <img
             src={pokemonImage}
             className="single-pokemon-pic"
-            alt={`${pokemonDetails.name} image`}
+            alt={`${pokemonDetails.name}`}
             id={pokemonDetails.id}
           />
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.css'
-import { Route, Link } from 'react-router-dom';
-import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
 
 const Header = ({ hideHowToBtn, foundPokemon }) => {
 // we have decided to keep this code for further study but 
