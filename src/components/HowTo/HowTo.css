@@ -54,4 +54,8 @@
   .pokemon-details-page {
     margin: .5rem .5rem .5rem .5rem;
   }
+
+.howto-header {
+  width: 270px;
+}  
 }
