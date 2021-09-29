@@ -45,7 +45,7 @@
 }
 
 .single-pokemon-pic {
-  width: 20rem;
+  width: 10rem;
   margin-bottom: .3rem;  transition: 300ms;
   position: relative;
   opacity: 0;
