@@ -1,5 +1,4 @@
 .App {
-  /* border: solid green 5px; */
   display: flex;
   flex-direction: column;
 }
@@ -11,10 +10,3 @@
   color: #ffeb3b91;
   -webkit-text-stroke: 0.5px #3b4cca;
 }
-
-/* .call-to-action-text {
-  font-family: 'PocketMonk';
-  color: white;
-  -webkit-text-stroke: 0.5px black;
-} */
-

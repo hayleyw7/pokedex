@@ -5,7 +5,6 @@ const Search = ({ addPokemon, clearErrorMessage }) => {
   const [queriedPokemon, setQueriedPokemon] = useState('')
 
   const handleClick = (e) => {
-    // console.log(queriedPokemon)
     e.preventDefault()
     clearErrorMessage()
     addPokemon(queriedPokemon)
@@ -26,7 +25,6 @@ const Search = ({ addPokemon, clearErrorMessage }) => {
         Catch!!!</button>
     </form>
   )
-
 };
 
 export default Search;
