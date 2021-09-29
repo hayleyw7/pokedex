@@ -27,7 +27,7 @@ const HowTo = (props) => {
             ></img>  
           </Link>
 
-        <h1 className='howto-header'>How To Use The PoKedeX</h1>   
+        <h1 className='howto-header'>PoKedeX</h1>   
 
         <h2 className='about-header'>About Application</h2>
         <article className='about-container'>
