@@ -68,6 +68,10 @@ a:link {
     fill: #FFFFFF;
 }
 
+.white-line {
+  display: none;
+}
+
 .header-images {
   position: relative;
   right: 140px;
@@ -89,24 +93,24 @@ a:link {
   position: absolute;
 }
 
-.white-line {
-  background: yellow;
-  width: 23rem;
-  height: .1rem;
-  position: absolute;
-  top: 279px;
-  left: -190px;
-} 
-
 @media only screen and (max-width: 700px) {
- .pokeball {
+  .pokeball {
     top: 120px;
     left: 30px;
- }   
+  }   
 
   .how-to {
     margin: -10px 0 0 -62px;
   }
+
+  .white-line {
+    /* background: yellow; */
+    width: 23rem;
+    height: 110rem;
+    position: absolute;
+    top: 279px;
+    left: -190px;
+  }   
 }
 
 .hidden {
