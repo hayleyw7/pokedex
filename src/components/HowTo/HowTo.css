@@ -2,15 +2,15 @@
   display: flex;
   flex-direction: column;
   margin: 50px 10% 50px 10%;
-  padding: 10px 15px 10px 15px;
-  border-radius: 25px;
+  /* padding: 10px 15px 10px 15px; */
+  /* border-radius: 25px; */
   /* sugestion???- not sure - i don't like on iphone- it will need a @mediaQuery*/
-  border: 2px solid #ec0d0d52; 
-  background: linear-gradient(145deg, #e00000d1, #3b4cca);
+  /* border: 2px solid #ec0d0d52;  */
+  /* background: linear-gradient(145deg, #e00000d1, #3b4cca);
 
-  box-shadow: 5px 8px 19px 11px #d0d0d0, -4px -4px 10px #f0f0f0;
-  text-align: center;
-  color: white;
+  box-shadow: 5px 8px 19px 11px #d0d0d0, -4px -4px 10px #f0f0f0; */
+  /* text-align: center; */
+  /* color: white; */
 }
 
 .howto-header {
@@ -18,6 +18,8 @@
   font-size: 50px;
   color: #ffde00;
   -webkit-text-stroke: 0.5px #3b4cca;
+  text-align: center;
+  margin: -3rem 0 1rem 0;
 }
 
 .about-header,
@@ -27,6 +29,8 @@
   color: #ffde00;
   -webkit-text-stroke: 0.5px #3b4cca;
   font-size: 35px;
+  text-align: center;
+  margin: 1rem;
 }
 
 .about-container,
@@ -46,7 +50,7 @@
   transform: scale(1.09) perspective(1px);  
 }
 
-.meowth-quote {
+/* .meowth-quote {
   font-family: 'PocketMonk';
   font-size: 30px;
   color: #ffde00;
@@ -58,7 +62,7 @@
 .meowth-pic {
   margin-top: 20px;
   width: 150px;   
-}
+} */
 
 @media only screen and (max-width: 600px) {
   .pokemon-details-id {
