@@ -62,7 +62,7 @@ const HowTo = (props) => {
 
         </article>
       </div>
-    </div>
+    </div> 
   )
 }
 
