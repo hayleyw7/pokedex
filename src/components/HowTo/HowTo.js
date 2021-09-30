@@ -45,14 +45,7 @@ const HowTo = (props) => {
         <article className='howto-search-container'>
 
           <p>
-            When a user visits the application on a desktop computer, laptop, or tablet, they should see a Search box and a grid of cards that contain all Generation 1 Pokemon images and names, which are sorted by ID number.
-          </p>
-          <p>  
-            When one visits the application on a mobile device, they should only see the Search box, even if offline.
-          <p>
-
-          </p>
-            From the Home or Pokemon Details pages, one can type either a name or ID number in the Search box. After pressing the "Catch!!!" button, they can access the respective Pokemon's image, type, moves, and abilities.
+            When a user visits the application, they should see a Search box, where one can type either a name or ID number. After pressing the "Catch" button, they can access the respective Pokemon's image, type, moves, and abilities.
           </p>
           <p>
             Once viewed on a device, that Pokemon Details page will then be available offline for future access.
@@ -69,7 +62,7 @@ const HowTo = (props) => {
 
         </article>
       </div>
-    </div>
+    </div> 
   )
 }
 
